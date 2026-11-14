@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es-CL" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clase B — Preparación de Examen de Conducir (CONASET 2026)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Cabecera Minimalista -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-group">
+        <span class="brand-title">Licencia Clase B</span>
+        <span class="brand-meta">CONASET 2026</span>
+      </div>
+
+      <div class="header-tools">
+        <a href="LIBRO-DEL-NUEVO-CONDUCTOR-AUTOMOVILISTAS_2026.pdf" target="_blank" rel="noopener" class="ghost-link" title="Abrir Libro Oficial en PDF">
+          <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+          </svg>
+          <span>Manual PDF</span>
+        </a>
+
+        <button type="button" id="theme-toggle-btn" class="ghost-link" aria-label="Cambiar apariencia">
+          <svg id="theme-icon-svg" class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span id="theme-label-text">Oscuro</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegación Principal (3 Vistas Esenciales) -->
+  <nav class="primary-nav" aria-label="Navegación principal">
+    <button type="button" class="nav-item is-active" data-view="plan">
+      <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <span>Plan y Práctica</span>
+    </button>
+
+    <button type="button" class="nav-item" data-view="exam">
+      <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <polyline points="9 11 12 14 22 4"></polyline>
+        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+      </svg>
+      <span>Simulador</span>
+    </button>
+
+    <button type="button" class="nav-item" data-view="manual">
+      <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+      </svg>
+      <span>Temario 2026</span>
+    </button>
+    <button type="button" class="nav-item" data-view="senales">
+      <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <polygon points="12 2 2 22 22 22"></polygon>
+      </svg>
+      <span>Señales (138)</span>
+    </button>
+  </nav>
+
+  <!-- Contenedor Principal -->
+  <main class="main-container">
+    <!-- ====================================================================
+         VISTA 1: PLAN Y PRÁCTICA
+         ==================================================================== -->
+    <section id="view-plan" class="view-panel is-active" aria-labelledby="plan-heading">
+      <!-- Bloque 1: Encabezado Principal y Configuración de Meta -->
+      <header class="hero-intro">
+        <h1 id="plan-heading" class="page-title">Plan de estudio a medida</h1>
+        <p class="page-subtitle">
+          Define la fecha de tu examen municipal para calcular tu dedicación diaria recomendada y generar los tests necesarios para aprobar al primer intento.
+        </p>
+      </header>
+
+      <!-- Barra de Configuración en Línea -->
+      <div class="goal-inline-bar">
+        <div class="control-group">
+          <label for="target-date-input" class="control-label">Fecha objetivo para rendir el examen</label>
+          <input type="date" id="target-date-input" class="minimal-input tabular" />
+          <div class="quick-presets" role="group" aria-label="Plazos rápidos">
+            <button type="button" class="preset-pill" data-preset-days="1">1 día</button>
+            <button type="button" class="preset-pill" data-preset-days="3">3 días</button>
+            <button type="button" class="preset-pill is-selected" data-preset-days="7">7 días</button>
+            <button type="button" class="preset-pill" data-preset-days="14">14 días</button>
+            <button type="button" class="preset-pill" data-preset-days="30">30 días</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label for="baseline-level-select" class="control-label">Punto de partida</label>
+          <select id="baseline-level-select" class="minimal-input">
+            <option value="zero">Desde cero (lectura + tests)</option>
+            <option value="medium">Con base previa (énfasis en tests)</option>
+            <option value="advanced">Repaso final (sólo simulacros)</option>
+          </select>
+
+          <label for="feedback-mode-select" class="control-label" style="margin-top: 0.45rem;">Corrección en simulacro oficial</label>
+          <select id="feedback-mode-select" class="minimal-input">
+            <option value="instant">Explicación inmediata al responder</option>
+            <option value="exam">Resultado al finalizar el examen</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Franja de 3 Métricas Esenciales -->
+      <div class="metrics-strip">
+        <div class="metric-cell">
+          <span class="metric-title">Plazo restante</span>
+          <span id="odo-days-left" class="metric-number tabular">7 días</span>
+          <span id="odo-target-date-sub" class="metric-note">Meta programada</span>
+        </div>
+
+        <div class="metric-cell">
+          <span class="metric-title">Dedicación diaria</span>
+          <span id="odo-daily-time" class="metric-number tabular">45 min</span>
+          <span id="odo-daily-time-sub" class="metric-note">2 tests por día</span>
+        </div>
+
+        <div class="metric-cell">
+          <span class="metric-title">Nivel actual</span>
+          <span id="odo-avg-score" class="metric-number tabular">Pendiente</span>
+          <span id="odo-avg-score-sub" class="metric-note">Mínimo 33 / 38 pts</span>
+        </div>
+      </div>
+
+      <!-- Acción Destacada de Hoy -->
+      <div class="primary-cta-bar">
+        <div class="cta-copy">
+          <span class="eyebrow-tag">Sesión prioritaria de hoy</span>
+          <h2 class="cta-heading" id="today-focus-summary">
+            Práctica programada para hoy
+          </h2>
+          <p class="cta-sub" id="today-focus-chapters">
+            Capítulos prioritarios del día + preguntas de doble puntaje
+          </p>
+        </div>
+
+        <button type="button" class="btn-solid" data-action="start-day-test" data-day-index="0">
+          <span>Iniciar test de hoy</span>
+          <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Bloque 2: Modalidades de Examen -->
+      <section class="content-section" aria-labelledby="modes-heading">
+        <div class="section-block-header">
+          <div>
+            <h2 id="modes-heading" class="section-heading">Modalidades de práctica</h2>
+            <p class="section-desc">
+              Elige entre un simulacro con las reglas oficiales de tu municipalidad o entrenamientos focalizados en preguntas críticas.
+            </p>
+          </div>
+          <span class="status-pill tabular">Aprobación: 33 / 38 pts</span>
+        </div>
+
+        <div class="clean-list">
+          <div class="clean-row">
+            <div class="row-main">
+              <span class="status-dot dot-active" aria-hidden="true"></span>
+              <div>
+                <h3 class="row-title">Simulacro oficial municipal</h3>
+                <p class="row-sub">35 preguntas (32 de 1 pto + 3 de doble puntaje) · Límite de 45 minutos</p>
+              </div>
+            </div>
+            <div class="row-right">
+              <button type="button" class="btn-outline" data-action="start-mode" data-mode="official">
+                <span>Rendir 35 pregs</span>
+                <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="clean-row">
+            <div class="row-main">
+              <span class="status-dot dot-warn" aria-hidden="true"></span>
+              <div>
+                <h3 class="row-title">Preguntas de doble puntaje</h3>
+                <p class="row-sub">Alcohol y drogas, velocidad máxima, cinturón y Sistemas de Retención Infantil (2 pts c/u)</p>
+              </div>
+            </div>
+            <div class="row-right">
+              <button type="button" class="btn-outline" data-action="start-mode" data-mode="double-points">
+                <span>Practicar 2 pts</span>
+                <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="clean-row">
+            <div class="row-main">
+              <span class="status-dot" aria-hidden="true"></span>
+              <div>
+                <h3 class="row-title">Práctica breve (10 preguntas)</h3>
+                <p class="row-sub">Sesión rápida de 12 minutos con selección mixta de capítulos</p>
+              </div>
+            </div>
+            <div class="row-right">
+              <button type="button" class="btn-outline" data-action="start-mode" data-mode="express">
+                <span>Iniciar 10 pregs</span>
+                <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="clean-row">
+            <div class="row-main">
+              <span class="status-dot dot-fail" aria-hidden="true"></span>
+              <div>
+                <h3 class="row-title">Repaso de errores registrados</h3>
+                <p class="row-sub" id="mistakes-row-sub">Preguntas respondidas incorrectamente en tus sesiones previas</p>
+              </div>
+            </div>
+            <div class="row-right">
+              <span id="mistakes-count-badge" class="status-pill tabular">0 errores</span>
+              <button type="button" class="btn-outline" data-action="start-mode" data-mode="mistakes">
+                <span>Repasar</span>
+                <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bloque 3: Cronograma Día por Día -->
+      <section class="content-section" aria-labelledby="schedule-heading">
+        <div class="section-block-header">
+          <div>
+            <h2 id="schedule-heading" class="section-heading">Tu ruta día por día</h2>
+            <p class="section-desc">
+              Distribución automática de los 9 capítulos del manual 2026 y simulacros según los días que faltan para tu examen.
+            </p>
+          </div>
+          <span id="schedule-summary-meta" class="status-pill tabular"></span>
+        </div>
+
+        <div id="sprint-schedule-list" class="clean-list">
+          <!-- Generado dinámicamente por app.js -->
+        </div>
+      </section>
+
+      <!-- Bloque 4: Historial de Sesiones -->
+      <section class="content-section" aria-labelledby="history-heading">
+        <div class="section-block-header">
+          <div>
+            <h2 id="history-heading" class="section-heading">Historial reciente</h2>
+            <p class="section-desc">
+              Registro de tus últimos simulacros y su equivalencia en la escala oficial de 38 puntos.
+            </p>
+          </div>
+        </div>
+        <div id="recent-history-list" class="clean-list"></div>
+      </section>
+    </section>
+
+    <!-- ====================================================================
+         VISTA 2: SIMULADOR DE EXAMEN
+         ==================================================================== -->
+    <section id="view-exam" class="view-panel" aria-label="Simulador de examen">
+      <div id="exam-cockpit-container">
+        <!-- Renderizado por app.js -->
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VISTA 3: TEMARIO OFICIAL 2026 (ACORDEÓN LIMPIO)
+         ==================================================================== -->
+    <section id="view-manual" class="view-panel" aria-labelledby="manual-heading">
+      <header class="hero-intro">
+        <h1 id="manual-heading" class="page-title">Temario Oficial CONASET 2026</h1>
+        <p class="page-subtitle">
+          Selecciona cualquier capítulo para desplegar los puntos clave exigidos en el examen municipal o generar un test específico del tema.
+        </p>
+      </header>
+
+      <div id="chapters-accordion-container" class="accordion-group">
+        <!-- Generado por app.js -->
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VISTA 4: SEÑALES DE TRÁNSITO CONASET
+         ==================================================================== -->
+    <section id="view-senales" class="view-panel" aria-labelledby="senales-heading">
+      <header class="hero-intro">
+        <h1 id="senales-heading" class="page-title">Catálogo Oficial de Señales de Tránsito</h1>
+        <p class="page-subtitle">
+          138 señales reglamentarias, de advertencia de peligro, informativas y transitorias exigidas en el examen municipal.
+        </p>
+        <div style="margin-top: 1rem;">
+          <input type="text" id="search-signs-input" class="minimal-input" placeholder="Buscar por nombre, código (ej: RPI-1) o descripción..." style="max-width: 480px; width: 100%;" />
+        </div>
+      </header>
+
+      <div id="signs-grid-container">
+        <!-- Generado por app.js agrupado por categoría con subtítulos H2 -->
+      </div>
+    </section>
+  </main>
+
+  <script src="questions-db.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

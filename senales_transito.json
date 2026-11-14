@@ -1,0 +1,968 @@
+[
+  {
+    "code": "RPI-1",
+    "name": "Ceda el paso",
+    "category": "Señales Reglamentarias",
+    "description": "Prioridad de paso para el vehículo que viene por la otra vía en una intersección, debiendo bajar la velocidad hasta ver que pueda cruzar de forma segura sin necesidad de detenerse por completo.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPI-1.svg"
+  },
+  {
+    "code": "RPI-2",
+    "name": "Pare",
+    "category": "Señales Reglamentarias",
+    "description": "Prioridad de paso para el vehículo que viene por la otra vía en una intersección, debiendo detenerse por completo y solo proseguir una vez que el cruce esté libre.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPI-2.svg"
+  },
+  {
+    "code": "RPI-3",
+    "name": "Pare niños",
+    "category": "Señales Reglamentarias",
+    "description": "Indica al conductor que debe detenerse por completo para permitir el cruce prioritario de escolares, para luego reanudar la marcha.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPI-3.svg"
+  },
+  {
+    "code": "RPO-1",
+    "name": "No entrar",
+    "category": "Señales Reglamentarias",
+    "description": "Indica la prohibición de continuar circulando o ingresar a determinada vía. En ciertos casos pueden indicarse excepciones.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-1.svg"
+  },
+  {
+    "code": "RPO-2a",
+    "name": "No virar izquierda",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe el viraje hacía la izquierda, ya sea en una intersección o dentro de una misma vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-2a.svg"
+  },
+  {
+    "code": "RPO-2b",
+    "name": "No virar derecha",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe el viraje hacía la derecha, ya sea en una intersección o dentro de una misma vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-2b.svg"
+  },
+  {
+    "code": "RPO-2c",
+    "name": "No virar en U",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe el viraje en 180º, como forma de cambiar el sentido hacia el cual se desplaza el auto dentro de una misma vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-2c.svg"
+  },
+  {
+    "code": "RPO-3",
+    "name": "No adelantar",
+    "category": "Señales Reglamentarias",
+    "description": "Se prohíbe el cambio de pista, ya sea en el mismo sentido o sentido contrario, para realizar maniobras de adelantamiento.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-3.svg"
+  },
+  {
+    "code": "RPO-4",
+    "name": "No cambiar de pista",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe cambiar de pista, no importa cuál sea la razón para la maniobra.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-4.svg"
+  },
+  {
+    "code": "RPO-5",
+    "name": "Prohibida circulación de vehículos de carga",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe el tránsito de vehículos destinados al transporte de carga, ya sea por cierta vía o por un sector.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-5.svg"
+  },
+  {
+    "code": "RPO-6",
+    "name": "Prohibida circulación de vehículos motorizados",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe que circulen vehículos impulsados por motor, pero no los a tracción humana o animal.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-6.svg"
+  },
+  {
+    "code": "RPO-7",
+    "name": "Prohibida circulación de buses",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe la circulación de buses de transporte de pasajeros, ya sean privados o públicos.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-7.svg"
+  },
+  {
+    "code": "RPO-8",
+    "name": "Prohibida circulación de bicicletas",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe la circulación de bicicletas u otros ciclos por determinada vía, ya sea en su totalidad o un sector.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-8.svg"
+  },
+  {
+    "code": "RPO-9",
+    "name": "Prohibida circulación de motocicletas",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe la circulación de vehículos motorizados de dos o tres ruedas por determinada vía, ya sea en su totalidad o un sector.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-9.svg"
+  },
+  {
+    "code": "RPO-10",
+    "name": "Prohibida circulación de maquinaria agrícola",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe la circulación de maquinaria destinada al uso agrícola por determinada vía, ya sea en su totalidad o un sector, debiendo preferir caminos secundarios.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-10.svg"
+  },
+  {
+    "code": "RPO-11",
+    "name": "Prohibida circulación de vehículos de tracción animal",
+    "category": "Señales Reglamentarias",
+    "description": "Se prohíbe el ingreso o circulación de vehículos a tracción animal.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-11.svg"
+  },
+  {
+    "code": "RPO-12",
+    "name": "Prohibida circulación de carros de mano",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe la circulación de carros impulsados por fuerza humana como las carretillas.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-12.svg"
+  },
+  {
+    "code": "RPO-13",
+    "name": "Silencio",
+    "category": "Señales Reglamentarias",
+    "description": "Prohibido realizar ruidos excesivos, como por ejemplo tocar la bocina.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-13.svg"
+  },
+  {
+    "code": "RPO-14",
+    "name": "Prohibido estacionar",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe el estacionar en una vía pública a todo vehículo.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-14.svg"
+  },
+  {
+    "code": "RPO-14a",
+    "name": "Prohibido estacionar",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe el estacionar en una vía pública, con la excepción de los vehículos para personas discapacitadas que cuenten con el distintivo que exige la ley.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-14a.svg"
+  },
+  {
+    "code": "RPO-15",
+    "name": "Prohibido estacionar y detenerse",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe cualquier tipo de detención, ya sea con el auto encendido o apagado por más que el chofer se encuentre en su interior.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-15.svg"
+  },
+  {
+    "code": "RPO-16",
+    "name": "No peatones",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe el ingreso de peatones a cierta vía o zona.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-16.svg"
+  },
+  {
+    "code": "RPO-17",
+    "name": "No bloquear cruce",
+    "category": "Señales Reglamentarias",
+    "description": "Prohíbe que los vehículos se detengan bloqueando un cruce de calles o intersección.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RPO-17.svg"
+  },
+  {
+    "code": "RR-1",
+    "name": "Velocidad máxima",
+    "category": "Señales Reglamentarias",
+    "description": "Indica cuál es la velocidad máxima de circulación en determinada vía o sección de esta.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RR-1_(50).svg"
+  },
+  {
+    "code": "RR-2",
+    "name": "Velocidad mínima",
+    "category": "Señales Reglamentarias",
+    "description": "Indica la velocidad mínima de circulación en determinada vía o sección de esta.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RR-2_(40).svg"
+  },
+  {
+    "code": "RR-3",
+    "name": "Circulación en ambos sentidos",
+    "category": "Señales Reglamentarias",
+    "description": "Indica que la vía por la cual se circula permite el tráfico en ambos sentidos.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RR-3.svg"
+  },
+  {
+    "code": "RR-4",
+    "name": "Peso máximo",
+    "category": "Señales Reglamentarias",
+    "description": "Indica cuál es el peso máximo permitido para los vehículos que utilizan determinada vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RR-4.svg"
+  },
+  {
+    "code": "RR-5",
+    "name": "Peso máximo por eje",
+    "category": "Señales Reglamentarias",
+    "description": "Indica cuál es el peso máximo por cada conjunto de ejes de camiones que circulan por una vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RR-5.svg"
+  },
+  {
+    "code": "RR-6",
+    "name": "Altura máxima",
+    "category": "Señales Reglamentarias",
+    "description": "Indica la longitud vertical máxima que puede tener el vehículo que circula por una vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RR-6.svg"
+  },
+  {
+    "code": "RR-7",
+    "name": "Ancho máximo",
+    "category": "Señales Reglamentarias",
+    "description": "Indica la anchura máxima para vehículos que circulen por una vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RR-7.svg"
+  },
+  {
+    "code": "RR-8",
+    "name": "Largo máximo",
+    "category": "Señales Reglamentarias",
+    "description": "Indica la extensión máxima para vehículos que circulen por una vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RR-8.svg"
+  },
+  {
+    "code": "RR-9",
+    "name": "Fin prohibición o restricción",
+    "category": "Señales Reglamentarias",
+    "description": "Finalización de una restricción informada previamente en la vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RR-9.svg"
+  },
+  {
+    "code": "RR-10",
+    "name": "Solo tag o sistema habilitado",
+    "category": "Señales Reglamentarias",
+    "description": "Vía restringida exclusivamente para vehículos con Tag u otro dispositivo de cobro similar.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RR-10.svg"
+  },
+  {
+    "code": "NS6",
+    "name": "Zona 30",
+    "category": "Otras Señales",
+    "description": "Restringe la velocidad máxima a 30 kilómetros por hora.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/NS6.zona_30.jpeg"
+  },
+  {
+    "code": "RO-1aL",
+    "name": "Tránsito en sentido Izquierdo",
+    "category": "Señales Reglamentarias",
+    "description": "Obliga a los conductores a circular por la pista izquierda de la vía, para así facilitar otras maniobras desde la derecha.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-1aL.svg"
+  },
+  {
+    "code": "RO-1aR",
+    "name": "Tránsito en sentido Derecho",
+    "category": "Señales Reglamentarias",
+    "description": "Obliga a los conductores a circular por la pista derecha de la vía, para así facilitar otras maniobras desde la izquierda.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-1aR.svg"
+  },
+  {
+    "code": "RO-1b",
+    "name": "Tránsito en ambos sentido",
+    "category": "Señales Reglamentarias",
+    "description": "La vía está habilitada para vehículos que circulan en ambos sentidos de tránsito.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-1b.svg"
+  },
+  {
+    "code": "RO-2",
+    "name": "Mantenga su derecha",
+    "category": "Señales Reglamentarias",
+    "description": "Obliga a circular por la pista derecha, dejando la izquierda libre para quienes realizan maniobras.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-2.svg"
+  },
+  {
+    "code": "RO-3L",
+    "name": "Dirección obligada a la izquierda",
+    "category": "Señales Reglamentarias",
+    "description": "Obliga a circular por la pista izquierda, dejando la derecha libre para quienes realizan maniobras.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-3L.svg"
+  },
+  {
+    "code": "RO-3R",
+    "name": "Dirección obligada a la derecha",
+    "category": "Señales Reglamentarias",
+    "description": "Al llegar a una intersección o cruce, es obligatorio seguir en dirección a la derecha.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-3R.svg"
+  },
+  {
+    "code": "RO-4",
+    "name": "Preferencia al sentido contrario",
+    "category": "Señales Reglamentarias",
+    "description": "Indica que los vehículos que circulan en sentido contrario tendrán la preferencia.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-4.svg"
+  },
+  {
+    "code": "RO-5L",
+    "name": "Tránsito de peatones",
+    "category": "Señales Reglamentarias",
+    "description": "Zona donde los conductores podrían encontrarse con peatones en la vía, llamando a la precaución.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-5L.svg"
+  },
+  {
+    "code": "RO-6a",
+    "name": "Paso obligado derecha",
+    "category": "Señales Reglamentarias",
+    "description": "Ante una división en la vía de circulación, indica que el conductor debe continuar su camino obligatoriamente por el lado derecho.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-6a.svg"
+  },
+  {
+    "code": "RO-6b",
+    "name": "Paso obligado izquierda",
+    "category": "Señales Reglamentarias",
+    "description": "Ante una división en la vía de circulación, indica que el conductor debe continuar su camino obligatoriamente por el lado izquierdo.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-6b.svg"
+  },
+  {
+    "code": "RO-6c",
+    "name": "Paso vértice",
+    "category": "Señales Reglamentarias",
+    "description": "Avisa sobre la existencia de un vértice divisorio del tránsito, ante el cual los vehículos deben continuar camino según el lado de la calzada por el cual circulan.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-6c.svg"
+  },
+  {
+    "code": "RO-7",
+    "name": "Control",
+    "category": "Señales Reglamentarias",
+    "description": "Informa sobre la presencia de un control, ya sea de carabineros, aduanas, SAG u otros organismos estatales",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-7.svg"
+  },
+  {
+    "code": "RO-8",
+    "name": "Uso Obligatorio de Cadenas",
+    "category": "Señales Reglamentarias",
+    "description": "Los conductores deben colocar las cadenas en las ruedas de sus autos, para así circular con seguridad por caminos con nieve o hielo.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-8.svg"
+  },
+  {
+    "code": "RO-9",
+    "name": "Solo bicicletas",
+    "category": "Señales Reglamentarias",
+    "description": "El tránsito está restringido exclusivamente a bicicletas.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-9.svg"
+  },
+  {
+    "code": "RO-10",
+    "name": "Solo motocicletas",
+    "category": "Señales Reglamentarias",
+    "description": "El tránsito está restringido exclusivamente a motocicletas.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-10.svg"
+  },
+  {
+    "code": "RO-11a",
+    "name": "Superficie segregada biciclos - peatones",
+    "category": "Señales Reglamentarias",
+    "description": "Avisa sobre la existencia y ubicación de vías separadas de circulación exclusiva para bicicletas y peatones.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-11a.svg"
+  },
+  {
+    "code": "RO-11b",
+    "name": "Superficie segregada peatones - biciclos",
+    "category": "Señales Reglamentarias",
+    "description": "Avisa sobre la existencia y ubicación de vías separadas de circulación exclusiva para bicicletas y peatones, indicando qué lado corresponde a cada cual.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-11b.svg"
+  },
+  {
+    "code": "RO-12a",
+    "name": "Vía segregada buses",
+    "category": "Señales Reglamentarias",
+    "description": "Informa de una vía separada de uso exclusivo para buses del transporte público y taxis.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RO-12a.svg"
+  },
+  {
+    "code": "NS1",
+    "name": "Preferencia ciclista al virar derecha",
+    "category": "Otras Señales",
+    "description": "Indica que los ciclistas tendrán preferencia por sobre todo el resto de los vehículos a la hora de virar a la derecha.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/NS1.preferencia_ciclista_virar_derecha.png"
+  },
+  {
+    "code": "NS2",
+    "name": "Preferencia ciclista al virar izquierda",
+    "category": "Otras Señales",
+    "description": "Indica que los ciclistas tendrán preferencia por sobre todo el resto de los vehículos a la hora de virar a la izquierda.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/NS2.preferencia_ciclista_virar_izquierda.png"
+  },
+  {
+    "code": "NS3",
+    "name": "Preferencia ciclista al cambiar de pista",
+    "category": "Otras Señales",
+    "description": "Indica que los vehículos deberán facilitar las maniobras de adelantamiento de los ciclistas, dándoles preferencia para ello.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/NS3b.preferencia_ciclista_cambiar_pista.jpeg"
+  },
+  {
+    "code": "NS4",
+    "name": "Desmonte de ciclistas",
+    "category": "Otras Señales",
+    "description": "Indica que los ciclistas deben descender de sus bicicletas y cruzar caminando junto a los peatones en cruces y pasos donde se encuentre una cantidad importante de personas a pie.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/NS4.demonte_de_ciclistas.jpeg"
+  },
+  {
+    "code": "RA-1",
+    "name": "Estacionamiento permitido",
+    "category": "Señales Reglamentarias",
+    "description": "Autoriza a estacionar en determinada calle o zona. En ciertos casos, puede indicar que solo algunos tipos de vehículos tienen permitido aparcar en el lugar.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RA-1.svg"
+  },
+  {
+    "code": "RA-2",
+    "name": "Permitido virar derecha con luz roja y precaución",
+    "category": "Señales Reglamentarias",
+    "description": "Autoriza a virar a la derecha con luz roja, siempre y cuando el conductor se asegure que no venga otro vehículo.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/RA-2.svg"
+  },
+  {
+    "code": "PG-1a",
+    "name": "Curva a la derecha",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte la cercanía de una curva al lado derecho del camino.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-1a.svg"
+  },
+  {
+    "code": "PG-1b",
+    "name": "Curva a la izquierda",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte la cercanía de una curva al lado izquierdo del camino.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-1b.svg"
+  },
+  {
+    "code": "PG-2a",
+    "name": "Curva cerrada a la derecha",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte la cercanía de una curva cerrada al lado derecho del camino, por lo que los conductores deben bajar la velocidad de circulación.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-2a.svg"
+  },
+  {
+    "code": "PG-2b",
+    "name": "Curva cerrada a la izquierda",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte la cercanía de una curva cerrada al lado izquierdo del camino, por lo que los conductores deben bajar la velocidad de circulación.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-2b.svg"
+  },
+  {
+    "code": "PG-3a",
+    "name": "Zona de curvas a la derecha",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la cercanía de una zona compuesta por 3 o más curvas ubicadas al costado derecho del camino.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-3a.svg"
+  },
+  {
+    "code": "PG-3b",
+    "name": "Zona de curvas a la izquierda",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte la cercanía de 3 o más curvas ubicadas al costado izquierdo del camino.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-3b.svg"
+  },
+  {
+    "code": "PG-4a",
+    "name": "Curva y contracurva a la derecha",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte de la cercanía de una curva por el costado derecho, seguida de otra curva por el lado contrario a una distancia igual o menor a los 120 metros.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-4a.svg"
+  },
+  {
+    "code": "PG-4b",
+    "name": "Curva y contracurva a la izquierda",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte de la cercanía de una curva por el costado izquierdo, seguida de otra curva por el lado contrario a una distancia igual o menos a los 120 metros.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-4b.svg"
+  },
+  {
+    "code": "PG-5a",
+    "name": "Curva y contracurva cerrada a la derecha",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte de la cercanía de una curva por el costado derecho, seguida de otra por el lado contrario a una distancia igual o menos a los 120 metros. Al menos una de ellas es una curva cerrada, lo que implica disminuir la velocidad",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-5a.svg"
+  },
+  {
+    "code": "PG-5b",
+    "name": "Curva y contracurva cerrada a la izquierda",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte de la cercanía de una curva por el costado izquierdo, seguida de otra por el lado contrario a una distancia igual o menos a los 120 metros. Al menos una de ellas es una curva cerrada, lo que implica disminuir la velocidad.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-5b.svg"
+  },
+  {
+    "code": "PG-6a",
+    "name": "Curva muy cerrada a la derecha",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte que se acerca una curva muy cerrada por el lado derecho, por lo que se debe circular a la velocidad mínima.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-6a.svg"
+  },
+  {
+    "code": "PG-6b",
+    "name": "Curva muy cerrada a la izquierda",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte que se acerca una curva muy cerrada por el lado izquierdo, por lo que se debe circular a la velocidad mínima.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-6b.svg"
+  },
+  {
+    "code": "PG-7a",
+    "name": "Pendiente fuerte de bajada",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte a todos los vehículos sobre la proximidad de una pendiente de bajada bastante pronunciada.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-7a.svg"
+  },
+  {
+    "code": "PG-7b",
+    "name": "Pendiente fuerte de bajada (camiones)",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte a los vehículos pesados y camiones sobre la proximidad de una pendiente de bajada bastante pronunciada.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-7b.svg"
+  },
+  {
+    "code": "PG-7c",
+    "name": "Pendiente fuerte de subida",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte a todos los vehículos sobre la proximidad de una subida con pendiente bastante pronunciada.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-7c.svg"
+  },
+  {
+    "code": "PG-7d",
+    "name": "Pendiente fuerte de subida (camiones)",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte a los vehículos pesados y camiones sobre la proximidad de una subida con pendiente bastante pronunciada.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-7d.svg"
+  },
+  {
+    "code": "PG-8",
+    "name": "Resalto",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la cercanía de una pequeña elevación curva en la pista de circulación, invitando al conductor a bajar su velocidad.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-8.svg"
+  },
+  {
+    "code": "PG-9",
+    "name": "Resaltos sucesivos",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte de una zona con resaltos sucesivos, así el conductor baja la velocidad de circulación.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-9.svg"
+  },
+  {
+    "code": "PG-10",
+    "name": "Badén",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la cercanía de una pequeña depresión curva en la pista de circulación, invitando al conductor a bajar su velocidad.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PG-10.svg"
+  },
+  {
+    "code": "PF-1a",
+    "name": "Angostamiento a ambos lados",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la reducción del ancho del camino a ambos lados de la vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PF-1a.svg"
+  },
+  {
+    "code": "PF-1b",
+    "name": "Angostamiento a la derecha",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la reducción del ancho del camino al costado derecho de la vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PF-1b.svg"
+  },
+  {
+    "code": "PF-1c",
+    "name": "Angostamiento a la izquierda",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la reducción del ancho del camino al costado izquierdo de la vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PF-1c.svg"
+  },
+  {
+    "code": "PF-2",
+    "name": "Puente angosto",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte al conductor sobre la cercanía de un puente más estrecho que la vía por la cual circula.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PF-2.svg"
+  },
+  {
+    "code": "PF-3a",
+    "name": "Ensanchamiento a ambos lados",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte al conductor sobre la ampliación del ancho del camino a ambos lados.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PF-3a.svg"
+  },
+  {
+    "code": "PF-3b",
+    "name": "Ensanchamiento a la derecha",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte al conductor sobre la ampliación del ancho del camino al costado derecho.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PF-3b.svg"
+  },
+  {
+    "code": "PF-3c",
+    "name": "Ensanchamiento a la izquierda",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte al conductor sobre la ampliación del ancho del camino al costado izquierdo.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PF-3c.svg"
+  },
+  {
+    "code": "PF-4",
+    "name": "Peso máximo",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte al conductor sobre el peso máximo que la vía es capaz de soportar.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PF-4.svg"
+  },
+  {
+    "code": "PF-5",
+    "name": "Altura máxima",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte al conductor sobre la altura máxima que puede tener un vehículo para circular por dicha vía, generalmente túneles o pasos bajo nivel.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PF-5.svg"
+  },
+  {
+    "code": "PF-6",
+    "name": "Ancho máximo",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte al conductor sobre el ancho máximo que puede tener un vehículo para circular por dicha vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PF-6.svg"
+  },
+  {
+    "code": "PF-7",
+    "name": "Largo máximo",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte al conductor sobre el largo máximo que puede tener un vehículo para circular por dicha vía",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PF-7.svg"
+  },
+  {
+    "code": "PI-1a",
+    "name": "Cruce ferroviario a nivel sin barreras",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la cercanía de un cruce ferroviario sin barreras de seguridad que lo bloqueen ante la cercanía de un tren.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PI-1a.svg"
+  },
+  {
+    "code": "PI-1b",
+    "name": "Cruce ferroviario a nivel con barreras",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la cercanía de un cruce ferroviario con barreras de seguridad que bloquean el paso ante la cercanía de un tren.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PI-1b.svg"
+  },
+  {
+    "code": "PI-2a",
+    "name": "Cruz de San Andrés",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Símbolo ferroviario con dos barras cruzadas en forma de X indicando la que se está ante un cruce ferroviario. Si en la zona inferior se ve una V invertida, se trata del cruce de más de dos vías.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PI-2a.svg"
+  },
+  {
+    "code": "PI-2b",
+    "name": "Cruz de San Andrés (2 vías)",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Símbolo ferroviario con dos barras cruzadas en forma de X indicando la que se está ante un cruce ferroviario. Si en la zona inferior no se forma una V invertida, el cruce es de solo dos vías.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PI-2b.svg"
+  },
+  {
+    "code": "PI-3",
+    "name": "Proximidad de rotonda",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la cercanía de una rotonda dentro de la vía por la que se circula.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PI-3.svg"
+  },
+  {
+    "code": "PO-1",
+    "name": "Dos sentidos de tránsito",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte que la vía alberga tránsito en ambos sentidos.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PO-1.svg"
+  },
+  {
+    "code": "PO-2",
+    "name": "Ciclistas en la vía",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte a los conductores de que compartirán una vía con ciclistas, llamando a la precaución.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PO-2.svg"
+  },
+  {
+    "code": "PO-3",
+    "name": "Maquinaria agrícola",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte al conductor sobre la circulación de maquinaría agrícola en la vía, para que guarde los cuidados necesarios.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PO-3.svg"
+  },
+  {
+    "code": "PO-4",
+    "name": "Carretelas en la vía",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte al conductor sobre la circulación de vehículos a tracción animal en la vía, para que guarde los cuidados necesarios.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PO-4.svg"
+  },
+  {
+    "code": "PO-5",
+    "name": "Animales en la vía",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la posibilidad de entrada de animales domésticos o de ganado a la vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PO-5.svg"
+  },
+  {
+    "code": "PO-6",
+    "name": "Animales indómitos",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la posibilidad de entrada de animales salvajes a la vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PO-6.svg"
+  },
+  {
+    "code": "PO-7",
+    "name": "Zona de peatones",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte a los conductores de que están en un área donde pueden encontrarse con peatones en las vías de circulación, llamando a la precaución.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PO-7.svg"
+  },
+  {
+    "code": "PO-8",
+    "name": "Proximidad de paso de cebra",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte al conductor sobre la cercanía de un paso cebra o de cruce con preferencia para peatones en la vía, debiendo bajar la velocidad.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PO-8.svg"
+  },
+  {
+    "code": "PO-9",
+    "name": "Zona de escuela",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte de la cercanía de un colegio, escuela o jardín infantil, de forma de que el conductor ponga atención y baje su velocidad.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PO-9.svg"
+  },
+  {
+    "code": "PO-10",
+    "name": "Niños jugando",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre calles donde podrían haber niños jugando, por lo que hay que bajar la velocidad al mínimo. Suele tratarse de pasajes o calles pequeñas y de bajo tráfico.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PO-10.svg"
+  },
+  {
+    "code": "PO-11",
+    "name": "Proximidad de semáforo",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la proximidad de un cruce regulado con semáforo.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PO-11.svg"
+  },
+  {
+    "code": "PO-12",
+    "name": "Proximidad de señal \"Ceda el Paso\"",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la proximidad de un cruce regulado con una señal Ceda el Paso.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PO-12.svg"
+  },
+  {
+    "code": "PO-13",
+    "name": "Proximidad de señal \"Pare\"",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la proximidad de un cruce regulado con una señal de disco Pare.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PO-13.svg"
+  },
+  {
+    "code": "PE-1",
+    "name": "Zona de derrumbes",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte al conductor sobre la posibilidad de derrumbes y caídas de proyectiles en la zona por la que está circulando, para que así esté preparado.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PE-1.svg"
+  },
+  {
+    "code": "PE-2",
+    "name": "Pavimento resbaladizo",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la posibilidad de que el pavimento esté resbaladizo, de forma de que el conductor tome precauciones al manejar.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PE-2.svg"
+  },
+  {
+    "code": "PE-3",
+    "name": "Proyección de gravilla",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte al conductor sobre la posibilidad de caída de gravilla sobre la vía por la cual se encuentra circulando.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PE-3.svg"
+  },
+  {
+    "code": "PE-4",
+    "name": "Proximidad de cables en alta tensión",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la cercanía de líneas de cables eléctricos de alta tensión.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PE-4.svg"
+  },
+  {
+    "code": "PE-5",
+    "name": "Proximidad de túnel",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte al conductor sobre la cercanía de un túnel, preparándose así para circular por este.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PE-5.svg"
+  },
+  {
+    "code": "PE-6",
+    "name": "Ribera sin protección",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la existencia de cursos de agua a los costados que no cuentan con una barrera protectora que los separe de la vía de circulación.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PE-6.svg"
+  },
+  {
+    "code": "PE-7",
+    "name": "Aeropuerto o aeródromo",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Cercanía a un aeropuerto o aeródromo.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PE-7.svg"
+  },
+  {
+    "code": "PE-8",
+    "name": "Viento lateral",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte que, en días de viento, este golpea a los autos que circulan por dicha vía por el lado, generando desestabilidad y condiciones complicadas de manejo.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PE-8.svg"
+  },
+  {
+    "code": "PE-9",
+    "name": "Desnivel severo",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre un tramo de la vía que está fuertemente desnivelada con respecto a las otras pistas, calzada o berma.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PE-9.svg"
+  },
+  {
+    "code": "PE-10",
+    "name": "Peligro",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre peligros en la vía a los alrededores, sin indicar de qué situación concreta se trata, llamando a los conductores a poner atención y circular con prudencia. El dibujo que incluye, indica de qué peligro podría tratarse.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PE-10.svg"
+  },
+  {
+    "code": "PT-1",
+    "name": "Trabajos en la vía",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre la realización de algún tipo de trabajos en la vía, ya sea en la misma calzada o en sus alrededores, llamando a la precaución.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PT-1.svg"
+  },
+  {
+    "code": "PT-2",
+    "name": "Fin trabajos en la vía",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Avisa sobre el fin de la zona de trabajos y normalización de la vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PT-2.svg"
+  },
+  {
+    "code": "PT-3",
+    "name": "Banderero",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "En zona de trabajos en la vía, advierte que el tráfico es regulado por un banderero que indicará qué vehículos pueden pasar según su sentido de circulación, por lo que es necesario estar atentos a sus señales.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PT-3.svg"
+  },
+  {
+    "code": "PT-4",
+    "name": "Tránsito de maquinaria",
+    "category": "Señales de Advertencia de Peligro",
+    "description": "Advierte sobre el tránsito de maquinaria, llamando a la precaución al circular.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/PT-4.svg"
+  },
+  {
+    "code": "IP-1",
+    "name": "Ruta alternativa",
+    "category": "Señales Informativas",
+    "description": "Informa de un desvío que se puede utilizar para llegar a otra calle ubicada en una intersección cercana, cuando no está permitido el viraje a ella.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/IP-1.svg"
+  },
+  {
+    "code": "ID-1a",
+    "name": "Salida inmediata",
+    "category": "Señales Informativas",
+    "description": "Mediante una flecha, indica dónde está la bifurcación para tomar una salida determinada.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/ID-1a.svg"
+  },
+  {
+    "code": "ID-1b",
+    "name": "Salida inmediata (verde)",
+    "category": "Señales Informativas",
+    "description": "Mediante una flecha, indica dónde está la bifurcación para tomar una salida determinada. La única diferencia con la azul es el color.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/ID-1b.svg"
+  },
+  {
+    "code": "IAA-1",
+    "name": "Inicio de autopista / autovía",
+    "category": "Señales Informativas",
+    "description": "Informa sobre el inicio de una autopista, carretera o autovía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/IAA-1.svg"
+  },
+  {
+    "code": "IAA-2",
+    "name": "Fin de autopista / autovía",
+    "category": "Señales Informativas",
+    "description": "Informa sobre el final de una autopista, carretera o autovía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/IAA-2.svg"
+  },
+  {
+    "code": "IAA-3",
+    "name": "Indicación de salida lateral derecha",
+    "category": "Señales Informativas",
+    "description": "Informa que se está ante una salida por el lado derecho de la vía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/IAA-3.svg"
+  },
+  {
+    "code": "IAA-4",
+    "name": "Salida antes de ingresar a autopista",
+    "category": "Señales Informativas",
+    "description": "Informa sobre una salida que permite salirse de la vía antes de que comience la autopista, evitando así entrar en ella.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/IAA-4.svg"
+  },
+  {
+    "code": "IAA-5",
+    "name": "Retorno en autopista / autovía",
+    "category": "Señales Informativas",
+    "description": "Marca una salida para realizar una maniobra de retorno en una autopista o autovía.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/IAA-5.svg"
+  },
+  {
+    "code": "IAA-6",
+    "name": "Preseñalización de lugar habilitado para estacionar",
+    "category": "Señales Informativas",
+    "description": "Informa sobre la cercanía de espacios para estacionamiento, indicando a qué distancia se está de ellos.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/IAA-6.svg"
+  },
+  {
+    "code": "IAA-7",
+    "name": "Teléfono de emergencia",
+    "category": "Señales Informativas",
+    "description": "Indica la presencia de un teléfono público de emergencia para solicitar ayuda en carreteras o autopistas, también puede indicar la proximidad de estos incluyendo a cuántos metros está.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/IAA-7.svg"
+  },
+  {
+    "code": "NS7",
+    "name": "Zona de espera adelantada de motos I",
+    "category": "Otras Señales",
+    "description": "Indica que el área de detención de las motocicletas está por delante de la de los autos.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/NS7.zona_espera_adelantada_moto1.jpeg"
+  },
+  {
+    "code": "NS8",
+    "name": "Zona de espera adelantada de motos II",
+    "category": "Otras Señales",
+    "description": "Indica que el área de detención de las motocicletas está por delante de la de los autos y buses.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/NS8.zona_espera_adelantada_moto2.jpeg"
+  },
+  {
+    "code": "NS9",
+    "name": "Zona de espera adelantada de motos III",
+    "category": "Otras Señales",
+    "description": "Indica que el área de detención de las motocicletas está por delante de la de los autos, sin extenderse a las pistas de buses.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/NS9.zona_espera_adelantada_moto3.jpeg"
+  },
+  {
+    "code": "NS10",
+    "name": "Zona 30 o fin zona 30",
+    "category": "Otras Señales",
+    "description": "Inicio o fin de zona donde la velocidad máxima es de 30 kilómetros por hora.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/NS10b.fin_zona_30.jpeg"
+  },
+  {
+    "code": "NS12",
+    "name": "Zona espera especial ciclos I",
+    "category": "Otras Señales",
+    "description": "Informa sobre una zona de detención especial para bicicletas por delante de los autos, permitiendo así que puedan partir antes que los vehículos motorizados.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/NS12a.zona_espera1.jpeg"
+  },
+  {
+    "code": "NS13",
+    "name": "Zona espera especial ciclos II",
+    "category": "Otras Señales",
+    "description": "Informa de áreas especiales de espera para bicicletas que deseen realizar maniobras de viraje ante una intersección.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/NS13a.zona_espera2.jpeg"
+  },
+  {
+    "code": "NS14",
+    "name": "Ciclocalle",
+    "category": "Otras Señales",
+    "description": "Informa sobre la existencia de una ciclocalle, vía compartida entre vehículos y bicicletas y cuya velocidad máxima es de 30 kilómetros por hora.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/NS14.zona_compartida_ciclistas.jpeg"
+  },
+  {
+    "code": "NS15",
+    "name": "Zona compartida peatones",
+    "category": "Otras Señales",
+    "description": "Informa de la existencia de una zona de circulación compartida entre bicicletas y peatones, indicando que ambos deben estar atentos a la presencia del otro para evitar accidentes.",
+    "image_url": "https://practicatest.cl/static/img/cl/temario/senales/NS15.zona_compartida_peatones.jpeg"
+  }
+]
