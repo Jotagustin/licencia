@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Intersección no regulada con Vehículo A rojo, Vehículo B azul y Vehículo C blanco">
+  <rect width="560" height="360" rx="16" fill="#dcfce7"/>
+  <!-- Road arms -->
+  <rect x="195" y="0" width="170" height="360" fill="#475569"/>
+  <rect x="0" y="105" width="560" height="150" fill="#475569"/>
+  <!-- Road edges -->
+  <line x1="195" y1="0" x2="195" y2="105" stroke="#facc15" stroke-width="4"/>
+  <line x1="365" y1="0" x2="365" y2="105" stroke="#facc15" stroke-width="4"/>
+  <line x1="195" y1="255" x2="195" y2="360" stroke="#facc15" stroke-width="4"/>
+  <line x1="365" y1="255" x2="365" y2="360" stroke="#facc15" stroke-width="4"/>
+  <line x1="0" y1="105" x2="195" y2="105" stroke="#facc15" stroke-width="4"/>
+  <line x1="365" y1="105" x2="560" y2="105" stroke="#facc15" stroke-width="4"/>
+  <line x1="0" y1="255" x2="195" y2="255" stroke="#facc15" stroke-width="4"/>
+  <line x1="365" y1="255" x2="560" y2="255" stroke="#facc15" stroke-width="4"/>
+  <!-- Dashed centerlines -->
+  <line x1="280" y1="0" x2="280" y2="95" stroke="#ffffff" stroke-width="3" stroke-dasharray="10 10"/>
+  <line x1="280" y1="265" x2="280" y2="360" stroke="#ffffff" stroke-width="3" stroke-dasharray="10 10"/>
+  <line x1="0" y1="180" x2="185" y2="180" stroke="#ffffff" stroke-width="3" stroke-dasharray="10 10"/>
+  <line x1="375" y1="180" x2="560" y2="180" stroke="#ffffff" stroke-width="3" stroke-dasharray="10 10"/>
+
+  <!-- Vehículo A (rojo) approaching from bottom going UP -->
+  <g transform="translate(294, 266)">
+    <rect x="0" y="0" width="52" height="80" rx="11" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+    <rect x="7" y="14" width="38" height="18" rx="4" fill="#fecaca"/>
+    <text x="26" y="56" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800">A</text>
+  </g>
+  <polygon points="320,236 311,254 329,254" fill="#fca5a5"/>
+
+  <!-- Vehículo B (azul) approaching from left going RIGHT -->
+  <g transform="translate(68, 192)">
+    <rect x="0" y="0" width="82" height="50" rx="11" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+    <rect x="52" y="7" width="18" height="36" rx="4" fill="#bfdbfe"/>
+    <text x="30" y="32" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800">B</text>
+  </g>
+  <polygon points="178,217 160,208 160,226" fill="#93c5fd"/>
+
+  <!-- Vehículo C (blanco) approaching from right going LEFT (nobody on C's right) -->
+  <g transform="translate(410, 118)">
+    <rect x="0" y="0" width="82" height="50" rx="11" fill="#ffffff" stroke="#0f172a" stroke-width="2.5"/>
+    <rect x="12" y="7" width="18" height="36" rx="4" fill="#cbd5e1"/>
+    <text x="52" y="32" text-anchor="middle" fill="#0f172a" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800">C</text>
+  </g>
+  <polygon points="382,143 400,134 400,152" fill="#ffffff"/>
+
+  <!-- Legend pill -->
+  <rect x="12" y="12" width="170" height="80" rx="10" fill="#0f172a" fill-opacity="0.82"/>
+  <text x="24" y="34" fill="#fca5a5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">A · Vehículo rojo</text>
+  <text x="24" y="55" fill="#93c5fd" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">B · Vehículo azul</text>
+  <text x="24" y="76" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">C · Vehículo blanco</text>
+</svg>

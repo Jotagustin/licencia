@@ -1,0 +1,1229 @@
+{
+  "pt_2": {
+    "options": [
+      "Detenerte por completo y esperar hasta que el cabezal especial para ciclistas pase a luz roja.",
+      "Avanzar manteniendo tu velocidad habitual, ya que la luz verde del semáforo te da preferencia.",
+      "Virar con precaución y ceder el paso a los ciclistas que estén cruzando con su semáforo verde."
+    ],
+    "correct": 2,
+    "explanation": "Al virar pierdes la preferencia respecto a quienes continúan derecho por su cruce o ciclovía con luz verde, por lo que debes ceder el paso a los ciclistas antes de completar el giro.",
+    "optionExplanations": [
+      "No corresponde esperar necesariamente a que el cabezal cambie a rojo; debes ceder el paso a los ciclistas que cruzan y luego completar el viraje con seguridad.",
+      "Al efectuar un viraje no tienes preferencia absoluta sobre los usuarios que cruzan con su propio semáforo en verde.",
+      "Correcto: al virar con luz verde debes ceder el paso a los ciclistas que cruzan reglamentariamente con su semáforo especial en verde."
+    ]
+  },
+  "pt_7": {
+    "options": [
+      "Ahorrar carga de batería y evitar el desgaste prematuro de los focos delanteros del vehículo.",
+      "Facilitar que los vehículos que circulan detrás puedan sobrepasarte con mayor visibilidad lateral.",
+      "Detectar peatones u obstáculos gracias al haz de luz de los vehículos que vienen en sentido opuesto."
+    ],
+    "correct": 2,
+    "explanation": "Bajar momentáneamente las luces altas en curvas y cambios de rasante permite distinguir siluetas u obstáculos iluminados por el contraste de las luces del vehículo contrario sin encandilar.",
+    "optionExplanations": [
+      "El cambio momentáneo a luces bajas no se realiza por ahorro eléctrico, sino por seguridad visual y cortesía vial.",
+      "Esta maniobra apunta a mejorar la visibilidad frente a vehículos que vienen de frente, no a facilitar adelantamientos por detrás.",
+      "Correcto: cambiar brevemente a luces bajas permite descubrir peatones u obstáculos en la silueta iluminada por el vehículo que viene en sentido contrario."
+    ]
+  },
+  "pt_9": {
+    "options": [
+      "Reduce la distancia de frenado cuando se circula en pendiente descendente.",
+      "Disminuye notablemente la visibilidad durante la caída o acumulación de nieve.",
+      "Mejora la estabilidad direccional del vehículo al compactarse sobre la calzada."
+    ],
+    "correct": 1,
+    "explanation": "Además de disminuir drásticamente la adherencia de los neumáticos, la nieve reduce el campo visual y oculta la demarcación y los bordes de la calzada.",
+    "optionExplanations": [
+      "Ocurre exactamente lo contrario: la nieve y el hielo aumentan de forma severa la distancia necesaria para detener el vehículo.",
+      "Correcto: la nieve dificulta seriamente la visibilidad al caer, empañar cristales o cubrir señales y líneas de la vía.",
+      "La nieve compactada hace que el vehículo pierda adherencia y estabilidad con facilidad."
+    ]
+  },
+  "pt_10": {
+    "options": [
+      "Una infracción gravísima sancionada solo con multa y suspensión de licencia.",
+      "Una infracción grave que se resuelve ante el Juzgado de Policía Local.",
+      "Un delito sancionado con penas de cárcel e inhabilidad para conducir."
+    ],
+    "correct": 2,
+    "explanation": "Según la Ley Emilia, huir del lugar de un siniestro con lesionados o fallecidos sin prestar ayuda ni dar aviso a la autoridad constituye un delito.",
+    "optionExplanations": [
+      "No es una simple falta administrativa gravísima; la ley lo tipifica como delito penal.",
+      "Los siniestros con fuga y lesionados salen de la competencia de una falta grave y pasan a ser delito.",
+      "Correcto: darse a la fuga sin dar aviso a la autoridad habiendo lesionados constituye un delito."
+    ]
+  },
+  "pt_13": {
+    "options": [
+      "Mantener el motor en marcha, encender las luces de emergencia y usar la bocina para advertir a los demás conductores.",
+      "Encender las luces de emergencia, detener el motor y esperar dentro con el cinturón puesto si no es seguro salir.",
+      "Activar las luces intermitentes y bajar de inmediato por el centro de la pista para pedir ayuda a otros autos."
+    ],
+    "correct": 1,
+    "explanation": "Si el vehículo queda inmovilizado en un túnel, debes activar las luces de emergencia, apagar el motor y seguir las instrucciones del personal del túnel sin exponerte al tráfico ni a los gases.",
+    "optionExplanations": [
+      "Mantener el motor encendido dentro de un túnel acumula gases tóxicos y tocar la bocina en un espacio cerrado genera confusión.",
+      "Correcto: debes encender las luces de emergencia, apagar el motor y permanecer resguardado con cinturón siguiendo al personal del túnel si no puedes mover el auto.",
+      "Bajar y caminar por la pista de un túnel con tráfico en marcha conlleva un riesgo extremo de atropello."
+    ]
+  },
+  "pt_14": {
+    "options": [
+      "Una presunción de responsabilidad del conductor, aunque no implica culpabilidad definitiva automática.",
+      "Una causal inmediata de cancelación perpetua de la licencia de conducir antes de cualquier investigación.",
+      "Una falta administrativa menor sin incidencia alguna en la determinación de responsabilidad del siniestro."
+    ],
+    "correct": 0,
+    "explanation": "El artículo 167 N.º 2 de la Ley de Tránsito establece una presunción de responsabilidad por no estar atento a las condiciones del tránsito, la cual admite prueba en contrario.",
+    "optionExplanations": [
+      "Correcto: constituye una presunción legal de responsabilidad del conductor, sujeta a los antecedentes del proceso, y no una condena automática definitiva.",
+      "No acarrea cancelación perpetua automática; funciona como presunción de responsabilidad en la investigación del hecho.",
+      "Sí tiene peso legal relevante: la ley la considera presunción de responsabilidad del conductor involucrado."
+    ]
+  },
+  "pt_15": {
+    "options": [
+      "Corresponde al mes de septiembre.",
+      "Corresponde al mes de noviembre.",
+      "Corresponde al mes de agosto."
+    ],
+    "correct": 0,
+    "explanation": "En el calendario oficial de revisión técnica según el último dígito de la patente, el dígito 6 corresponde a septiembre (1: abril, 2: mayo, 3: junio, 4: julio, 5: agosto, 6: septiembre, 7: octubre, 8: noviembre, 9: enero, 0: febrero).",
+    "optionExplanations": [
+      "Correcto: a las patentes terminadas en 6 les corresponde realizar su revisión técnica en septiembre.",
+      "Noviembre corresponde a las placas patentes cuyo último dígito es el 8.",
+      "Agosto corresponde a las placas patentes cuyo último dígito es el 5."
+    ]
+  },
+  "pt_16": {
+    "options": [
+      "Verificar que todas las personas dentro del vehículo lleven abrochado su cinturón.",
+      "Exigir su uso únicamente al conductor y a quien ocupe el asiento delantero derecho.",
+      "Permitir que dos niños compartan un mismo cinturón si viajan en el asiento trasero."
+    ],
+    "correct": 0,
+    "explanation": "El uso del cinturón de seguridad es obligatorio en todos los asientos del vehículo y cada ocupante debe contar con su propio sistema de retención.",
+    "optionExplanations": [
+      "Correcto: todas las personas que viajan en el vehículo deben llevar su propio cinturón de seguridad bien ajustado.",
+      "El cinturón es obligatorio tanto en los asientos delanteros como en los traseros.",
+      "Nunca deben compartir un cinturón dos personas, ya que en un impacto ambas colisionan entre sí y la banda lesiona gravemente."
+    ]
+  },
+  "pt_21": {
+    "options": [
+      "Disminuir la velocidad sin detenerse.",
+      "Detener el vehículo por completo.",
+      "Tocar la bocina y cruzar rápido."
+    ],
+    "correct": 1,
+    "explanation": "La señal PARE exige detener completamente la marcha antes de la línea de detención o del cruce y ceder el paso a todo vehículo o peatón que circule por la vía transversal.",
+    "optionExplanations": [
+      "Disminuir la velocidad sin detenerse corresponde a una señal CEDA EL PASO (cuando no vienen vehículos), nunca a un signo PARE.",
+      "Correcto: frente a un signo PARE es obligatorio detener totalmente las ruedas antes de reanudar la marcha.",
+      "Tocar la bocina no reemplaza la detención total obligatoria ni otorga preferencia alguna en el cruce."
+    ]
+  },
+  "pt_22": {
+    "options": [
+      "Con todo el vehículo sobre la berma derecha o lo más pegado posible a la cuneta.",
+      "Sobre la pista derecha de circulación, ocupando el ancho mínimo para ser visible.",
+      "Sobre la berma del costado izquierdo para quedar frente al tránsito en contra."
+    ],
+    "correct": 0,
+    "explanation": "En vías rurales, ante una emergencia se debe retirar completamente el vehículo de la calzada hacia la berma derecha o lo más cerca posible del borde derecho.",
+    "optionExplanations": [
+      "Correcto: debe situarse fuera de la calzada, sobre la berma derecha o lo más próximo posible a la cuneta.",
+      "Dejar el vehículo sobre la pista de circulación en carretera representa un riesgo severo de colisión por alcance.",
+      "Estacionar en la berma izquierda obliga a cruzar la calzada y deja el vehículo en sentido contrario al flujo."
+    ]
+  },
+  "pt_23": {
+    "options": [
+      "Una zona de espera adelantada exclusiva para vehículos de emergencia.",
+      "Una zona de detención especial reservada para ciclos y motocicletas.",
+      "Una zona de carga y descarga habilitada fuera de horario punta."
+    ],
+    "correct": 1,
+    "explanation": "Muchos cruces semaforizados cuentan con una línea de detención adelantada entre la detención de autos y el paso peatonal destinada a bicicletas y motocicletas para hacerlas más visibles.",
+    "optionExplanations": [
+      "No está reservada para ambulancias ni carros bomba; es una caja de espera para vehículos de dos ruedas.",
+      "Correcto: corresponde a la zona de espera especial para ciclos y motocicletas, delante de los automóviles.",
+      "Está estrictamente prohibido estacionar o hacer carga y descarga en las proximidades de un cruce."
+    ]
+  },
+  "pt_25": {
+    "options": [
+      "Mejoran los reflejos permanentemente si se mezclan con agua fría.",
+      "Ayudan solo al comienzo, pero luego generan un efecto rebote de fatiga.",
+      "Eliminan por completo el cansancio si se toman en grandes cantidades."
+    ],
+    "correct": 1,
+    "explanation": "Las bebidas estimulantes pueden mantener la alerta temporalmente, pero cuando pasa su efecto producen un bajón brusco (efecto rebote) que agrava la somnolencia.",
+    "optionExplanations": [
+      "No eliminan el cansancio de forma permanente ni reemplazan el descanso real.",
+      "Correcto: ofrecen un alivio breve a corto plazo, pero después provocan un efecto rebote que aumenta el sueño.",
+      "Consumir grandes cantidades puede generar nerviosismo, taquicardia y un descenso posterior aún más peligroso."
+    ]
+  },
+  "pt_26": {
+    "options": [
+      "Acelerar progresivamente antes de ingresar y frenar suavemente en la mitad del giro.",
+      "Reducir la velocidad antes de entrar a la curva y mantenerla estable al recorrerla.",
+      "Pisar el embrague durante toda la curva para evitar que el motor retenga las ruedas."
+    ],
+    "correct": 1,
+    "explanation": "Para trazar una curva sin perder adherencia, se debe frenar antes de entrar a ella y luego mantener una velocidad moderada y constante mientras se gira.",
+    "optionExplanations": [
+      "Frenar bruscamente en medio de la curva sobrecarga las ruedas delanteras y favorece el derrape.",
+      "Correcto: se debe ajustar la velocidad frenando con suavidad antes de entrar y mantenerla constante durante la curva.",
+      "Desembragar en la curva quita retención del motor y reduce el control de tracción."
+    ]
+  },
+  "pt_27": {
+    "options": [
+      "Sectores alrededor del vehículo que quedan ocultos aunque los espejos estén bien ajustados.",
+      "Franjas laterales de la calzada donde los focos delanteros no alcanzan a proyectar luz.",
+      "Zonas traseras del automóvil que siempre se cubren por completo usando el espejo interior."
+    ],
+    "correct": 0,
+    "explanation": "Incluso con los espejos correctamente regulados existen áreas laterales traseras no visibles en ellos, por lo que antes de cambiar de pista conviene girar brevemente la cabeza.",
+    "optionExplanations": [
+      "Correcto: los puntos ciegos son ángulos alrededor del auto que los espejos retrovisores no alcanzan a mostrar.",
+      "No se refiere al alcance lumínico de los focos, sino a los ángulos visuales que no cubren los retrovisores.",
+      "Ningún espejo interior cubre por sí solo todos los ángulos muertos laterales."
+    ]
+  },
+  "pt_28": {
+    "options": [
+      "A menos de 200 metros de una curva o cima de pendiente.",
+      "Sobre un paso peatonal o dentro de una intersección semaforizada.",
+      "En vías de doble tránsito donde ninguna señal o línea lo prohíba."
+    ],
+    "correct": 2,
+    "explanation": "El viraje en U solo está permitido cuando no existe prohibición expresa ni condiciones de riesgo (como intersecciones, pasos peatonales, líneas continuas o visibilidad menor a 200 metros).",
+    "optionExplanations": [
+      "Está prohibido virar en U a menos de 200 metros de curvas, cimas, gradientes o túneles.",
+      "Está prohibido virar en U en intersecciones y sobre pasos de peatones.",
+      "Correcto: puede efectuarse en vías de doble sentido siempre que no exista prohibición ni obstáculo visual."
+    ]
+  },
+  "pt_30": {
+    "options": [
+      "Los daños materiales causados a la carrocería de terceros y a la propiedad privada.",
+      "La muerte y las lesiones corporales que sufran las personas afectadas en un siniestro.",
+      "Las multas municipales y los costos judiciales derivados de una infracción grave."
+    ],
+    "correct": 1,
+    "explanation": "El Seguro Obligatorio de Accidentes Personales (SOAP) cubre exclusivamente muerte, incapacidad permanente y gastos médicos de las personas involucradas, no daños materiales.",
+    "optionExplanations": [
+      "El SOAP no cubre daños materiales a vehículos ni a bienes; para eso existen los seguros voluntarios de daños a terceros.",
+      "Correcto: el SOAP cubre muerte y lesiones corporales de conductor, pasajeros y terceros afectados en un siniestro.",
+      "Las multas de tránsito y sanciones económicas no son cubiertas por ningún seguro obligatorio."
+    ]
+  },
+  "pt_31": {
+    "options": [
+      "Autorizan de forma automática el estacionamiento paralelo junto a la solera.",
+      "Indican maniobras permitidas, obligaciones de circulación o advertencias en la vía.",
+      "Reemplazan exclusivamente las señales de velocidad máxima en autopistas urbanas."
+    ],
+    "correct": 1,
+    "explanation": "Las demarcaciones de símbolos y leyendas pintadas en la calzada (flechas, PARE, CEDA EL PASO, LENTO, etc.) orientan, advierten peligros o regulan maniobras obligatorias.",
+    "optionExplanations": [
+      "No autorizan estacionamiento; las flechas y leyendas regulan el tránsito en movimiento.",
+      "Correcto: señalan maniobras permitidas, acciones obligatorias y advertencias de riesgo sobre la calzada.",
+      "No se limitan a indicar velocidad máxima; cumplen funciones reglamentarias y de advertencia."
+    ]
+  },
+  "pt_35": {
+    "options": [
+      "La imprudencia al volante, el consumo de alcohol y desobedecer las señales.",
+      "El uso exclusivo de vías pavimentadas sin iluminación artificial nocturna.",
+      "Circular únicamente por autopistas concesionadas durante los fines de semana."
+    ],
+    "correct": 0,
+    "explanation": "La gran mayoría de los siniestros se origina en factores humanos evitables: imprudencia, exceso de velocidad, alcohol y no respetar la señalización.",
+    "optionExplanations": [
+      "Correcto: la imprudencia, el alcohol y la desobediencia a las señales son factores de máxima incidencia en los siniestros.",
+      "Las vías pavimentadas no son la causa principal; el error e imprudencia humana explican cerca del 90% de los siniestros.",
+      "Las autopistas concesionadas suelen tener menor tasa relativa que caminos rurales sin separación, y el factor clave es la conducta humana."
+    ]
+  },
+  "pt_36": {
+    "options": [
+      "Encender de inmediato las luces altas para mejorar la visibilidad frente al tránsito contrario.",
+      "Tocar la bocina de forma intermitente al acercarse a cada curva para advertir su presencia.",
+      "Reducir la velocidad debido al mayor riesgo existente y mantener el control del vehículo."
+    ],
+    "correct": 2,
+    "explanation": "En zonas densamente pobladas, con baja visibilidad, mal tiempo o al acercarse a curvas y cimas, es obligatorio disminuir la velocidad para poder reaccionar a tiempo.",
+    "optionExplanations": [
+      "En neblina o frente a tráfico contrario, las luces altas encandilan y empeoran la visibilidad.",
+      "La bocina solo se usa para prevenir un siniestro inminente, no como sustituto de reducir la velocidad.",
+      "Correcto: estas situaciones exigen disminuir obligatoriamente la velocidad ante el mayor riesgo."
+    ]
+  },
+  "pt_38": {
+    "question": "El líquido de frenos de un vehículo, ¿debe ser cambiado periódicamente?",
+    "options": [
+      "Sí, lo debe reemplazar un mecánico según los plazos indicados por el fabricante.",
+      "Sí, debe reemplazarse obligatoriamente cada tres meses sin importar el kilometraje.",
+      "No, es un fluido cerrado de por vida que solo requiere rellenarse si baja el nivel."
+    ],
+    "correct": 0,
+    "explanation": "El líquido de frenos absorbe humedad con el tiempo y pierde eficacia, por lo que debe cambiarse según el calendario recomendado por el fabricante.",
+    "optionExplanations": [
+      "Correcto: debe cambiarse en los intervalos establecidos por el fabricante (habitualmente cada 1 a 2 años o según kilometraje).",
+      "No requiere cambiarse cada tres meses; se sigue el plan de mantenimiento del fabricante.",
+      "El líquido de frenos se degrada con la humedad y jamás debe simplemente rellenarse indefinidamente sin revisión."
+    ]
+  },
+  "pt_42": {
+    "options": [
+      "Colocar la palanca en neutro y dosificar la velocidad solo con el pedal de freno.",
+      "Enganchar una marcha baja para aprovechar la retención del motor al descender.",
+      "Mantener pisado el pedal del embrague mientras aplica el freno de estacionamiento."
+    ],
+    "correct": 1,
+    "explanation": "Bajar una pendiente pronunciada en una marcha baja utiliza el freno motor para controlar la velocidad sin recalentar ni fatigar los frenos de servicio.",
+    "optionExplanations": [
+      "Bajar en neutro sobrecarga los frenos de servicio y puede provocar que pierdan eficacia por sobrecalentamiento.",
+      "Correcto: seleccionar una marcha baja aprovecha el freno motor y evita exigir en exceso los frenos.",
+      "Pisar el embrague desconecta el motor de las ruedas y usar el freno de mano en marcha puede bloquear el eje trasero."
+    ]
+  },
+  "pt_44": {
+    "question": "Si usted desea obtener su licencia de conducir por primera vez, ¿a qué municipalidad debe dirigirse?",
+    "options": [
+      "A la Dirección de Tránsito de la municipalidad correspondiente a su domicilio.",
+      "A cualquier municipalidad del país, sin importar en qué comuna resida.",
+      "Exclusivamente a la municipalidad de la comuna donde nació."
+    ],
+    "correct": 0,
+    "explanation": "La Ley de Tránsito establece que la licencia debe solicitarse en la municipalidad correspondiente al domicilio que el postulante acredite.",
+    "optionExplanations": [
+      "Correcto: debe tramitarse en la municipalidad de su comuna de residencia acreditada.",
+      "No puede obtenerse libremente en cualquier comuna sin acreditar residencia en ella.",
+      "El lugar de nacimiento no determina la comuna de trámite, sino el domicilio actual."
+    ]
+  },
+  "pt_45": {
+    "options": [
+      "Sentarlo en la calzada y quitarle el casco con cuidado para que respire mejor.",
+      "Trasladarlo de inmediato en un vehículo particular hasta el centro asistencial.",
+      "No quitarle el casco ni moverlo, y llamar de inmediato a los servicios de urgencia."
+    ],
+    "correct": 2,
+    "explanation": "Retirar el casco o mover a un motociclista lesionado puede agravar gravemente una lesión cervical o medular; solo debe hacerse ante peligro vital inmediato (como incendio).",
+    "optionExplanations": [
+      "Quitarle el casco puede provocar lesiones irreversibles en la columna cervical.",
+      "Mover a una persona accidentada sin inmovilización médica puede agravar fracturas o daños medulares.",
+      "Correcto: no se le debe quitar el casco ni movilizarlo, y se debe solicitar atención de emergencia de inmediato."
+    ]
+  },
+  "pt_46": {
+    "options": [
+      "El pavimento siempre presenta manchas de combustible en las salidas.",
+      "La velocidad máxima permitida aumenta automáticamente al doble.",
+      "El contraste brusco de luz puede producir ceguera temporal al salir."
+    ],
+    "correct": 2,
+    "explanation": "Al salir de la penumbra de un túnel hacia la luz intensa del día, la pupila tarda unos segundos en adaptarse, generando un deslumbramiento momentáneo.",
+    "optionExplanations": [
+      "Aunque puede haber suciedad, el riesgo específico y característico de la salida del túnel es el cambio lumínico.",
+      "La velocidad no se duplica al salir; se rige por la señalización vigente de la vía.",
+      "Correcto: el cambio abrupto entre oscuridad y luz exterior puede encandilar momentáneamente al conductor."
+    ]
+  },
+  "pt_47": {
+    "options": [
+      "Tocar brevemente la bocina antes de accionar la manilla exterior o interior.",
+      "Verificar por los espejos y girando la cabeza que no se aproxime ningún ciclista.",
+      "Abrir la puerta de golpe solo lo necesario para bajar rápidamente a la calzada."
+    ],
+    "correct": 1,
+    "explanation": "Abrir una puerta sin mirar provoca accidentes graves conocidos como 'dooring'; siempre debe revisarse el espejo y girar la cabeza hacia atrás antes de abrirla.",
+    "optionExplanations": [
+      "Tocar la bocina no garantiza que el ciclista alcance a frenar si abres la puerta en su trayectoria.",
+      "Correcto: debes mirar el espejo y girar la cabeza para confirmar que no venga ningún ciclista antes de abrir.",
+      "Abrir repentinamente la puerta puede golpear o hacer caer al ciclista hacia el flujo vehicular."
+    ]
+  },
+  "pt_48": {
+    "question": "¿Qué indica esta señal informativa de autopista?",
+    "options": [
+      "Ingreso a autopista.",
+      "Retorno en autopista.",
+      "Salida de autopista."
+    ],
+    "correct": 1,
+    "explanation": "La flecha curva en forma de U sobre fondo azul identifica la proximidad o acceso a un retorno habilitado en autopista.",
+    "optionExplanations": [
+      "El ingreso a autopista se señaliza con convergencia de pistas, no con giro en U.",
+      "Correcto: indica un retorno habilitado en la autopista.",
+      "La salida de autopista muestra una flecha diagonal desviándose hacia la derecha."
+    ]
+  },
+  "pt_54": {
+    "options": [
+      "Acelerar levemente para superar cuanto antes la fila de vehículos estacionados.",
+      "Mantener una separación lateral equivalente al menos al ancho de una puerta abierta.",
+      "Circular exactamente a menos de medio metro del costado de los vehículos estacionados."
+    ],
+    "correct": 1,
+    "explanation": "Dejar al menos el ancho de una puerta respecto a autos estacionados evita colisiones si alguien abre una puerta de improviso o sale un peatón entre los vehículos.",
+    "optionExplanations": [
+      "Acelerar reduce tu tiempo de reacción si se abre una puerta o aparece un peatón entre los autos.",
+      "Correcto: se recomienda dejar una separación lateral suficiente, al menos equivalente al ancho de una puerta.",
+      "Pasar a menos de 50 cm deja sin margen alguno ante la apertura repentina de una puerta."
+    ]
+  },
+  "pt_58": {
+    "options": [
+      "Asegurarte de contar con suficiente combustible antes de entrar.",
+      "Apagar las luces bajas si el túnel cuenta con iluminación artificial.",
+      "Bajar todas las ventanas para escuchar mejor los vehículos cercanos."
+    ],
+    "correct": 0,
+    "explanation": "Quedarse sin combustible dentro de un túnel genera una detención muy riesgosa en un espacio confinado; además, siempre se debe entrar con luces bajas encendidas y ventanas cerradas.",
+    "optionExplanations": [
+      "Correcto: verificar que tienes combustible suficiente evita detenciones peligrosas dentro del túnel.",
+      "Dentro de un túnel es obligatorio mantener las luces bajas encendidas, aunque esté iluminado.",
+      "Conviene llevar las ventanas cerradas para evitar el ingreso directo de gases de escape y ruido."
+    ]
+  },
+  "pt_59": {
+    "options": [
+      "Avanzar por las huellas a alta velocidad para evitar que las ruedas patinen en la nieve.",
+      "Seguir las huellas con precaución para no golpear los bajos con la nieve acumulada al centro.",
+      "Salir siempre de las huellas marcadas y circular por el sector de nieve virgen lateral."
+    ],
+    "correct": 1,
+    "explanation": "Las huellas de otros vehículos ofrecen mejor agarre en nieve, pero el lomo de nieve helada que queda entre ambas roderas puede dañar el cárter o partes bajas del auto.",
+    "optionExplanations": [
+      "Circular a alta velocidad sobre nieve aumenta drásticamente la distancia de frenado y el riesgo de perder control.",
+      "Correcto: conviene seguir las huellas con cuidado, vigilando la altura del montículo central de nieve.",
+      "Circular sobre nieve virgen ofrece menor tracción y aumenta la resistencia al avance."
+    ]
+  },
+  "pt_63": {
+    "options": [
+      "Estacionar sobre la vereda solo si deja al menos un metro libre para los peatones.",
+      "Estacionar exclusivamente en zonas habilitadas sin obstaculizar peatones ni vehículos.",
+      "Estacionar en la acera únicamente cuando no exista señal expresa de prohibición."
+    ],
+    "correct": 1,
+    "explanation": "Está prohibido estacionar sobre aceras o veredas salvo autorización expresa de la autoridad, y siempre debe dejarse libre el paso de peatones y el flujo vehicular.",
+    "optionExplanations": [
+      "Por regla general está prohibido estacionar sobre la vereda aunque quede espacio lateral.",
+      "Correcto: solo se puede estacionar en lugares permitidos sin obstruir a peatones ni a otros vehículos.",
+      "La prohibición de estacionar en veredas rige por ley aunque no haya un letrero específico en cada cuadra."
+    ]
+  },
+  "pt_64": {
+    "options": [
+      "Orientar a quienes conducen sobre rutas, localidades, distancias y servicios cercanos.",
+      "Regular de forma temporal los desvíos y restricciones en zonas de trabajos en la vía.",
+      "Alertar con anticipación sobre peligros del camino, como curvas, pendientes o cruces."
+    ],
+    "correct": 2,
+    "explanation": "Las señales de advertencia de peligro (generalmente rombos amarillos) avisan anticipadamente sobre riesgos en la vía para que el conductor reduzca velocidad y extreme precauciones.",
+    "optionExplanations": [
+      "Orientar sobre rutas, destinos y servicios corresponde a las señales informativas.",
+      "Regular zonas de obras corresponde a las señales transitorias (generalmente de color naranja).",
+      "Correcto: las señales de advertencia de peligro previenen sobre riesgos en la ruta para actuar con precaución."
+    ]
+  },
+  "pt_66": {
+    "options": [
+      "Una velocidad fija de 20 km/h en toda vía urbana y rural.",
+      "Aquella que no entorpezca el desplazamiento normal del tránsito.",
+      "Al menos 40 km/h en calles locales y 60 km/h en avenidas."
+    ],
+    "correct": 1,
+    "explanation": "La Ley de Tránsito no fija un mínimo numérico universal, sino que prohíbe circular a una velocidad tan baja que impida sin causa justificada el desplazamiento normal de los demás.",
+    "optionExplanations": [
+      "No existe una velocidad mínima numérica fija de 20 km/h aplicable a todas las vías.",
+      "Correcto: la velocidad mínima permitida es aquella que no impida el flujo normal y seguro de la circulación.",
+      "Tampoco hay mínimos numéricos universales de 40 o 60 km/h; incluso en zonas escolares el máximo es 30 km/h."
+    ]
+  },
+  "pt_67": {
+    "options": [
+      "Porque es un gas inodoro y altamente tóxico.",
+      "Porque forma una nube densa de color oscuro.",
+      "Porque irrita los ojos aunque no es tóxico."
+    ],
+    "correct": 0,
+    "explanation": "El monóxido de carbono (CO) carece de olor y color, por lo que puede intoxicar silenciosamente en espacios cerrados provocando somnolencia, pérdida de conciencia e incluso la muerte.",
+    "optionExplanations": [
+      "Correcto: el monóxido de carbono es inodoro, incoloro y sumamente venenoso.",
+      "Es un gas invisible sin color ni olor, lo que precisamente dificulta detectarlo a tiempo.",
+      "Es un gas letal que impide el transporte de oxígeno en la sangre; no es inofensivo."
+    ]
+  },
+  "pt_70": {
+    "question": "¿Qué categorías de costos genera un siniestro de tránsito para la sociedad?",
+    "options": [
+      "Únicamente daños materiales en los vehículos y en la infraestructura.",
+      "Costos materiales, de salud, administrativos y costos humanos.",
+      "Solo costos hospitalarios de urgencia y gastos de reparación vial."
+    ],
+    "correct": 1,
+    "explanation": "Los siniestros de tránsito impactan en cuatro grandes ámbitos: daños materiales, gastos de salud, costos administrativos (policía, bomberos, justicia, seguros) y costos humanos.",
+    "optionExplanations": [
+      "Además de los daños materiales, existen costos humanos, médicos y administrativos muy elevados.",
+      "Correcto: un siniestro genera costos materiales, de salud, administrativos y humanos.",
+      "Esta alternativa deja fuera los costos humanos y los costos administrativos."
+    ]
+  },
+  "pt_72": {
+    "options": [
+      "Acelerar a fondo hasta el final de la pista y detenerse allí antes de ingresar.",
+      "Acelerar gradualmente para igualar el flujo e incorporarse cediendo el paso.",
+      "Circular siempre a baja velocidad hasta el término de la pista y esperar parado."
+    ],
+    "correct": 1,
+    "explanation": "La pista de aceleración sirve para alcanzar una velocidad compatible con la de la autopista e ingresar de forma fluida sin detenerse innecesariamente, respetando la preferencia de quienes ya circulan por ella.",
+    "optionExplanations": [
+      "Detenerse al final de la pista de aceleración impide igualar la velocidad del tránsito y vuelve muy peligrosa la incorporación.",
+      "Correcto: debes acelerar prudentemente para adaptarte al flujo e incorporarte sin parar si existe espacio, cediendo la preferencia.",
+      "Circular demasiado lento obliga a frenar a quienes vienen por la pista derecha de la autopista."
+    ]
+  },
+  "pt_73": {
+    "doublePoints": true
+  },
+  "pt_77": {
+    "question": "¿Qué condiciones de salud presentan un mayor riesgo asociado a siniestros de tránsito?",
+    "options": [
+      "Trastornos neurológicos, adicción a medicamentos y diabetes.",
+      "Alergias estacionales leves y afecciones dermatológicas.",
+      "Trastornos digestivos crónicos y miopía corregida con lentes."
+    ],
+    "correct": 0,
+    "explanation": "Los trastornos neurológicos (como epilepsia no controlada), la dependencia de fármacos psicotrópicos y la diabetes (por riesgo de hipoglicemia) elevan considerablemente el riesgo vial.",
+    "optionExplanations": [
+      "Correcto: los trastornos neurológicos, la adicción a medicamentos y la diabetes figuran entre las patologías de mayor riesgo.",
+      "Las alergias leves (salvo ciertos antihistamínicos que dan sueño) y problemas cutáneos no encabezan el riesgo.",
+      "Una miopía debidamente corregida con lentes cumple los requisitos visuales para conducir."
+    ]
+  },
+  "pt_78": {
+    "options": [
+      "No produce ninguna alteración visual sobre la estimación de distancias.",
+      "Las líneas que convergen hacen que el punto parezca más lejano de lo real.",
+      "Las líneas paralelas hacen que los obstáculos se perciban mucho más cerca."
+    ],
+    "correct": 1,
+    "explanation": "Por el efecto óptico de perspectiva lineal, las líneas convergentes de la vía hacia el horizonte crean la ilusión de que un punto u objeto está más distante de lo que realmente se encuentra.",
+    "optionExplanations": [
+      "La perspectiva lineal sí influye directamente en cómo el cerebro interpreta la profundidad y la distancia.",
+      "Correcto: las líneas convergentes provocan que el punto de encuentro aparente estar más lejos de la distancia real.",
+      "El efecto de perspectiva lineal tiende a sobreestimar la lejanía del punto de convergencia, no a acercarlo."
+    ]
+  },
+  "pt_80": {
+    "options": [
+      "Vía urbana gratuita de baja velocidad diseñada para compartir con peatones.",
+      "Vía de peaje con calzadas separadas por sentido, aislada de zonas pobladas.",
+      "Camino rural sin pavimentar destinado al tránsito mixto de vehículos y ganado."
+    ],
+    "correct": 1,
+    "explanation": "Las autopistas están diseñadas para largos desplazamientos a mayor velocidad, con calzadas independientes por sentido, sin cruces a nivel y separadas de áreas urbanas densas.",
+    "optionExplanations": [
+      "En una autopista está prohibida la circulación de peatones y suele tener control de acceso y peajes.",
+      "Correcto: cuenta con calzadas separadas para cada sentido, control de acceso fuera de zonas densas y habitualmente peajes.",
+      "Un camino rural de tránsito mixto con animales corresponde a un camino convencional o rural, no a una autopista."
+    ]
+  },
+  "pt_82": {
+    "options": [
+      "No, la normativa exige sobrepasar exclusivamente por la pista izquierda.",
+      "No, porque la pista derecha está reservada solo para buses y bicicletas.",
+      "Sí, está permitido sobrepasar por la derecha cuando hay tres o más pistas."
+    ],
+    "correct": 2,
+    "explanation": "En vías urbanas con tres o más pistas en un mismo sentido se permite el sobrepaso por la derecha, siempre verificando los espejos y puntos ciegos.",
+    "optionExplanations": [
+      "En vías urbanas de tres o más pistas en el mismo sentido, la ley autoriza excepcionalmente pasar por la derecha.",
+      "Salvo que exista demarcación expresa de pista solo buses o ciclovía, la pista derecha es de uso general.",
+      "Correcto: está permitido sobrepasar por la derecha en vías urbanas con tres o más pistas en el mismo sentido."
+    ]
+  },
+  "pt_85": {
+    "options": [
+      "Desde media hora antes del anochecer hasta la salida exacta del sol.",
+      "Desde media hora tras la puesta de sol hasta media hora antes de su salida.",
+      "Únicamente entre las 21:00 y las 06:00 horas en vías sin alumbrado."
+    ],
+    "correct": 1,
+    "explanation": "Las luces del vehículo deben encenderse desde media hora después de la puesta del sol hasta media hora antes de su salida, y siempre que las condiciones de visibilidad lo requieran.",
+    "optionExplanations": [
+      "El encendido obligatorio comienza media hora después de la puesta de sol y termina media hora antes del amanecer.",
+      "Correcto: rige desde media hora después de la puesta de sol hasta media hora antes de su salida, o cuando falte visibilidad.",
+      "El horario obligatorio depende de la puesta y salida del sol y de la visibilidad ambiental, no de una hora fija."
+    ]
+  },
+  "pt_86": {
+    "options": [
+      "El filtro de aire está sucio o hay exceso de combustible.",
+      "Existe una fuga de líquido refrigerante hacia el escape.",
+      "El silenciador del tubo de escape presenta una fisura."
+    ],
+    "correct": 0,
+    "explanation": "El humo negro indica una combustión incompleta (mezcla rica en combustible o falta de aire por filtro obstruido); el humo azul indica quema de aceite y el blanco abundante puede indicar vapor/refrigerante.",
+    "optionExplanations": [
+      "Correcto: el humo muy negro suele deberse a un filtro de aire sucio o a exceso de combustible en la mezcla.",
+      "Una fuga de refrigerante hacia la cámara produce humo blanco denso, no humo negro.",
+      "Una rotura en el tubo de escape genera más ruido y fugas bajo el auto, no humo negro."
+    ]
+  },
+  "pt_88": {
+    "options": [
+      "Al acercarte por detrás a otro vehículo o al cruzarte con tráfico de frente.",
+      "Solo cuando te cruces con peatones que caminen en el mismo sentido tuyo.",
+      "Únicamente al ingresar a un cruce ferroviario que no cuente con barreras."
+    ],
+    "correct": 0,
+    "explanation": "Las luces altas encandilan tanto al conductor que viene de frente como al que va delante a través de sus espejos retrovisores, por lo que deben bajarse en ambos casos (alrededor de 200 m de frente).",
+    "optionExplanations": [
+      "Correcto: debes cambiar a luces bajas al aproximarte por detrás a otro vehículo y al cruzarte con vehículos en sentido contrario.",
+      "El cambio obligatorio a luces bajas busca evitar encandilar a conductores que vienen de frente o van delante.",
+      "Aunque en cruces ferroviarios debes extremar la atención, el cambio de luces altas a bajas responde a no deslumbrar a otros vehículos."
+    ]
+  },
+  "pt_89": {
+    "options": [
+      "Activar de inmediato el intermitente para exigir espacio en la pista contigua.",
+      "Comprobar por espejos y punto ciego que la maniobra sea segura antes de señalizar.",
+      "Acelerar bruscamente para superar al auto contiguo antes de encender la luz."
+    ],
+    "correct": 1,
+    "explanation": "Antes de señalizar y ejecutar un cambio de pista se aplica la secuencia espejo-punto ciego-señal-maniobra: primero verificas que exista espacio seguro y luego señalizas.",
+    "optionExplanations": [
+      "Señalizar no otorga derecho preferente; primero debes confirmar que la pista esté libre y sea seguro moverse.",
+      "Correcto: siempre debes verificar primero que es seguro efectuar el cambio de pista antes de señalizar y maniobrar.",
+      "Acelerar sin revisar el entorno ni señalizar genera riesgo inmediato de colisión lateral."
+    ]
+  },
+  "pt_90": {
+    "options": [
+      "Siempre que el conductor permanezca en el auto para retirarlo si llega el titular.",
+      "Nunca, pues todo estacionamiento reservado conlleva multa inmediata sin excepción.",
+      "Solo si el vehículo detenido corresponde exactamente al mismo tipo que el reservado."
+    ],
+    "correct": 0,
+    "explanation": "Salvo los espacios exclusivos para personas con discapacidad (donde nunca se puede detener o estacionar sin credencial), un reservado puede ocuparse momentáneamente si el conductor permanece dentro listo para cederlo.",
+    "optionExplanations": [
+      "Correcto: puede ocuparse temporalmente si el conductor permanece en el vehículo para retirarlo apenas llegue quien tiene la reserva.",
+      "La prohibición absoluta sin permanencia aplica a espacios para personas con discapacidad, no a los reservados comunes con conductor a bordo.",
+      "El tipo de vehículo no habilita el uso del espacio si el conductor abandona el automóvil."
+    ]
+  },
+  "pt_94": {
+    "options": [
+      "Ampliar la capacidad de todas las autopistas.",
+      "Reducir a cero los siniestros de tránsito graves.",
+      "Aumentar la recaudación por infracciones viales."
+    ],
+    "correct": 1,
+    "explanation": "Bajo el enfoque moderno de Seguridad Vial y Sistema Seguro (Visión Cero), la meta última es eliminar las muertes y lesiones graves derivadas de los siniestros de tránsito.",
+    "optionExplanations": [
+      "Ampliar autopistas es una medida de capacidad vial, no la meta principal de la Seguridad Vial.",
+      "Correcto: la meta de la Seguridad Vial es eliminar los siniestros de tránsito y sus víctimas.",
+      "Las multas son herramientas disuasorias, nunca el objetivo central de la Seguridad Vial."
+    ]
+  },
+  "pt_98": {
+    "options": [
+      "Solo un cable metálico de enganche adicional sin sistema de frenado propio.",
+      "Frenos propios y un dispositivo automático de detención si se suelta el enganche.",
+      "Únicamente luces traseras adicionales, pues bastan los frenos del auto tractor."
+    ],
+    "correct": 1,
+    "explanation": "Cuando la capacidad de carga de un remolque excede los 750 kg, la normativa exige que cuente con frenos propios independientes y un sistema de emergencia que lo frene si se desengancha.",
+    "optionExplanations": [
+      "Un remolque de más de 750 kg genera demasiada inercia para depender solo de un cable de retención sin frenos.",
+      "Correcto: requiere sistema de frenado propio y un mecanismo que lo detenga automáticamente en caso de rotura del enganche.",
+      "Sobre los 750 kg de carga, los frenos del vehículo tractor por sí solos resultan insuficientes."
+    ]
+  },
+  "pt_99": {
+    "options": [
+      "Altera el estado de ánimo y lentifica la reacción.",
+      "Agudiza los reflejos ante estímulos imprevistos.",
+      "Acelera las señales del sistema nervioso central."
+    ],
+    "correct": 0,
+    "explanation": "El alcohol es un depresor del sistema nervioso central: altera el estado de ánimo, reduce la coordinación, aumenta el tiempo de reacción y empeora el juicio.",
+    "optionExplanations": [
+      "Correcto: perturba el estado de ánimo y vuelve más lentas y torpes las reacciones del conductor.",
+      "Ocurre lo contrario: el alcohol disminuye la agudeza sensorial y alarga el tiempo de reacción.",
+      "El alcohol deprime y ralentiza la transmisión nerviosa; nunca la acelera."
+    ]
+  },
+  "pt_100": {
+    "options": [
+      "Extremar el cuidado y bajar la velocidad al acercarse.",
+      "Apagar brevemente las luces altas para evitar reflejos.",
+      "Acelerar para sobrepasarlos antes de llegar al cruce."
+    ],
+    "correct": 0,
+    "explanation": "De noche o con baja visibilidad es más difícil distinguir bicicletas sin buena iluminación o reflectantes, por lo que debes moderar la velocidad y aumentar la precaución.",
+    "optionExplanations": [
+      "Correcto: hay que tener especial cuidado, anticipar movimientos inesperados y mantener distancia lateral segura.",
+      "Nunca debes apagar las luces reglamentarias durante la conducción nocturna.",
+      "Acelerar cerca de usuarios vulnerables en baja visibilidad eleva gravemente el riesgo de atropello."
+    ]
+  },
+  "pt_104": {
+    "options": [
+      "Hacer cambio repetido de luces altas para demostrarle su molestia por la imprudencia.",
+      "Tocar la bocina de forma prolongada y acelerar para cerrarle el paso más adelante.",
+      "Mantener la calma, evitar cualquier represalia y recuperar su distancia de seguridad."
+    ],
+    "correct": 2,
+    "explanation": "En conducción preventiva nunca se debe responder a errores ajenos con agresividad; lo seguro es conservar la calma y restablecer la distancia de seguridad.",
+    "optionExplanations": [
+      "Encandilar o recriminar con las luces distrae la atención y puede escalar un conflicto vial.",
+      "Responder acelerando o cerrando el paso convierte un error ajeno en un choque probable.",
+      "Correcto: debes mantener la calma, no tomar represalias y restablecer una distancia segura."
+    ]
+  },
+  "pt_105": {
+    "options": [
+      "Apurar al conductor de adelante cuando demora en avanzar en luz verde.",
+      "Prevenir un siniestro de tránsito cuando sea estrictamente necesario.",
+      "Anunciar su llegada al estacionar frente a un domicilio o edificio."
+    ],
+    "correct": 1,
+    "explanation": "La Ley de Tránsito prohíbe usar la bocina salvo en caso de peligro inminente para prevenir un siniestro.",
+    "optionExplanations": [
+      "Usar la bocina para apurar en un semáforo está prohibido y constituye una infracción.",
+      "Correcto: solo puede usarse cuando es estrictamente necesario para advertir un peligro y evitar un siniestro.",
+      "Tocar la bocina como saludo o aviso de llegada en zonas urbanas está prohibido."
+    ]
+  },
+  "pt_107": {
+    "options": [
+      "En todo momento mientras se conduce el vehículo.",
+      "Solo de noche o al circular por autopistas de alta velocidad.",
+      "Únicamente cuando llueve o hay congestión vehicular intensa."
+    ],
+    "correct": 0,
+    "explanation": "La atención permanente a las condiciones del tránsito y del entorno es una obligación continua durante toda la conducción, sin importar el horario ni la vía.",
+    "optionExplanations": [
+      "Correcto: la atención constante es obligatoria en todo instante mientras se conduce.",
+      "El riesgo existe también de día y en calles urbanas con peatones, ciclistas y cruces.",
+      "Incluso con buen clima y poco tráfico pueden aparecer imprevistos que exigen reacción inmediata."
+    ]
+  },
+  "pt_108": {
+    "options": [
+      "Mantener o reducir la velocidad y orillarse a la derecha para facilitar el paso.",
+      "Encender las luces de emergencia mientras acelera para acortar la maniobra.",
+      "Frenar de golpe o acelerar bruscamente para impedir que lo sobrepasen."
+    ],
+    "correct": 0,
+    "explanation": "El conductor que es adelantado tiene la obligación legal de facilitar la maniobra manteniéndose a su derecha y no aumentando su velocidad.",
+    "optionExplanations": [
+      "Correcto: debes mantenerte lo más a la derecha posible y no acelerar hasta que el otro vehículo termine de adelantarte.",
+      "Acelerar mientras te adelantan alarga peligrosamente el tiempo que el otro vehículo ocupa la pista contraria.",
+      "Impedir o dificultar un adelantamiento es una conducta peligrosa e ilegal."
+    ]
+  },
+  "pt_109": {
+    "options": [
+      "Acelerar delante del vehículo de emergencia para salir de su trayectoria.",
+      "Frenar en seco en medio de la pista para dejar que busque otra vía libre.",
+      "Orillarse hacia la derecha o izquierda despejando la vía y detenerse si hace falta."
+    ],
+    "correct": 2,
+    "explanation": "Ante sirenas y balizas de un vehículo de emergencia en servicio, debes ceder el paso desplazándote hacia un costado para abrir corredor y detenerte si es necesario.",
+    "optionExplanations": [
+      "Acelerar delante de una ambulancia o carro bomba obstaculiza su paso y aumenta el riesgo de choque.",
+      "Frenar bruscamente en medio de la calzada bloquea la pista por donde necesita avanzar la emergencia.",
+      "Correcto: debes ceder el paso desplazándote hacia un lado de la calzada y deteniéndote si es necesario."
+    ]
+  },
+  "pt_111": {
+    "options": [
+      "La persona que transita a pie por una vía pública.",
+      "La persona que conduce una bicicleta por la ciclovía.",
+      "La persona que opera y dirige un vehículo motorizado."
+    ],
+    "correct": 0,
+    "explanation": "La Ley de Tránsito define como peatón a la persona que se desplaza a pie por la vía pública (así como a usuarios en silla de ruedas u otros dispositivos asistidos).",
+    "optionExplanations": [
+      "Correcto: es la persona que se desplaza a pie por una vía pública.",
+      "Quien conduce una bicicleta corresponde a la categoría de ciclista o conductor de ciclo, no peatón.",
+      "Quien dirige o maniobra un vehículo motorizado es un conductor."
+    ]
+  },
+  "pt_112": {
+    "options": [
+      "Acelerar para adelantarlo justo antes del cruce y doblar delante de él.",
+      "Permanecer detrás del ciclista hasta que haya atravesado la intersección.",
+      "Tocar la bocina para advertirle que se detenga antes de cruzar la esquina."
+    ],
+    "correct": 1,
+    "explanation": "Nunca se debe encerrar a un ciclista adelantándolo inmediatamente antes de virar a la derecha; se debe esperar detrás hasta que despeje el cruce.",
+    "optionExplanations": [
+      "Adelantarlo para virar delante le corta la trayectoria y provoca atropellos o caídas frecuentes en esquinas.",
+      "Correcto: mantente detrás del ciclista hasta que cruce la intersección y luego efectúa el viraje.",
+      "El ciclista que sigue recto tiene derecho a cruzar sin ser presionado ni interceptado."
+    ]
+  },
+  "pt_113": {
+    "options": [
+      "Permitir que viajen sueltos en el asiento trasero para mayor comodidad.",
+      "Sentarlos en el asiento delantero con el cinturón de tres puntas del auto.",
+      "Usar un Sistema de Retención Infantil adecuado a su peso, talla y edad."
+    ],
+    "correct": 2,
+    "explanation": "El Sistema de Retención Infantil (silla o alzador) certificado y acorde a peso, talla y edad reduce drásticamente el riesgo de muerte y lesiones graves en niños.",
+    "optionExplanations": [
+      "Viajar sin sujeción expone al menor a salir proyectado contra los asientos o parabrisas ante una frenada o choque.",
+      "Los menores de 12 años tienen prohibido viajar en el asiento delantero en autos con asientos traseros.",
+      "Correcto: utilizar un SRI adecuado a su talla, peso y desarrollo es la medida fundamental de protección."
+    ]
+  },
+  "pt_114": {
+    "options": [
+      "Porque aumenta el consumo eléctrico del sistema de climatización.",
+      "Porque lleva a calcular mal la distancia de frenado y eleva el riesgo de choque.",
+      "Porque reduce la comodidad de los pasajeros en los trayectos por autopista."
+    ],
+    "correct": 1,
+    "explanation": "Si subestimas la velocidad real a la que circulas, subestimas también el espacio que necesitarás para detenerte, favoreciendo colisiones por alcance o salidas de vía.",
+    "optionExplanations": [
+      "El riesgo vial no tiene relación con el consumo eléctrico del vehículo.",
+      "Correcto: calcular mal la velocidad lleva a subestimar la distancia de frenado y eleva el riesgo de siniestros.",
+      "La pérdida de percepción de velocidad es un peligro directo de seguridad, no un asunto de confort."
+    ]
+  },
+  "pt_116": {
+    "options": [
+      "Solo para prevenir un siniestro cuando exista peligro real.",
+      "Para avisar a otros conductores que el semáforo cambió a verde.",
+      "Para saludar a conocidos o pedir preferencia en una intersección."
+    ],
+    "correct": 0,
+    "explanation": "La bocina está reservada exclusivamente para prevenir un siniestro de tránsito cuando no exista otro medio oportuno de advertencia.",
+    "optionExplanations": [
+      "Correcto: solo puede utilizarse para prevenir un siniestro ante un peligro real.",
+      "No está permitido tocar la bocina para apurar la partida en los semáforos.",
+      "Tocarla para saludar o exigir preferencia constituye uso indebido sancionado por la ley."
+    ]
+  },
+  "pt_117": {
+    "options": [
+      "Bajar la velocidad a 20 km/h y responder brevemente con el teléfono en la mano.",
+      "Estacionar en un lugar permitido y seguro antes de manipular o contestar el teléfono.",
+      "Activar el altavoz sosteniendo el celular con una mano mientras mantiene la marcha."
+    ],
+    "correct": 1,
+    "explanation": "La Ley 'No Chat' prohíbe manipular dispositivos móviles mientras se conduce (incluyendo detenciones en semáforos o tacos); debes estacionar en un lugar seguro y permitido.",
+    "optionExplanations": [
+      "Manipular el celular mientras el vehículo está en movimiento (a cualquier velocidad) es una infracción gravísima.",
+      "Correcto: debes esperar a estacionar en un sitio permitido y seguro para revisar o responder el teléfono.",
+      "Sostener el teléfono con la mano mientras conduces distrae la atención y está estrictamente prohibido."
+    ]
+  },
+  "pt_118": {
+    "options": [
+      "Tocar brevemente la bocina desde lejos para confirmar que el peatón te escuchó.",
+      "Acelerar con suavidad para cruzar el paso peatonal antes de que siga avanzando.",
+      "Reducir la velocidad, extremar la precaución y cederle el paso con paciencia."
+    ],
+    "correct": 2,
+    "explanation": "Los peatones mayores o con movilidad o audición reducida necesitan más tiempo para cruzar y pueden no percibir un vehículo; nunca debes asustarlos ni apurarlos.",
+    "optionExplanations": [
+      "Un bocinazo puede sobresaltar al peatón o hacer que pierda el equilibrio en medio de la calzada.",
+      "Intentar pasar antes que un peatón vulnerable en un cruce es sumamente peligroso e ilegal.",
+      "Correcto: debes disminuir la velocidad, conducir con cuidado y mostrar consideración cediéndole el paso."
+    ]
+  },
+  "pt_120": {
+    "options": [
+      "Adelantarlo rápidamente antes de llegar al centro de la intersección.",
+      "Tocar la bocina con antelación para que se orille junto a la solera.",
+      "Mantener atención y distancia, pues podría virar o desviarse sin avisar."
+    ],
+    "correct": 2,
+    "explanation": "Muchos ciclistas cambian de trayectoria en los cruces o esquivan alcantarillas sin señalizar con el brazo; mantener distancia y atención te permite frenar a tiempo.",
+    "optionExplanations": [
+      "Adelantar a un ciclista en la proximidad inmediata de un cruce genera grave riesgo de encerrarlo.",
+      "Tocar la bocina cerca de un ciclista puede desestabilizarlo y provocar una caída hacia la calzada.",
+      "Correcto: debes ir atento y guardar distancia suficiente por si cambia de dirección sin señalizar."
+    ]
+  },
+  "pt_121": {
+    "options": [
+      "Permitirles abrir las puertas traseras solo cuando el auto circule a baja velocidad.",
+      "Activar el seguro para niños para impedir que abran las puertas desde el interior.",
+      "Sentarlos junto a las ventanas sin seguro para facilitar una salida rápida en taco."
+    ],
+    "correct": 1,
+    "explanation": "El seguro infantil bloquea la apertura desde la manilla interior de las puertas traseras, evitando que los niños las abran accidentalmente con el vehículo en marcha.",
+    "optionExplanations": [
+      "Incluso a baja velocidad, abrir una puerta en movimiento puede hacer que el niño caiga a la calzada o sea impactado por otro vehículo.",
+      "Correcto: debes verificar el cierre y usar el seguro infantil para que no puedan abrir desde adentro.",
+      "Las puertas siempre deben permanecer cerradas y aseguradas durante todo el trayecto."
+    ]
+  },
+  "pt_122": {
+    "options": [
+      "Solo al ingresar a autopistas concesionadas durante horarios de alta congestión.",
+      "En zonas pobladas, con mal tiempo, curvas, colegios u otras situaciones de riesgo.",
+      "Únicamente en caminos rurales de tierra sin señalización vertical instalada."
+    ],
+    "correct": 1,
+    "explanation": "La ley obliga a circular a velocidad razonable y prudente, reduciéndola en zonas pobladas, mal tiempo, curvas, caminos angostos, cercanía de colegios o cualquier situación de riesgo.",
+    "optionExplanations": [
+      "La obligación de reducir la velocidad aplica en todo lugar donde aumente el riesgo vial, no solo en autopistas congestionadas.",
+      "Correcto: es obligatorio moderar la velocidad en sectores poblados, mal clima, curvas, colegios y demás zonas de riesgo.",
+      "También en calles urbanas pavimentadas y bien señalizadas debes reducir la velocidad ante factores de riesgo."
+    ]
+  },
+  "pt_124": {
+    "options": [
+      "Cederles el paso desplazándote hacia un costado y deteniéndote si hace falta.",
+      "Mantener tu misma pista y velocidad para no sorprender a quienes vienen detrás.",
+      "Tocar la bocina y encender las luces altas para indicar que viste su sirena."
+    ],
+    "correct": 0,
+    "explanation": "Cuando un vehículo de emergencia hace uso de sus señales audibles y visibles, debes abrir paso desplazándote hacia un costado y deteniéndote si es necesario.",
+    "optionExplanations": [
+      "Correcto: corresponde ceder el derecho a vía orillándose y deteniéndose si es necesario para dejar libre su corredor.",
+      "Seguir igual en tu pista bloquea la trayectoria del vehículo de emergencia.",
+      "La bocina y las luces altas no despejan la vía y pueden confundir al resto de los conductores."
+    ]
+  },
+  "pt_125": {
+    "options": [
+      "Ciertos medicamentos, como antihistamínicos y ansiolíticos.",
+      "Una taza de café solo o té negro bebido antes de salir.",
+      "Bebidas isotónicas o agua mineral consumidas durante el viaje."
+    ],
+    "correct": 0,
+    "explanation": "Diversos medicamentos (antihistamínicos, relajantes musculares, ansiolíticos o antidepresivos) producen somnolencia y alteran los reflejos de manera similar al alcohol.",
+    "optionExplanations": [
+      "Correcto: ciertos medicamentos provocan somnolencia, visión borrosa o lentitud en las reacciones.",
+      "El café no produce un deterioro equivalente al del alcohol (aunque tampoco compensa la falta de sueño ni elimina el alcohol).",
+      "La hidratación normal con agua o bebidas isotónicas no perjudica la capacidad de conducción."
+    ]
+  },
+  "pt_128": {
+    "options": [
+      "Para prevenir un peligro inminente o evitar un siniestro de tránsito.",
+      "Para saludar brevemente a peatones conocidos al pasar por la cuadra.",
+      "Para apurar a quienes demoran en cruzar por un paso peatonal."
+    ],
+    "correct": 0,
+    "explanation": "El único uso lícito de la bocina es advertir un peligro inmediato para prevenir un siniestro de tránsito.",
+    "optionExplanations": [
+      "Correcto: su uso se limita estrictamente a prevenir peligros o evitar un siniestro.",
+      "Usar la bocina para saludar genera contaminación acústica y está sancionado por la ley.",
+      "Apurar a peatones con la bocina es indebido y puede asustarlos en medio del cruce."
+    ]
+  },
+  "pt_129": {
+    "options": [
+      "Para mantener el control del vehículo y evitar siniestros según el entorno.",
+      "Para reducir al máximo el consumo de combustible durante todo el trayecto.",
+      "Para acortar la duración total del viaje sin superar la velocidad máxima."
+    ],
+    "correct": 0,
+    "explanation": "Lluvia, niebla, pavimento mojado o escarcha reducen la adherencia y la visibilidad, por lo que adaptar la velocidad y la distancia es clave para conservar el control y evitar siniestros.",
+    "optionExplanations": [
+      "Correcto: adecuar la conducción al clima y al pavimento permite conservar el control y prevenir siniestros.",
+      "El objetivo principal al adaptar la conducción al mal tiempo es la seguridad vial, no el rendimiento de combustible.",
+      "En condiciones climáticas adversas se debe circular más lento y con mayor margen, lo que normalmente alarga el viaje."
+    ]
+  },
+  "pt_131": {
+    "options": [
+      "Conducir bajo los efectos o la influencia del alcohol.",
+      "Conducir durante horas de plena luz natural del día.",
+      "Conducir manteniendo una distancia prudente en tráfico fluido."
+    ],
+    "correct": 0,
+    "explanation": "Incluso cantidades pequeñas de alcohol deterioran la coordinación, aumentan el tiempo de reacción y favorecen conductas arriesgadas.",
+    "optionExplanations": [
+      "Correcto: el alcohol multiplica exponencialmente la probabilidad de sufrir un siniestro vial.",
+      "La conducción diurna ofrece mejor visibilidad que la nocturna; por sí sola no es un factor de riesgo.",
+      "Mantener una distancia prudente reduce el riesgo de colisiones por alcance."
+    ]
+  },
+  "pt_132": {
+    "options": [
+      "Tocar la bocina brevemente para que el ciclista frene antes de llegar a la esquina.",
+      "Ceder el paso al ciclista, esperar a que cruce con seguridad y luego completar el giro.",
+      "Acelerar con decisión para terminar el viraje antes de que el ciclista alcance el cruce."
+    ],
+    "correct": 1,
+    "explanation": "Al virar hacia la derecha cruzando una ciclovía, el automóvil carece de preferencia y debe ceder el paso al ciclista que circula por ella.",
+    "optionExplanations": [
+      "El ciclista que avanza por la ciclovía tiene preferencia frente al vehículo que vira y cruza su trayectoria.",
+      "Correcto: debes esperar y ceder el paso al ciclista antes de completar el viraje hacia la derecha.",
+      "Intentar ganarle el cruce a un ciclista que viene por la ciclovía provoca colisiones laterales muy graves."
+    ]
+  },
+  "pt_133": {
+    "options": [
+      "Cederle el paso desplazándote hacia un lado y deteniéndote si hace falta.",
+      "Continuar circulando por tu pista a velocidad constante sin hacer maniobras.",
+      "Acelerar para alejarte del vehículo de emergencia y dejarle espacio detrás."
+    ],
+    "correct": 0,
+    "explanation": "Siempre se debe facilitar el paso de ambulancias, Bomberos y Carabineros con señales activas despejando la pista hacia un costado.",
+    "optionExplanations": [
+      "Correcto: debes orillarte hacia un lado de la calzada y detenerte si es necesario para despejarle el paso.",
+      "Permanecer en tu pista sin ceder bloquea el desplazamiento urgente del vehículo de emergencia.",
+      "Acelerar delante de una emergencia resulta peligroso y sigue obstruyendo la pista que necesita usar."
+    ]
+  },
+  "pt_134": {
+    "options": [
+      "Cambiarte a la pista izquierda para evitar que el otro conductor te pase.",
+      "Aumentar ligeramente tu velocidad para mantenerte delante durante la maniobra.",
+      "Mantenerte lo más a la derecha posible y no acelerar para facilitar el paso."
+    ],
+    "correct": 2,
+    "explanation": "Quien es adelantado debe facilitar el paso permaneciendo a la derecha y sin aumentar su velocidad hasta que termine la maniobra.",
+    "optionExplanations": [
+      "Cambiar hacia la izquierda mientras te adelantan provoca un choque lateral o invade el espacio del que adelanta.",
+      "Acelerar durante un adelantamiento prolonga peligrosamente la invasión de la pista contraria.",
+      "Correcto: debes mantenerte a la derecha y no aumentar la velocidad para facilitar el adelantamiento."
+    ]
+  },
+  "pt_137": {
+    "options": [
+      "Para mantener la altura libre del chasis sobre los resaltos de la vía.",
+      "Para conservar la adherencia adecuada y evitar que el vehículo patine.",
+      "Para impedir que la carrocería se incline hacia un lado en línea recta."
+    ],
+    "correct": 1,
+    "explanation": "Una presión correcta garantiza la superficie óptima de contacto del neumático con el pavimento, evitando pérdida de adherencia, derrapes y reventones.",
+    "optionExplanations": [
+      "La altura al suelo depende principalmente de la suspensión; la presión correcta busca adherencia y desgaste uniforme.",
+      "Correcto: mantener la presión recomendada conserva la estabilidad y evita que los neumáticos patinen.",
+      "La inclinación en línea recta suele asociarse a fallas de suspensión o carga mal distribuida, aunque una rueda muy desinflada también afecta la estabilidad."
+    ]
+  },
+  "pt_142": {
+    "question": "¿Qué indica esta señal reglamentaria?",
+    "options": [
+      "Desde la señal vuelve a regir el límite general de velocidad y se permite adelantar.",
+      "Desde la señal rige únicamente el límite máximo de velocidad establecido por la ley.",
+      "Desde la señal termina la prohibición de adelantar vigente en el tramo anterior."
+    ],
+    "correct": 2,
+    "explanation": "La señal circular blanca con línea diagonal negra que tacha dos vehículos indica el fin de la prohibición de adelantar.",
+    "optionExplanations": [
+      "Esta señal levanta exclusivamente la restricción de adelantar; los límites de velocidad se regulan por sus propias señales.",
+      "No se refiere a límites de velocidad, sino específicamente al término de la prohibición de adelantar.",
+      "Correcto: indica que a partir de ese punto deja de regir la prohibición de adelantar."
+    ]
+  },
+  "pt_144": {
+    "options": [
+      "Efectos tanto positivos como negativos.",
+      "Efectos positivos en casi todo momento.",
+      "Efectos negativos de forma exclusiva."
+    ],
+    "correct": 0,
+    "explanation": "La influencia del grupo puede inducir conductas arriesgadas al volante (presión negativa), pero también puede fomentar el autocuidado, la moderación y el respeto a las normas (presión positiva).",
+    "optionExplanations": [
+      "Correcto: la presión de grupo puede influir positiva o negativamente en el comportamiento del conductor.",
+      "No siempre es positiva; muchas veces empuja a asumir riesgos innecesarios para impresionar a los acompañantes.",
+      "No siempre es negativa; un grupo responsable puede disuadir a quien conduce de exceder la velocidad o beber alcohol."
+    ]
+  },
+  "pt_147": {
+    "options": [
+      "Amortiguadores vencidos o en mal estado.",
+      "Neumáticos nuevos con presión adecuada.",
+      "Pedal de embrague ligeramente desgastado."
+    ],
+    "correct": 0,
+    "explanation": "Los amortiguadores gastados provocan rebotes de las ruedas y pérdida de contacto con el pavimento, alargando notablemente la distancia de frenado.",
+    "optionExplanations": [
+      "Correcto: unos amortiguadores en mal estado reducen la adherencia en la frenada y aumentan la distancia de detención.",
+      "Los neumáticos en buen estado y bien inflados optimizan la adherencia y acortan la frenada.",
+      "El embrague transmite potencia desde el motor, pero no determina la eficacia del frenado cuando los frenos actúan."
+    ]
+  },
+  "pt_149": {
+    "options": [
+      "Tendencia a reaccionar con agresividad para compensar su inseguridad al volante.",
+      "Tendencia a evitar conducir en vías urbanas o autopistas durante toda su vida.",
+      "Mayor facilidad para evaluar riesgos complejos con serenidad bajo alta presión."
+    ],
+    "correct": 0,
+    "explanation": "En psicología vial, la 'formación de reacción' ocurre cuando una persona insegura o tímida compensa su temor adoptando una actitud defensiva exagerada o agresiva.",
+    "optionExplanations": [
+      "Correcto: la persona puede sobreactuar con conductas agresivas para ocultar o compensar su inseguridad.",
+      "La evitación constante corresponde al miedo a conducir, no al mecanismo compensatorio de formación de reacción.",
+      "Al contrario, esa tensión emocional perjudica el criterio y aumenta el riesgo de conflictos viales."
+    ]
+  },
+  "pt_152": {
+    "options": [
+      "Calle, camino u otro espacio público destinado al tránsito.",
+      "Calzada demarcada exclusivamente para circulación de buses urbanos.",
+      "Faja longitudinal destinada al desplazamiento de una fila de autos."
+    ],
+    "correct": 0,
+    "explanation": "En la Ley de Tránsito, 'vía' es el término amplio que abarca calles, caminos u otros lugares destinados al tránsito (incluyendo calzada, aceras y bermas).",
+    "optionExplanations": [
+      "Correcto: una vía es toda calle, camino u otro lugar destinado al tránsito.",
+      "Eso corresponde a la definición de vía o pista exclusiva para transporte público, no a 'vía' en sentido general.",
+      "La faja destinada a una fila de vehículos corresponde a la definición de 'pista de circulación'."
+    ]
+  },
+  "pt_153": {
+    "options": [
+      "Solo vehículos de carga pesada y buses.",
+      "Vehículos cuyo ancho sea de 2 metros o más.",
+      "Todo vehículo motorizado de cuatro o más ruedas."
+    ],
+    "correct": 1,
+    "explanation": "Los vehículos de 2,0 metros o más de ancho deben portar luces delimitadoras (de trocha/gálibo) que indiquen su ancho y altura máximos.",
+    "optionExplanations": [
+      "El criterio reglamentario depende del ancho del vehículo (2 metros o más), no únicamente de la categoría comercial.",
+      "Correcto: los vehículos de 2 o más metros de ancho deben llevar luces que señalen su ancho y altura máximos.",
+      "Un automóvil particular estándar mide menos de 2 metros de ancho y no requiere estas luces delimitadoras."
+    ]
+  },
+  "pt_154": {
+    "options": [
+      "Las que limitan el peso, ancho y altura máximos de un vehículo.",
+      "Las que prohíben el paso de ciertos vehículos o determinadas maniobras.",
+      "Las que regulan el derecho preferente de paso en una intersección."
+    ],
+    "correct": 2,
+    "explanation": "Las señales reglamentarias de prioridad (como PARE, CEDA EL PASO y PARE NIÑOS) determinan quién tiene preferencia o debe ceder el paso en un cruce.",
+    "optionExplanations": [
+      "Esas corresponden a señales reglamentarias de restricción dimensional o de peso, no de prioridad.",
+      "Esas corresponden a señales reglamentarias de prohibición.",
+      "Correcto: las señales de prioridad regulan la preferencia o derecho de paso entre los usuarios."
+    ]
+  },
+  "pt_155": {
+    "options": [
+      "Avanzar solo si existe espacio despejado al otro lado del cruce.",
+      "Acelerar para cruzar de inmediato apenas se encienda la luz verde.",
+      "Detenerse por completo y ceder el paso antes de ingresar al cruce."
+    ],
+    "correct": 0,
+    "explanation": "La luz verde autoriza el paso siempre que exista espacio suficiente después del cruce para no quedar bloqueando la intersección (y cediendo a quienes viran o cruzan reglamentariamente).",
+    "optionExplanations": [
+      "Correcto: solo puedes avanzar con luz verde si al otro lado del cruce hay espacio suficiente para despejarlo.",
+      "Entrar al cruce sin verificar espacio disponible puede dejarte detenido en medio de la intersección.",
+      "La obligación de detenerse o ceder el paso antes de avanzar corresponde a la luz roja o a una señal PARE/CEDA EL PASO."
+    ]
+  },
+  "pt_158": {
+    "options": [
+      "Apenas perciba por el espejo que el otro vehículo comenzó a adelantarlo.",
+      "Cuando el vehículo que adelanta ya pueda ser encandilado por sus luces.",
+      "Únicamente después de que el otro vehículo lo haya sobrepasado completo."
+    ],
+    "correct": 1,
+    "explanation": "Quien es adelantado mantiene sus luces altas mientras no encandile por el espejo retrovisor al vehículo que adelanta (en la práctica, las baja en cuanto el otro vehículo se empareja o pasa adelante).",
+    "optionExplanations": [
+      "Bajarlas antes de que el otro auto se acerque reduce tu propia visibilidad frontal innecesariamente.",
+      "Correcto: no debes cambiar a luces bajas mientras no puedas deslumbrar al que adelanta; las bajas cuando esté por pasarte para no encandilarlo por su espejo.",
+      "Esperar a que termine todo el adelantamiento deslumbraría por los espejos al conductor que se está reintegrando a la pista."
+    ]
+  },
+  "pt_160": {
+    "options": [
+      "Se hunde la cola del auto, pierden apoyo las ruedas delanteras y el haz de luces apunta hacia arriba.",
+      "El vehículo mantiene su equilibrio normal en línea recta y solo requiere mayor presión en los neumáticos.",
+      "Se levanta la cola del auto, disminuye el alcance de las luces y el remolque tiende a serpentear y volcar."
+    ],
+    "correct": 2,
+    "explanation": "Si la carga sobre la esfera de enganche es insuficiente o negativa, levanta la parte trasera del vehículo tractor, reduce la adherencia del eje trasero y favorece el coleo o vuelco del remolque.",
+    "optionExplanations": [
+      "Ese efecto ocurre cuando la presión sobre la esfera de enganche es excesiva (demasiado peso adelante del remolque), no cuando es baja o nula.",
+      "Una carga mal equilibrada sobre el enganche compromete gravemente la estabilidad del conjunto.",
+      "Correcto: al elevarse la parte trasera del auto, las ruedas traseras pierden adherencia, las luces alumbran más corto y el remolque puede zigzaguear y volcar."
+    ]
+  },
+  "pt_161": {
+    "options": [
+      "Dejar una marcha enganchada y girar las ruedas delanteras hacia la cuneta.",
+      "Dejar la palanca en neutro y mantener las ruedas delanteras bien rectas.",
+      "Dejar enganchada una marcha y orientar las ruedas hacia el centro de la vía."
+    ],
+    "correct": 0,
+    "explanation": "En pendiente descendente se engancha marcha atrás (reversa) y se giran las ruedas hacia la cuneta/solera para que ésta frene el vehículo si cediera el freno de mano.",
+    "optionExplanations": [
+      "Correcto: dejar el vehículo enganchado con las ruedas delanteras orientadas hacia la cuneta evita que ruede hacia el tráfico.",
+      "Dejar la caja en neutro y las ruedas rectas hace depender todo del freno de mano, con riesgo de que el vehículo descienda sin control.",
+      "Girar las ruedas hacia la calzada en bajada haría que el vehículo invadiera la vía si se deslizara; esa orientación se usa en subida con solera."
+    ]
+  },
+  "pt_162": {
+    "options": [
+      "Colocar cadenas únicamente en el eje delantero, aunque la tracción sea trasera.",
+      "Instalar cadenas al menos en las ruedas motrices siguiendo las pautas del fabricante.",
+      "Montar cadenas en las cuatro ruedas únicamente cuando se circula por pavimento seco."
+    ],
+    "correct": 1,
+    "explanation": "Las cadenas de nieve deben colocarse como mínimo en el eje motriz (donde el motor entrega fuerza) respetando siempre las indicaciones del fabricante del vehículo.",
+    "optionExplanations": [
+      "En un vehículo de tracción trasera, poner cadenas solo adelante deja las ruedas motrices sin agarre para avanzar.",
+      "Correcto: deben instalarse al menos en las ruedas motrices conforme a las instrucciones del fabricante.",
+      "Nunca deben usarse cadenas metálicas sobre pavimento seco o despejado, pues dañan el neumático y la calzada."
+    ]
+  },
+  "pt_163": {
+    "options": [
+      "No respetar la preferencia de paso de un peatón en un cruce demarcado.",
+      "Circular sin encender el intermitente al cambiar de pista en zona urbana.",
+      "Trasladar a un menor de 12 años adelante o sin su SRI obligatorio."
+    ],
+    "correct": 2,
+    "explanation": "Incumplir la prohibición de llevar menores de 12 años en el asiento delantero o no utilizar el Sistema de Retención Infantil obligatorio constituye una infracción gravísima.",
+    "optionExplanations": [
+      "No respetar el derecho preferente de paso de un peatón es una infracción grave (no gravísima, salvo excepciones específicas).",
+      "No señalizar oportunamente un viraje o cambio de pista corresponde a una infracción menos grave o grave según el caso.",
+      "Correcto: llevar menores de 12 años en el asiento delantero o sin el SRI exigido por ley es una infracción gravísima."
+    ]
+  },
+  "pt_167": {
+    "options": [
+      "Inmediatamente a la derecha del eje central de la calzada.",
+      "Lo más pegado posible al borde derecho de la misma calzada.",
+      "Lo más cerca posible del borde izquierdo de la vía contraria."
+    ],
+    "correct": 0,
+    "explanation": "En vías de doble sentido de tránsito, para virar a la izquierda debes aproximarte justo a la derecha del eje central sin invadir la pista contraria hasta iniciar el giro.",
+    "optionExplanations": [
+      "Correcto: debes ubicarte inmediatamente a la derecha del eje central de la calzada.",
+      "Pegarse al borde derecho se utiliza para virar a la derecha; hacerlo para doblar a la izquierda cruza toda la pista.",
+      "En vías bidireccionales, pegarse al borde izquierdo implica invadir la pista del tránsito que viene en contra."
+    ]
+  },
+  "pt_169": {
+    "options": [
+      "Mantener pisado el pedal de embrague durante todo el tramo de bajada.",
+      "Controlar la bajada usando exclusivamente el pedal del freno de servicio.",
+      "Enganchar una marcha adecuada al descenso y frenar solo de forma intermitente."
+    ],
+    "correct": 2,
+    "explanation": "Descender en una marcha baja aprovecha el freno motor y evita recalentar las pastillas o discos de freno por frenado continuo.",
+    "optionExplanations": [
+      "Pisar el embrague desconecta la retención del motor y deja caer el vehículo libremente por gravedad.",
+      "Presionar continuamente el freno durante una bajada larga puede provocar sobrecalentamiento y pérdida total de frenado (fading).",
+      "Correcto: enganchar una marcha baja adecuada permite retener el vehículo con el motor y frenar de manera ocasional."
+    ]
+  }
+}

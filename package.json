@@ -1,0 +1,11 @@
+{
+  "name": "licencia-clase-b",
+  "version": "1.0.0",
+  "description": "Clase B - Preparación de Examen de Conducir CONASET 2026",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'No build step - static HTML site'",
+    "build": "echo 'No build step - static HTML site'",
+    "start": "echo 'Static site - open index.html'"
+  }
+}

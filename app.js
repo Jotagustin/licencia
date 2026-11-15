@@ -14,7 +14,9 @@
     chevronRight: `<svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>`,
     chevronDown: `<svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>`,
     sun: `<path d="M12 3v2m0 14v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path><circle cx="12" cy="12" r="5"></circle>`,
-    moon: `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>`
+    moon: `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>`,
+    volumeOn: `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>`,
+    volumeOff: `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>`
   };
 
   function getTodayISO() {
@@ -60,12 +62,18 @@
     targetSimulacros: 6,
     feedbackMode: "instant",
     completedDays: {},
+    manualDayCredits: {},
+    dailyRouteProgress: {},
     masteredQuestionIds: [],
     failedQuestionIds: [],
+    questionStats: {},
+    studiedChapters: [],
+    masteredSignCodes: [],
     examHistory: [],
     studiedMinutesToday: 0,
     lastStudyDate: getTodayISO(),
-    theme: "light"
+    theme: "light",
+    soundEnabled: true
   };
 
   let state = loadState();
@@ -75,11 +83,60 @@
       const raw = localStorage.getItem(STORAGE_KEY);
       if (!raw) return { ...defaultState };
       const parsed = JSON.parse(raw);
-      const merged = { ...defaultState, ...parsed };
-      if (merged.lastStudyDate !== getTodayISO()) {
-        merged.studiedMinutesToday = 0;
-        merged.lastStudyDate = getTodayISO();
+      const merged = { ...defaultState, ...(parsed && typeof parsed === "object" ? parsed : {}) };
+      if (!merged.completedDays || typeof merged.completedDays !== "object" || Array.isArray(merged.completedDays)) {
+        merged.completedDays = {};
       }
+      if (!merged.manualDayCredits || typeof merged.manualDayCredits !== "object" || Array.isArray(merged.manualDayCredits)) {
+        merged.manualDayCredits = {};
+      }
+      if (!merged.dailyRouteProgress || typeof merged.dailyRouteProgress !== "object" || Array.isArray(merged.dailyRouteProgress)) {
+        merged.dailyRouteProgress = {};
+      }
+      if (!Array.isArray(merged.masteredQuestionIds)) {
+        merged.masteredQuestionIds = [];
+      }
+      if (!Array.isArray(merged.failedQuestionIds)) {
+        merged.failedQuestionIds = [];
+      }
+      if (!merged.questionStats || typeof merged.questionStats !== "object" || Array.isArray(merged.questionStats)) {
+        merged.questionStats = {};
+      }
+      if (!Array.isArray(merged.studiedChapters)) {
+        merged.studiedChapters = [];
+      }
+      if (!Array.isArray(merged.masteredSignCodes)) {
+        merged.masteredSignCodes = [];
+      }
+      if (!Array.isArray(merged.examHistory)) {
+        merged.examHistory = [];
+      }
+      if (typeof merged.soundEnabled !== "boolean") {
+        merged.soundEnabled = true;
+      }
+      if (typeof merged.studiedMinutesToday !== "number" || merged.studiedMinutesToday < 0) {
+        merged.studiedMinutesToday = 0;
+      }
+      const todayISO = getTodayISO();
+      if (!merged.targetDate || typeof merged.targetDate !== "string" || merged.targetDate < todayISO) {
+        merged.targetDate = todayISO;
+      }
+      if (merged.lastStudyDate !== todayISO) {
+        merged.studiedMinutesToday = 0;
+        merged.lastStudyDate = todayISO;
+      }
+
+      if (Array.isArray(window.CONASET_QUESTIONS) && window.CONASET_QUESTIONS.length > 0) {
+        const validIds = new Set(window.CONASET_QUESTIONS.map((q) => q.id));
+        merged.masteredQuestionIds = merged.masteredQuestionIds.filter((id) => validIds.has(id));
+        merged.failedQuestionIds = merged.failedQuestionIds.filter((id) => validIds.has(id));
+        const prunedStats = {};
+        Object.keys(merged.questionStats).forEach((id) => {
+          if (validIds.has(id)) prunedStats[id] = merged.questionStats[id];
+        });
+        merged.questionStats = prunedStats;
+      }
+
       return merged;
     } catch (e) {
       return { ...defaultState };
@@ -92,6 +149,109 @@
     } catch (e) {
       // Ignore storage error
     }
+  }
+
+  // ==========================================================================
+  // Audio de Retroalimentación (Web Audio API sin dependencias externas)
+  // ==========================================================================
+  let sharedAudioCtx = null;
+
+  function getAudioContext() {
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) return null;
+    if (!sharedAudioCtx) {
+      sharedAudioCtx = new AudioCtx();
+    }
+    if (sharedAudioCtx.state === "suspended" && typeof sharedAudioCtx.resume === "function") {
+      sharedAudioCtx.resume().catch(() => {});
+    }
+    return sharedAudioCtx;
+  }
+
+  function playToneSequence(notes) {
+    if (!state.soundEnabled) return;
+    try {
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      const baseTime = ctx.currentTime;
+      notes.forEach(({ freq, startOffset, duration, type, volume }) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = type || "sine";
+        osc.frequency.setValueAtTime(freq, baseTime + startOffset);
+        gain.gain.setValueAtTime(0.0001, baseTime + startOffset);
+        gain.gain.exponentialRampToValueAtTime(volume || 0.12, baseTime + startOffset + 0.015);
+        gain.gain.exponentialRampToValueAtTime(0.0001, baseTime + startOffset + duration);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(baseTime + startOffset);
+        osc.stop(baseTime + startOffset + duration + 0.02);
+      });
+    } catch (e) {
+      // Ignore audio errors in restricted environments
+    }
+  }
+
+  function playFeedbackSound(isCorrect) {
+    if (isCorrect) {
+      playToneSequence([
+        { freq: 523.25, startOffset: 0, duration: 0.11, type: "sine", volume: 0.12 },
+        { freq: 659.25, startOffset: 0.08, duration: 0.14, type: "sine", volume: 0.12 },
+        { freq: 783.99, startOffset: 0.16, duration: 0.18, type: "triangle", volume: 0.1 }
+      ]);
+    } else {
+      playToneSequence([
+        { freq: 246.94, startOffset: 0, duration: 0.15, type: "triangle", volume: 0.13 },
+        { freq: 185.0, startOffset: 0.13, duration: 0.22, type: "triangle", volume: 0.12 }
+      ]);
+    }
+  }
+
+  function playExamResultSound(passed) {
+    if (passed) {
+      playToneSequence([
+        { freq: 523.25, startOffset: 0, duration: 0.12, type: "sine", volume: 0.11 },
+        { freq: 659.25, startOffset: 0.1, duration: 0.12, type: "sine", volume: 0.11 },
+        { freq: 783.99, startOffset: 0.2, duration: 0.14, type: "sine", volume: 0.12 },
+        { freq: 1046.5, startOffset: 0.3, duration: 0.28, type: "triangle", volume: 0.11 }
+      ]);
+    } else {
+      playToneSequence([
+        { freq: 293.66, startOffset: 0, duration: 0.16, type: "triangle", volume: 0.11 },
+        { freq: 246.94, startOffset: 0.15, duration: 0.24, type: "triangle", volume: 0.11 }
+      ]);
+    }
+  }
+
+  function applyQuestionProgress(q, isCorrect) {
+    if (!q) return;
+    if (q.isSignQuestion) {
+      if (isCorrect && q.signCode) {
+        const signSet = new Set(state.masteredSignCodes);
+        signSet.add(q.signCode);
+        state.masteredSignCodes = Array.from(signSet);
+      }
+      return;
+    }
+
+    const masteredSet = new Set(state.masteredQuestionIds);
+    const failedSet = new Set(state.failedQuestionIds);
+    if (!state.questionStats[q.id]) {
+      state.questionStats[q.id] = { attempts: 0, correct: 0 };
+    }
+    state.questionStats[q.id].attempts += 1;
+
+    if (isCorrect) {
+      state.questionStats[q.id].correct += 1;
+      masteredSet.add(q.id);
+      failedSet.delete(q.id);
+    } else {
+      failedSet.add(q.id);
+      masteredSet.delete(q.id);
+    }
+
+    state.masteredQuestionIds = Array.from(masteredSet);
+    state.failedQuestionIds = Array.from(failedSet);
   }
 
   // ==========================================================================
@@ -169,7 +329,8 @@
         focusTitle,
         chapterIds: assignedChapters.map((c) => c.id),
         chapters: assignedChapters,
-        completed: Boolean(state.completedDays[dayISO])
+        completed: Boolean(state.completedDays[dayISO]),
+        progress: state.dailyRouteProgress[dayISO] || null
       });
     }
 
@@ -203,6 +364,128 @@
       examsTaken: history.length,
       avgScore38
     };
+  }
+
+  function computeTopicProgress() {
+    const masteredSet = new Set(state.masteredQuestionIds);
+    const studiedSet = new Set(state.studiedChapters);
+
+    return window.CONASET_CHAPTERS.map((ch) => {
+      const chQuestions = window.CONASET_QUESTIONS.filter((q) => q.chapter === ch.id);
+      const total = chQuestions.length;
+      const mastered = chQuestions.filter((q) => masteredSet.has(q.id)).length;
+      const pct = total > 0 ? Math.round((mastered / total) * 100) : 0;
+
+      let attempts = 0;
+      let correct = 0;
+      chQuestions.forEach((q) => {
+        const st = state.questionStats[q.id];
+        if (st) {
+          attempts += st.attempts || 0;
+          correct += st.correct || 0;
+        }
+      });
+      const accuracyPct = attempts > 0 ? Math.round((correct / attempts) * 100) : null;
+
+      return {
+        chapter: ch,
+        total,
+        mastered,
+        pct,
+        attempts,
+        accuracyPct,
+        studied: studiedSet.has(ch.id)
+      };
+    });
+  }
+
+  function renderTopicProgress(stats) {
+    const overallPct =
+      stats.totalQuestions > 0
+        ? Math.round((stats.masteredCount / stats.totalQuestions) * 100)
+        : 0;
+    const totalSigns = Array.isArray(window.CONASET_SIGNS) ? window.CONASET_SIGNS.length : 138;
+    const signsMastered = state.masteredSignCodes.length;
+
+    const masteryPill = document.getElementById("overall-mastery-pill");
+    if (masteryPill) {
+      masteryPill.textContent = `${overallPct}% dominado`;
+      masteryPill.className = `status-pill tabular ${
+        overallPct >= 80 ? "pill-pass" : ""
+      }`;
+    }
+
+    const bankSubtitle = document.getElementById("progress-bank-subtitle");
+    if (bankSubtitle) {
+      bankSubtitle.textContent = `Dominio por capítulo (${stats.totalQuestions} preguntas) y lectura del manual`;
+    }
+
+    const signsBadge = document.getElementById("signs-mastered-badge");
+    if (signsBadge) {
+      signsBadge.textContent = `${signsMastered} / ${totalSigns}`;
+      signsBadge.className = `status-pill tabular ${
+        signsMastered > 0 ? "pill-pass" : ""
+      }`;
+    }
+
+    const overallWrap = document.getElementById("overall-progress-bar-wrap");
+    if (overallWrap) {
+      overallWrap.innerHTML = `
+        <div class="overall-progress-header">
+          <span>Banco teórico: <strong>${stats.masteredCount} / ${stats.totalQuestions}</strong> preguntas dominadas</span>
+          <span class="tabular">Señales: <strong>${signsMastered} / ${totalSigns}</strong> · Capítulos leídos: <strong>${state.studiedChapters.length} / ${window.CONASET_CHAPTERS.length}</strong></span>
+        </div>
+        <div class="progress-track-sm" aria-hidden="true">
+          <div class="progress-fill-sm" style="width: ${overallPct}%;"></div>
+        </div>
+      `;
+    }
+
+    const listEl = document.getElementById("chapter-progress-list");
+    if (!listEl) return;
+
+    const items = computeTopicProgress();
+    listEl.innerHTML = items
+      .map((item) => {
+        const ch = item.chapter;
+        const dotClass =
+          item.pct >= 80
+            ? "dot-done"
+            : item.mastered > 0 || item.studied
+            ? "dot-active"
+            : "";
+        const accuracyLabel =
+          item.accuracyPct !== null ? ` · Acierto: ${item.accuracyPct}%` : "";
+
+        return `
+          <div class="clean-row">
+            <div class="row-main">
+              <span class="status-dot ${dotClass}" aria-hidden="true"></span>
+              <div style="width: 100%;">
+                <h3 class="row-title">${ch.number}: ${ch.title}</h3>
+                <p class="row-sub tabular">${item.mastered}/${item.total} dominadas (${item.pct}%)${accuracyLabel}</p>
+                <div class="chapter-progress-meta">
+                  <div class="chapter-progress-bar-inline" aria-hidden="true">
+                    <div class="progress-fill-sm" style="width: ${item.pct}%;"></div>
+                  </div>
+                  ${
+                    item.studied
+                      ? `<span class="status-pill pill-pass">Leído</span>`
+                      : ""
+                  }
+                </div>
+              </div>
+            </div>
+            <div class="row-right">
+              <button type="button" class="btn-outline" data-action="start-chapter-test" data-chapter-id="${ch.id}">
+                <span>${item.mastered > 0 && item.pct < 100 ? "Reforzar" : "Practicar"}</span>
+                ${ICONS.chevronRight}
+              </button>
+            </div>
+          </div>
+        `;
+      })
+      .join("");
   }
 
   // ==========================================================================
@@ -306,11 +589,17 @@
                 </div>
               </div>
               <div class="row-right">
-                <span class="status-pill tabular">${day.dailyMinutes} min</span>
+                ${
+                  day.completed
+                    ? '<span class="status-pill pill-pass">Completado</span>'
+                    : day.progress && day.progress.answered > 0
+                    ? `<span class="status-pill tabular">${day.progress.answered}/${day.progress.total} pregs</span>`
+                    : `<span class="status-pill tabular">${day.dailyMinutes} min</span>`
+                }
                 <button type="button" class="btn-text-action" data-action="start-day-test" data-day-index="${
                   day.dayIndex
                 }">
-                  <span>Practicar</span>
+                  <span>${day.completed ? "Repasar" : "Practicar"}</span>
                   ${ICONS.chevronRight}
                 </button>
               </div>
@@ -320,12 +609,66 @@
         .join("");
     }
 
+    // Config sub-label
+    const configSub = document.getElementById("config-summary-sub");
+    if (configSub) {
+      configSub.textContent = `Meta: ${formatHumanDate(state.targetDate)} (${plan.daysLeft} días restantes) · ${plan.dailyMinutes} min/día sugeridos`;
+    }
+
+    renderTopicProgress(stats);
+    renderPresetExams();
     renderHistoryList();
+  }
+
+  function renderPresetExams() {
+    const container = document.getElementById("preset-exams-list");
+    if (!container) return;
+    const examSets = Array.isArray(window.CONASET_EXAM_SETS) ? window.CONASET_EXAM_SETS : [];
+    if (examSets.length === 0) return;
+
+    const masteredSet = new Set(state.masteredQuestionIds);
+    container.innerHTML = examSets
+      .map((setObj) => {
+        const masteredInSet = setObj.questionIds.filter((id) => masteredSet.has(id)).length;
+        const dotClass =
+          setObj.key === "hardest-35"
+            ? "dot-warn"
+            : setObj.key === "official-day"
+            ? "dot-active"
+            : "";
+
+        return `
+          <div class="clean-row">
+            <div class="row-main">
+              <span class="status-dot ${dotClass}" aria-hidden="true"></span>
+              <div>
+                <h3 class="row-title">${setObj.title}</h3>
+                <p class="row-sub">${setObj.description}</p>
+              </div>
+            </div>
+            <div class="row-right">
+              <span class="status-pill tabular">${masteredInSet}/${setObj.questionIds.length} dom.</span>
+              <button type="button" class="btn-outline" data-action="start-preset-exam" data-exam-key="${setObj.key}">
+                <span>Rendir test</span>
+                ${ICONS.chevronRight}
+              </button>
+            </div>
+          </div>
+        `;
+      })
+      .join("");
   }
 
   function renderHistoryList() {
     const container = document.getElementById("recent-history-list");
     if (!container) return;
+
+    const historyBadge = document.getElementById("history-count-badge");
+    if (historyBadge) {
+      historyBadge.textContent = `${state.examHistory.length} ${
+        state.examHistory.length === 1 ? "registro" : "registros"
+      }`;
+    }
 
     if (state.examHistory.length === 0) {
       container.innerHTML = `
@@ -421,20 +764,34 @@
       );
     }
 
+    if (mode === "preset-exam") {
+      const examSets = Array.isArray(window.CONASET_EXAM_SETS) ? window.CONASET_EXAM_SETS : [];
+      const setObj = examSets.find((s) => s.key === options.examKey) || examSets[0];
+      if (setObj) {
+        const byId = new Map(allQuestions.map((q) => [q.id, q]));
+        const selected = setObj.questionIds.map((id) => byId.get(id)).filter(Boolean);
+        return shuffleArray(selected).map(prepareQuestionInstance);
+      }
+    }
+
     if (mode === "day-sprint") {
       const plan = computeSprintPlan();
       const dayObj = plan.schedule[options.dayIndex || 0] || plan.schedule[0];
       const chapterSet = new Set(dayObj.chapterIds);
-      const pdfVisualsInChapters = shuffleArray(
-        allQuestions.filter((q) => chapterSet.has(q.chapter) && String(q.id).startsWith("q_pdf_"))
+      const failedSet = new Set(state.failedQuestionIds);
+      const masteredSet = new Set(state.masteredQuestionIds);
+
+      const inChapter = allQuestions.filter((q) => chapterSet.has(q.chapter));
+      const priorityInChapter = shuffleArray(
+        inChapter.filter((q) => failedSet.has(q.id) || !masteredSet.has(q.id))
       );
-      const restInChapters = shuffleArray(
-        allQuestions.filter((q) => chapterSet.has(q.chapter) && !String(q.id).startsWith("q_pdf_"))
+      const restInChapter = shuffleArray(
+        inChapter.filter((q) => !failedSet.has(q.id) && masteredSet.has(q.id))
       );
-      const doubles = shuffleArray(
+      const doublesOther = shuffleArray(
         allQuestions.filter((q) => q.doublePoints && !chapterSet.has(q.chapter))
       );
-      const combined = [...pdfVisualsInChapters.slice(0, 6), ...restInChapters, ...doubles].slice(0, 15);
+      const combined = [...priorityInChapter, ...restInChapter, ...doublesOther].slice(0, 15);
       return shuffleArray(combined).map(prepareQuestionInstance);
     }
 
@@ -464,6 +821,61 @@
       return pool.map(prepareQuestionInstance);
     }
 
+    if (mode === "signs") {
+      const allSigns = Array.isArray(window.CONASET_SIGNS) ? window.CONASET_SIGNS : [];
+      const masteredSigns = new Set(state.masteredSignCodes);
+      const unmastered = shuffleArray(allSigns.filter((s) => !masteredSigns.has(s.code)));
+      const mastered = shuffleArray(allSigns.filter((s) => masteredSigns.has(s.code)));
+      const selected = [...unmastered, ...mastered].slice(0, 15);
+
+      return selected.map((sign) => {
+        const targetLen = sign.name.length;
+        const byLengthDiff = (a, b) =>
+          Math.abs(a.name.length - targetLen) - Math.abs(b.name.length - targetLen);
+
+        const sameCat = shuffleArray(
+          allSigns
+            .filter((other) => other.code !== sign.code && other.category === sign.category)
+            .sort(byLengthDiff)
+            .slice(0, 10)
+        );
+        const fallbackCat = shuffleArray(
+          allSigns
+            .filter((other) => other.code !== sign.code && other.category !== sign.category)
+            .sort(byLengthDiff)
+            .slice(0, 10)
+        );
+        const distractors = [...sameCat, ...fallbackCat].slice(0, 3);
+        const rawOptions = [
+          `${sign.name} (${sign.code})`,
+          ...distractors.map((d) => `${d.name} (${d.code})`)
+        ];
+        const optionExplanations = [
+          `Correcto: "${sign.name}" (${sign.code}, ${sign.category}). ${sign.description}`,
+          ...distractors.map(
+            (d) =>
+              `Se descarta: esa descripción corresponde a "${d.name}" (${d.code}, ${d.category}), no a la señal mostrada (${sign.name}).`
+          )
+        ];
+
+        return prepareQuestionInstance({
+          id: `sign_${sign.code}`,
+          signCode: sign.code,
+          isSignQuestion: true,
+          chapter: "Señales",
+          category: sign.category,
+          doublePoints: false,
+          question: `¿Qué indica esta señal oficial de tránsito (${sign.category})?`,
+          options: rawOptions,
+          correct: 0,
+          explanation: `${sign.name} (${sign.code}): ${sign.description}`,
+          image: sign.image_url,
+          localFallback: "",
+          optionExplanations
+        });
+      });
+    }
+
     return shuffleArray(allQuestions).slice(0, 15).map(prepareQuestionInstance);
   }
 
@@ -475,8 +887,17 @@
 
     let title = "Simulacro oficial municipal";
     let timeLimitSeconds = 45 * 60;
+    let dayISO = null;
 
-    if (mode === "day-sprint") {
+    if (mode === "preset-exam") {
+      const examSets = Array.isArray(window.CONASET_EXAM_SETS) ? window.CONASET_EXAM_SETS : [];
+      const setObj = examSets.find((s) => s.key === options.examKey) || examSets[0];
+      title = setObj ? setObj.title : "Test oficial extraído";
+      timeLimitSeconds = 45 * 60;
+    } else if (mode === "day-sprint") {
+      const plan = computeSprintPlan();
+      const dayObj = plan.schedule[options.dayIndex || 0] || plan.schedule[0];
+      dayISO = dayObj ? dayObj.dateISO : getTodayISO();
       const dayNum = (options.dayIndex || 0) + 1;
       title = `Práctica programada · Día ${dayNum}`;
       timeLimitSeconds = 20 * 60;
@@ -492,20 +913,26 @@
     } else if (mode === "chapter") {
       const ch = window.CONASET_CHAPTERS.find((c) => c.id === Number(options.chapterId));
       title = ch ? `${ch.number}: ${ch.title}` : "Práctica por capítulo";
-      timeLimitSeconds = 15 * 60;
+      timeLimitSeconds = Math.max(10 * 60, questions.length * 45);
+    } else if (mode === "signs") {
+      title = "Test de señales de tránsito (15)";
+      timeLimitSeconds = 12 * 60;
     }
 
     activeExam = {
       mode,
       title,
+      dayISO,
       questions,
       maxPoints,
       currentIndex: 0,
       answers: {},
+      recordedIndices: {},
       startTimeMs: Date.now(),
       remainingSeconds: timeLimitSeconds,
       finished: false,
-      feedbackMode: mode === "official" ? state.feedbackMode : "instant"
+      feedbackMode:
+        mode === "official" || mode === "preset-exam" ? state.feedbackMode : "instant"
     };
 
     switchView("exam");
@@ -627,8 +1054,12 @@
       </div>
 
       <div>
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span class="status-pill">Capítulo ${q.chapter} · ${q.category}</span>
+        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <span class="status-pill">${
+            q.isSignQuestion
+              ? `Señales de tránsito · ${q.category}`
+              : `Capítulo ${q.chapter} · ${q.category}`
+          }</span>
           ${
             q.doublePoints
               ? `<span class="status-pill pill-double">Doble puntaje · 2 pts</span>`
@@ -642,9 +1073,20 @@
             ? `<figure class="exam-figure">
                 <img src="${q.image}" data-fallback="${
                 q.localFallback || ""
-              }" onerror="if(this.dataset.fallback && this.src !== this.dataset.fallback){this.src = this.dataset.fallback;}" alt="Ilustración de apoyo para la pregunta" loading="lazy" />
+              }" onerror="if(this.dataset.fallback && this.src !== this.dataset.fallback){this.src = this.dataset.fallback;}else{this.style.display='none';if(this.nextElementSibling && this.nextElementSibling.classList.contains('sign-fallback-badge')){this.nextElementSibling.classList.add('is-visible');}}" alt="${
+                q.isSignQuestion ? `Señal ${q.signCode}` : "Ilustración de apoyo para la pregunta"
+              }" loading="lazy" />
+                ${
+                  q.isSignQuestion
+                    ? `<span class="sign-fallback-badge tabular">${q.signCode}</span>`
+                    : ""
+                }
                 <figcaption class="exam-figure-caption">
-                  Lámina de referencia · Libro para la Conducción en Chile (Capítulo ${q.chapter})
+                  ${
+                    q.isSignQuestion
+                      ? `Señal oficial · Código ${q.signCode}`
+                      : `Imagen de apoyo`
+                  }
                 </figcaption>
               </figure>`
             : ""
@@ -696,9 +1138,7 @@
                     : `Respuesta incorrecta (0 de ${ptsLabel})`
                 }</span>
               </div>
-              <span class="status-pill">${
-                q.manualRef || `Capítulo ${q.chapter} · Manual Oficial 2026`
-              }</span>
+              <span class="status-pill">${q.category}</span>
             </div>
 
             ${
@@ -788,6 +1228,32 @@
     updateTimerDisplay();
   }
 
+  function recordQuestionAttempt(qIndex) {
+    if (!activeExam || activeExam.recordedIndices[qIndex]) return;
+    const q = activeExam.questions[qIndex];
+    const userAns = activeExam.answers[qIndex];
+    if (!q || userAns === undefined) return;
+
+    activeExam.recordedIndices[qIndex] = true;
+    applyQuestionProgress(q, userAns === q.correct);
+
+    if (activeExam.mode === "day-sprint" && activeExam.dayISO) {
+      const answeredCount = Object.keys(activeExam.answers).length;
+      const totalQ = activeExam.questions.length;
+      state.dailyRouteProgress[activeExam.dayISO] = {
+        answered: answeredCount,
+        total: totalQ
+      };
+      if (answeredCount >= totalQ) {
+        state.completedDays[activeExam.dayISO] = true;
+      }
+    }
+
+    saveState();
+    renderDashboard();
+    renderChaptersAccordion();
+  }
+
   function finishExam() {
     if (!activeExam || activeExam.finished) return;
     activeExam.finished = true;
@@ -801,25 +1267,34 @@
     );
     const elapsedMinutes = Math.max(1, Math.ceil(elapsedSeconds / 60));
 
-    const masteredSet = new Set(state.masteredQuestionIds);
-    const failedSet = new Set(state.failedQuestionIds);
-
     activeExam.questions.forEach((q, idx) => {
       const pts = q.doublePoints ? 2 : 1;
       const userAns = activeExam.answers[idx];
-      if (userAns === q.correct) {
+      const isCorrect = userAns === q.correct;
+
+      if (isCorrect) {
         earnedPoints += pts;
         correctCount += 1;
-        masteredSet.add(q.id);
-        failedSet.delete(q.id);
-      } else {
-        failedSet.add(q.id);
+      }
+
+      if (!activeExam.recordedIndices[idx] && userAns !== undefined) {
+        activeExam.recordedIndices[idx] = true;
+        applyQuestionProgress(q, isCorrect);
       }
     });
 
-    state.masteredQuestionIds = Array.from(masteredSet);
-    state.failedQuestionIds = Array.from(failedSet);
     state.studiedMinutesToday += elapsedMinutes;
+
+    if (activeExam.mode === "day-sprint" && activeExam.dayISO) {
+      const answeredCount = Object.keys(activeExam.answers).length;
+      state.dailyRouteProgress[activeExam.dayISO] = {
+        answered: answeredCount,
+        total: activeExam.questions.length
+      };
+      if (answeredCount > 0) {
+        state.completedDays[activeExam.dayISO] = true;
+      }
+    }
 
     const scaledScore38 =
       Math.round((earnedPoints / activeExam.maxPoints) * 38 * 10) / 10;
@@ -827,6 +1302,7 @@
     const mins = Math.floor(elapsedSeconds / 60);
     const secs = elapsedSeconds % 60;
     const durationStr = `${mins}m ${secs}s`;
+    const passed = scaledScore38 >= 33;
 
     activeExam.results = {
       earnedPoints,
@@ -834,7 +1310,7 @@
       correctCount,
       totalQuestions: activeExam.questions.length,
       scaledScore38,
-      passed: scaledScore38 >= 33,
+      passed,
       durationStr
     };
 
@@ -850,9 +1326,14 @@
       durationStr
     });
 
+    if (activeExam.feedbackMode !== "instant") {
+      playExamResultSound(passed);
+    }
+
     saveState();
     renderExamView();
     renderDashboard();
+    renderChaptersAccordion();
   }
 
   function renderExamResults(container) {
@@ -870,7 +1351,9 @@
           <div class="clean-row" style="align-items: flex-start; flex-direction: column; gap: 0.4rem;">
             <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
               <span style="font-size: 0.78rem; color: var(--text-muted);" class="tabular">
-                Pregunta ${idx + 1} · Capítulo ${q.chapter} ${
+                Pregunta ${idx + 1} · ${
+          q.isSignQuestion ? `Señal ${q.signCode}` : `Capítulo ${q.chapter}`
+        } ${
           q.doublePoints ? "· Doble puntaje (2 pts)" : ""
         }
               </span>
@@ -882,9 +1365,15 @@
             <p class="row-title" style="font-size: 0.95rem;">${q.question}</p>
             ${
               q.image
-                ? `<div style="margin: 0.5rem 0; background: #FFFFFF; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border-hairline);"><img src="${q.image}" data-fallback="${
+                ? `<div style="margin: 0.5rem 0; background: #FFFFFF; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border-hairline); display: inline-flex; align-items: center; gap: 0.5rem;"><img src="${q.image}" data-fallback="${
                     q.localFallback || ""
-                  }" onerror="if(this.dataset.fallback && this.src !== this.dataset.fallback){this.src = this.dataset.fallback;}" alt="Ilustración de la pregunta" style="max-height: 140px; width: auto; display: block;" /></div>`
+                  }" onerror="if(this.dataset.fallback && this.src !== this.dataset.fallback){this.src = this.dataset.fallback;}else{this.style.display='none';if(this.nextElementSibling && this.nextElementSibling.classList.contains('sign-fallback-badge')){this.nextElementSibling.classList.add('is-visible');}}" alt="${
+                    q.isSignQuestion ? `Señal ${q.signCode}` : "Ilustración de la pregunta"
+                  }" style="max-height: 140px; width: auto; display: block;" />${
+                    q.isSignQuestion
+                      ? `<span class="sign-fallback-badge tabular">${q.signCode}</span>`
+                      : ""
+                  }</div>`
                 : ""
             }
 
@@ -973,16 +1462,22 @@
     const container = document.getElementById("chapters-accordion-container");
     if (!container) return;
 
+    const masteredSet = new Set(state.masteredQuestionIds);
+    const studiedSet = new Set(state.studiedChapters);
+
     container.innerHTML = window.CONASET_CHAPTERS.map((ch, idx) => {
-      const chQuestionsCount = window.CONASET_QUESTIONS.filter(
+      const chQuestions = window.CONASET_QUESTIONS.filter(
         (q) => q.chapter === ch.id
-      ).length;
+      );
+      const chQuestionsCount = chQuestions.length;
+      const chMasteredCount = chQuestions.filter((q) => masteredSet.has(q.id)).length;
+      const isStudied = studiedSet.has(ch.id);
 
       const calculatorHtml =
         ch.id === 2
           ? `
         <div class="inline-calculator">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.65rem;">
+          <div class="inline-calculator-header">
             <strong style="font-size: 0.86rem; color: var(--text-primary);">
               Calculadora de distancia de reacción y frenado
             </strong>
@@ -991,7 +1486,7 @@
             </span>
           </div>
 
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.85rem; margin-bottom: 0.75rem;">
+          <div class="inline-calculator-grid">
             <div>
               <label for="lab-speed-slider" class="control-label" style="display: flex; justify-content: space-between;">
                 <span>Velocidad</span>
@@ -1010,7 +1505,7 @@
             </div>
           </div>
 
-          <div style="display: flex; gap: 1.25rem; font-size: 0.82rem; color: var(--text-secondary); border-top: 1px solid var(--border-hairline); padding-top: 0.6rem;" class="tabular">
+          <div class="inline-calculator-results tabular">
             <span>Reacción (1 s): <strong id="lab-reaction-val" style="color: var(--text-primary);">18 m</strong></span>
             <span>Frenado: <strong id="lab-braking-val" style="color: var(--text-primary);">21 m</strong></span>
           </div>
@@ -1023,7 +1518,9 @@
           <summary class="chapter-summary">
             <div class="row-main">
               <span class="status-dot ${
-                ch.priority.includes("Crítica") || ch.priority.includes("Alta")
+                isStudied
+                  ? "dot-done"
+                  : ch.priority.includes("Crítica") || ch.priority.includes("Alta")
                   ? "dot-warn"
                   : ""
               }" aria-hidden="true"></span>
@@ -1035,6 +1532,9 @@
               </div>
             </div>
             <div class="row-right">
+              <span class="status-pill tabular ${
+                chMasteredCount === chQuestionsCount && chQuestionsCount > 0 ? "pill-pass" : ""
+              }">${chMasteredCount}/${chQuestionsCount} dominadas</span>
               <span class="status-pill">${ch.priority}</span>
               ${ICONS.chevronDown}
             </div>
@@ -1065,12 +1565,18 @@
                 : ""
             }
             ${calculatorHtml}
-            <div style="margin-top: 1rem;">
+            <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.65rem; align-items: center;">
               <button type="button" class="btn-outline" data-action="start-chapter-test" data-chapter-id="${
                 ch.id
               }">
                 <span>Practicar ${ch.number} (${chQuestionsCount} preguntas)</span>
                 ${ICONS.arrowRight}
+              </button>
+              <button type="button" class="btn-outline" data-action="toggle-chapter-studied" data-chapter-id="${
+                ch.id
+              }" aria-pressed="${isStudied}">
+                ${isStudied ? ICONS.check : ""}
+                <span>${isStudied ? "Capítulo leído" : "Marcar como leído"}</span>
               </button>
             </div>
           </div>
@@ -1132,8 +1638,9 @@
               .map(
                 (s) => `
               <div class="clean-row" style="align-items: flex-start;">
-                <div style="width: 3.5rem; flex-shrink: 0; display: flex; justify-content: center; padding-top: 0.15rem;">
-                  <img src="${s.image_url}" alt="${s.name}" loading="lazy" style="width: 3.25rem; height: 3.25rem; aspect-ratio: 1 / 1; object-fit: contain;" />
+                <div class="sign-thumb-box">
+                  <img class="sign-thumb-img" src="${s.image_url}" alt="${s.name}" loading="lazy" onerror="this.style.display='none';if(this.nextElementSibling){this.nextElementSibling.classList.add('is-visible');}" />
+                  <span class="sign-fallback-badge tabular">${s.code}</span>
                 </div>
                 <div class="row-main" style="flex-direction: column; gap: 0.2rem;">
                   <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
@@ -1189,6 +1696,27 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  function applySoundPreference(enabled, persist = true) {
+    state.soundEnabled = Boolean(enabled);
+    const btn = document.getElementById("sound-toggle-btn");
+    const labelEl = document.getElementById("sound-label-text");
+    const iconEl = document.getElementById("sound-icon-svg");
+    if (btn) {
+      btn.setAttribute("aria-pressed", String(state.soundEnabled));
+      btn.setAttribute(
+        "aria-label",
+        state.soundEnabled ? "Silenciar sonidos de respuesta" : "Activar sonidos de respuesta"
+      );
+    }
+    if (labelEl) {
+      labelEl.textContent = state.soundEnabled ? "Sonido" : "Silencio";
+    }
+    if (iconEl) {
+      iconEl.innerHTML = state.soundEnabled ? ICONS.volumeOn : ICONS.volumeOff;
+    }
+    if (persist) saveState();
+  }
+
   function applyTheme(theme) {
     state.theme = theme;
     document.documentElement.setAttribute("data-theme", theme);
@@ -1238,6 +1766,17 @@
       });
     }
 
+    const soundBtn = document.getElementById("sound-toggle-btn");
+    if (soundBtn) {
+      soundBtn.addEventListener("click", () => {
+        const nextEnabled = !state.soundEnabled;
+        applySoundPreference(nextEnabled, true);
+        if (nextEnabled) {
+          playFeedbackSound(true);
+        }
+      });
+    }
+
     const themeBtn = document.getElementById("theme-toggle-btn");
     if (themeBtn) {
       themeBtn.addEventListener("click", () => {
@@ -1282,22 +1821,56 @@
         startExam("day-sprint", { dayIndex });
       } else if (action === "toggle-day-complete") {
         const iso = actionEl.getAttribute("data-day-iso");
-        state.completedDays[iso] = !state.completedDays[iso];
-        if (state.completedDays[iso]) {
-          state.studiedMinutesToday += 25;
+        if (!iso) return;
+        const willComplete = !state.completedDays[iso];
+        if (willComplete) {
+          state.completedDays[iso] = true;
+          if (!state.manualDayCredits[iso]) {
+            state.manualDayCredits[iso] = 25;
+            state.studiedMinutesToday += 25;
+          }
+        } else {
+          delete state.completedDays[iso];
+          if (state.manualDayCredits[iso]) {
+            state.studiedMinutesToday = Math.max(0, state.studiedMinutesToday - state.manualDayCredits[iso]);
+            delete state.manualDayCredits[iso];
+          }
         }
         saveState();
         renderDashboard();
       } else if (action === "start-mode") {
         const mode = actionEl.getAttribute("data-mode");
         startExam(mode);
+      } else if (action === "start-preset-exam") {
+        const examKey = actionEl.getAttribute("data-exam-key");
+        startExam("preset-exam", { examKey });
       } else if (action === "start-chapter-test") {
         const chId = Number(actionEl.getAttribute("data-chapter-id"));
         startExam("chapter", { chapterId: chId });
+      } else if (action === "toggle-chapter-studied") {
+        const chId = Number(actionEl.getAttribute("data-chapter-id"));
+        const idx = state.studiedChapters.indexOf(chId);
+        if (idx >= 0) {
+          state.studiedChapters.splice(idx, 1);
+        } else {
+          state.studiedChapters.push(chId);
+        }
+        saveState();
+        renderChaptersAccordion();
+        renderDashboard();
       } else if (action === "select-option") {
         if (!activeExam || activeExam.finished) return;
+        const qIndex = activeExam.currentIndex;
+        if (activeExam.feedbackMode === "instant" && activeExam.answers[qIndex] !== undefined) {
+          return;
+        }
         const optIdx = Number(actionEl.getAttribute("data-opt-index"));
-        activeExam.answers[activeExam.currentIndex] = optIdx;
+        activeExam.answers[qIndex] = optIdx;
+        const q = activeExam.questions[qIndex];
+        if (activeExam.feedbackMode === "instant" && q) {
+          playFeedbackSound(optIdx === q.correct);
+          recordQuestionAttempt(qIndex);
+        }
         renderExamView();
       } else if (action === "next-question") {
         if (activeExam && activeExam.currentIndex < activeExam.questions.length - 1) {
@@ -1324,6 +1897,7 @@
 
   window.addEventListener("DOMContentLoaded", () => {
     applyTheme(state.theme || "light");
+    applySoundPreference(state.soundEnabled !== false, false);
     initEvents();
     renderDashboard();
     renderChaptersAccordion();

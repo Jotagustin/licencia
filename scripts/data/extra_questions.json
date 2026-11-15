@@ -1,0 +1,2060 @@
+[
+  {
+    "id": "q101",
+    "chapter": 1,
+    "category": "Siniestros de tránsito",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Por qué hoy se prefiere hablar de 'siniestros de tránsito' en vez de 'accidentes'?",
+    "options": [
+      "Porque la palabra 'accidente' da a entender un hecho fortuito e inevitable, aunque casi todos pueden prevenirse.",
+      "Porque la legislación vigente reserva el término 'accidente' solo para colisiones entre vehículos de carga.",
+      "Porque en los documentos policiales solo se denomina siniestro cuando existen personas lesionadas graves."
+    ],
+    "correct": 0,
+    "explanation": "Llamarlos 'accidentes' sugiere fatalidad inevitable; en cambio, cerca del 90% de los siniestros de tránsito se origina en errores humanos evitables.",
+    "optionExplanations": [
+      "Correcto: el término 'siniestro' refleja que son hechos prevenibles y no meros sucesos azarosos.",
+      "La distinción no depende del tipo de vehículo involucrado, sino de su carácter prevenible.",
+      "Todo hecho vial prevenible se considera siniestro, haya o no personas lesionadas."
+    ]
+  },
+  {
+    "id": "q102",
+    "chapter": 1,
+    "category": "Siniestros de tránsito",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "Según las estadísticas viales en Chile, ¿dónde ocurren más siniestros y dónde hay más fallecidos?",
+    "options": [
+      "Más siniestros y también más personas fallecidas en autopistas urbanas.",
+      "Más siniestros en zonas urbanas, pero más fallecidos en zonas no urbanas.",
+      "Más siniestros en caminos rurales, pero más fallecidos en calles céntricas."
+    ],
+    "correct": 1,
+    "explanation": "La mayor cantidad de siniestros (~85%) ocurre en áreas urbanas por la congestión, pero las carreteras y zonas no urbanas concentran más fallecidos (~60%) debido a las mayores velocidades.",
+    "optionExplanations": [
+      "Aunque en zonas urbanas hay más siniestros por densidad de tráfico, los impactos a baja velocidad resultan menos letales.",
+      "Correcto: la zona urbana acumula más siniestros y la no urbana registra más muertes por la alta velocidad.",
+      "En zonas rurales ocurren menos siniestros en número total, pero su gravedad y letalidad son mucho mayores."
+    ]
+  },
+  {
+    "id": "q103",
+    "chapter": 1,
+    "category": "Siniestros de tránsito",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-038-073.png",
+    "localFallback": "assets/pdf-images/pdf-038-073.png",
+    "question": "¿Qué grupo etario concentra la mayor proporción de conductores fallecidos en Chile?",
+    "options": [
+      "Personas mayores de 65 años por disminución progresiva de reflejos.",
+      "Conductores entre 45 y 59 años durante desplazamientos laborales.",
+      "Jóvenes de 18 a 29 años, siendo hombres cerca del 92% de ellos."
+    ],
+    "correct": 2,
+    "explanation": "Los conductores jóvenes (18 a 29 años) concentran el mayor porcentaje de fallecidos al volante, con cerca del 92% de sexo masculino.",
+    "optionExplanations": [
+      "Las personas mayores son vulnerables como peatones, pero no lideran las cifras de conductores fallecidos.",
+      "Este tramo presenta menor tasa relativa de mortalidad al volante que el grupo juvenil.",
+      "Correcto: el grupo de 18 a 29 años concentra la mayor proporción de conductores fallecidos, mayoritariamente hombres."
+    ]
+  },
+  {
+    "id": "q104",
+    "chapter": 1,
+    "category": "Siniestros de tránsito",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Qué porcentaje aproximado de los siniestros de tránsito se explica por falla o error humano?",
+    "options": [
+      "Cerca del 90% de los casos.",
+      "Alrededor del 50% de los casos.",
+      "Menos del 35% de los casos."
+    ],
+    "correct": 0,
+    "explanation": "Aproximadamente 9 de cada 10 siniestros se producen por decisiones o errores humanos (velocidad, alcohol, distracciones), y no por fallas mecánicas o climáticas inevitables.",
+    "optionExplanations": [
+      "Correcto: alrededor del 90% de los siniestros con víctimas tiene origen en fallas humanas.",
+      "La participación humana supera ampliamente la mitad de los siniestros registrados.",
+      "Las fallas mecánicas explican un porcentaje muy menor; el factor humano ronda el 90%."
+    ]
+  },
+  {
+    "id": "q105",
+    "chapter": 1,
+    "category": "Siniestros de tránsito",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-009-vec.png",
+    "localFallback": "assets/pdf-images/pdf-009-vec.png",
+    "question": "¿Cuál es la premisa central del enfoque 'Sistema Seguro' (Visión Cero) en el tránsito?",
+    "options": [
+      "El sistema debe diseñarse para que los errores humanos no causen muertes ni lesiones graves.",
+      "Los siniestros desaparecen por sí solos si se reduce el número de señales en las esquinas.",
+      "La responsabilidad exclusiva de evitar choques recae siempre sobre peatones y ciclistas."
+    ],
+    "correct": 0,
+    "explanation": "El Sistema Seguro asume que las personas cometen errores, por lo que vías, vehículos y velocidades deben diseñarse de modo que una falla no termine en muerte o lesión grave.",
+    "optionExplanations": [
+      "Correcto: asume la falibilidad humana y diseña el sistema vial para amortiguar errores sin víctimas fatales.",
+      "La señalización clara es parte esencial del ordenamiento y prevención vial.",
+      "La responsabilidad es compartida entre quienes diseñan el sistema vial y todos los usuarios."
+    ]
+  },
+  {
+    "id": "q106",
+    "chapter": 1,
+    "category": "Siniestros de tránsito",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Qué lugar ocupan los siniestros de tránsito como causa de muerte en niños (1 a 14 años) y jóvenes (15 a 29 años) en Chile?",
+    "options": [
+      "Tercera causa en niños de 1 a 14 años y primera causa en jóvenes de 15 a 29 años.",
+      "Primera causa en niños de 1 a 14 años y segunda causa en jóvenes de 15 a 29 años.",
+      "Segunda causa en niños de 1 a 14 años y cuarta causa en jóvenes de 15 a 29 años."
+    ],
+    "correct": 1,
+    "explanation": "En Chile, los siniestros viales son la primera causa de mortalidad infantil entre 1 y 14 años, y la segunda entre jóvenes de 15 a 29 años (tras los suicidios).",
+    "optionExplanations": [
+      "Invierte la gravedad del tramo infantil y sobreestima el primer lugar en jóvenes.",
+      "Correcto: primera causa de muerte entre 1 y 14 años, y segunda causa entre 15 y 29 años.",
+      "Subestima el impacto mortal de los siniestros de tránsito en ambos grupos etarios."
+    ]
+  },
+  {
+    "id": "q_pdf_01",
+    "chapter": 1,
+    "category": "Siniestros de tránsito",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-007-vec.png",
+    "localFallback": "assets/pdf-images/pdf-007-vec.png",
+    "question": "¿Cuál de los siguientes elementos corresponde específicamente a los Costos Humanos de un siniestro?",
+    "options": [
+      "La atención médica de urgencia, rehabilitación y traslados en ambulancia.",
+      "La pérdida de productividad futura y el sufrimiento físico y psicológico.",
+      "La intervención de Carabineros, Bomberos, seguros y procesos judiciales."
+    ],
+    "correct": 1,
+    "explanation": "Los costos de un siniestro se dividen en materiales, de salud (ambulancia, hospital), administrativos (policía, bomberos, justicia, seguros) y humanos (sufrimiento y pérdida de productividad).",
+    "optionExplanations": [
+      "Los traslados en ambulancia y gastos médicos corresponden a la categoría de Costos de Salud.",
+      "Correcto: el sufrimiento de víctimas y cercanos, junto a la pérdida de productividad futura, son Costos Humanos.",
+      "Carabineros, Bomberos, seguros y tribunales integran los Costos Administrativos."
+    ]
+  },
+  {
+    "id": "q_pdf_02",
+    "chapter": 1,
+    "category": "Siniestros de tránsito",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-009-vec.png",
+    "localFallback": "assets/pdf-images/pdf-009-vec.png",
+    "question": "Dentro del Sistema Seguro, ¿por qué deben limitarse las velocidades en zonas de interacción con peatones?",
+    "options": [
+      "Porque la tolerancia del cuerpo humano ante la energía de un impacto es limitada.",
+      "Porque ningún vehículo particular logra frenar en menos de cien metros en ciudad.",
+      "Porque el cuerpo humano resiste cualquier choque si utiliza cinturón de seguridad."
+    ],
+    "correct": 0,
+    "explanation": "El principio de tolerancia física del Sistema Seguro reconoce que el cuerpo humano soporta solo cierta fuerza de impacto antes de sufrir lesiones mortales o graves.",
+    "optionExplanations": [
+      "Correcto: el cuerpo humano tiene un umbral biológico limitado frente a las fuerzas de un choque.",
+      "Un automóvil en condiciones normales a velocidad urbana se detiene en mucho menos de cien metros.",
+      "Incluso con cinturón de seguridad, impactos a velocidades excesivas superan la resistencia física del cuerpo."
+    ]
+  },
+  {
+    "id": "q202",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-024-047.png",
+    "localFallback": "assets/pdf-images/pdf-024-047.png",
+    "question": "Si usted circula a 70 km/h y tiene un tiempo de reacción de 1 segundo, ¿qué distancia recorre antes de pisar el freno?",
+    "options": [
+      "Aproximadamente 14 metros.",
+      "Aproximadamente 21 metros.",
+      "Aproximadamente 49 metros."
+    ],
+    "correct": 1,
+    "explanation": "La regla práctica multiplica la primera cifra de la velocidad por 3: a 70 km/h, 7 × 3 = 21 metros de distancia de reacción (valor real exacto ~19,4 m).",
+    "optionExplanations": [
+      "14 metros corresponde aproximadamente a circular a 50 km/h (5 × 3 = 15 m).",
+      "Correcto: aplicando la regla práctica (7 × 3), se recorren unos 21 metros durante ese segundo de reacción.",
+      "49 metros supera el doble de la distancia de reacción real a 70 km/h."
+    ]
+  },
+  {
+    "id": "q203",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-019-023.png",
+    "localFallback": "assets/pdf-images/pdf-019-023.png",
+    "question": "¿Cuál es la profundidad mínima legal permitida en los surcos principales de los neumáticos de un automóvil?",
+    "options": [
+      "0,8 milímetros en pavimento seco y 2,0 mm en época invernal.",
+      "3,0 milímetros como exigencia legal mínima en todo el país.",
+      "1,6 milímetros, aunque conviene cambiarlos bajo los 3,0 mm."
+    ],
+    "correct": 2,
+    "explanation": "La normativa fija un mínimo legal de 1,6 mm en la banda de rodadura, aunque por seguridad frente a lluvia y aquaplaning se aconseja reemplazarlos al llegar a 3,0 mm.",
+    "optionExplanations": [
+      "Circular con 0,8 mm es ilegal y sumamente peligroso incluso en pavimento seco.",
+      "3,0 mm es el umbral preventivo recomendado para recambio, pero el mínimo legal es 1,6 mm.",
+      "Correcto: el mínimo legal es 1,6 mm y la recomendación de seguridad es cambiarlos antes de bajar de 3,0 mm."
+    ]
+  },
+  {
+    "id": "q204",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-019-023.png",
+    "localFallback": "assets/pdf-images/pdf-019-023.png",
+    "question": "Si observa que los neumáticos presentan un desgaste mucho mayor en el centro de la banda que en los costados, ¿cuál es la causa?",
+    "options": [
+      "Se han usado de forma prolongada con presión de aire excesiva.",
+      "Se han usado de forma habitual con presión inferior a la indicada.",
+      "Existe un desajuste severo en la alineación o balanceo trasero."
+    ],
+    "correct": 0,
+    "explanation": "El exceso de aire abomba la banda central del neumático, desgastando el centro; la falta de presión desgasta ambos bordes exteriores.",
+    "optionExplanations": [
+      "Correcto: el sobreinflado concentra el apoyo y el desgaste en la franja central del neumático.",
+      "Una presión insuficiente provoca desgaste prematuro en los dos bordes externos, no en el centro.",
+      "Una mala alineación suele generar desgaste irregular en uno solo de los costados."
+    ]
+  },
+  {
+    "id": "q205",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-019-023.png",
+    "localFallback": "assets/pdf-images/pdf-019-023.png",
+    "question": "¿En qué condición debe medirse y ajustarse la presión de aire de los neumáticos?",
+    "options": [
+      "Inmediatamente tras un viaje largo en autopista con las gomas calientes.",
+      "Cuando los neumáticos están fríos y han rodado muy poca distancia.",
+      "En cualquier instante del trayecto, pues el calor no altera la presión."
+    ],
+    "correct": 1,
+    "explanation": "Al rodar, el aire interior se calienta y expande alterando la lectura del manómetro; por eso la presión se mide siempre en frío.",
+    "optionExplanations": [
+      "Con el neumático caliente el aire expandido marca una presión mayor a la real en frío.",
+      "Correcto: la presión debe comprobarse en frío para obtener una lectura fiel a la especificación del fabricante.",
+      "La temperatura aumenta la presión interna, por lo que no da lo mismo medir en frío o en caliente."
+    ]
+  },
+  {
+    "id": "q206",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-014-013.png",
+    "localFallback": "assets/pdf-images/pdf-014-013.png",
+    "question": "¿Qué ventaja principal aporta el sistema de frenos antibloqueo (ABS) durante una frenada de emergencia?",
+    "options": [
+      "Reduce siempre a la mitad la distancia total necesaria en hielo o nieve.",
+      "Evita que las ruedas se bloqueen, permitiendo dirigir el auto al frenar.",
+      "Detiene el vehículo de forma autónoma antes de que el conductor pise el pedal."
+    ],
+    "correct": 1,
+    "explanation": "El ABS libera y aplica rápidamente la presión de freno para impedir el bloqueo de las ruedas, manteniendo la capacidad de maniobrar con el volante mientras frenas a fondo.",
+    "optionExplanations": [
+      "Sobre hielo o nieve suelta el ABS no acorta a la mitad el frenado; su rol principal es mantener el control direccional.",
+      "Correcto: al evitar el bloqueo de las ruedas, permite seguir controlando la dirección para esquivar obstáculos.",
+      "El ABS asiste la frenada cuando el conductor pisa el pedal; no es un sistema de frenado autónomo."
+    ]
+  },
+  {
+    "id": "q207",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": true,
+    "image": "assets/pdf-images/pdf-027-053.png",
+    "localFallback": "assets/pdf-images/pdf-027-053.png",
+    "question": "Respecto al cinturón de seguridad en un automóvil particular, ¿qué afirmación es correcta?",
+    "options": [
+      "En trayectos urbanos breves puede omitirse si el vehículo dispone de airbags frontales.",
+      "En los asientos traseros solo es exigible al circular por carreteras fuera de la ciudad.",
+      "Es obligatorio en todos los asientos; ir suelto atrás pone en riesgo incluso a los de adelante."
+    ],
+    "correct": 2,
+    "explanation": "La ley exige el uso de cinturón en todas las plazas; en un choque frontal un pasajero trasero suelto sale proyectado hacia adelante con fuerza equivalente a toneladas.",
+    "optionExplanations": [
+      "El airbag complementa al cinturón y jamás lo reemplaza; sin cinturón puede causar lesiones graves.",
+      "La obligatoriedad en asientos traseros aplica tanto en vías urbanas como rurales.",
+      "Correcto: su uso es obligatorio en asientos delanteros y traseros para proteger a todos los ocupantes."
+    ]
+  },
+  {
+    "id": "q208",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-031-071.png",
+    "localFallback": "assets/pdf-images/pdf-031-071.png",
+    "question": "¿Cómo debe regularse el apoyacabezas para evitar el efecto latigazo en un choque por alcance?",
+    "options": [
+      "Con su borde superior a la altura de la cabeza y a no más de 4 cm de distancia.",
+      "Apoyado en la base de la nuca y separado unos 12 cm para permitir girar el cuello.",
+      "Inclinado por debajo del nivel de las orejas para sostener la zona de los hombros."
+    ],
+    "correct": 0,
+    "explanation": "Para contener el retroceso brusco de la cabeza, el centro del apoyacabezas debe quedar a la altura de los ojos (borde superior parejo con la cabeza) y a menos de 4 cm de distancia.",
+    "optionExplanations": [
+      "Correcto: el borde superior debe quedar a nivel de la parte alta de la cabeza y muy próximo (máx. 4 cm).",
+      "Si queda demasiado bajo o a 12 cm de distancia, la cabeza rebota hacia atrás agravando la lesión cervical.",
+      "Colocarlo a la altura de los hombros actúa como punto de palanca y empeora el efecto latigazo."
+    ]
+  },
+  {
+    "id": "q209",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Qué ocurre con la fuerza centrífuga que empuja al vehículo hacia afuera al tomar una curva?",
+    "options": [
+      "Disminuye si el conductor presiona el embrague justo en la mitad del giro.",
+      "Aumenta con el cuadrado de la velocidad y cuando menor es el radio de la curva.",
+      "Depende exclusivamente de la presión del aire y el ancho de los neumáticos."
+    ],
+    "correct": 1,
+    "explanation": "La fuerza centrífuga crece exponencialmente (con el cuadrado de la velocidad) y es mayor cuanto más cerrada sea la curva.",
+    "optionExplanations": [
+      "Pisar el embrague no reduce la fuerza centrífuga y quita control de tracción en la curva.",
+      "Correcto: la fuerza centrífuga crece al cuadrado con la velocidad y aumenta en curvas más cerradas.",
+      "Aunque el agarre del neumático ayuda a contenerla, la magnitud de la fuerza depende de masa, velocidad y radio."
+    ]
+  },
+  {
+    "id": "q211",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Cuál de los siguientes grupos reúne únicamente elementos de seguridad activa del vehículo?",
+    "options": [
+      "Cinturón de seguridad, bolsas de aire (airbags) y apoyacabezas.",
+      "Frenos, neumáticos, sistema de dirección, suspensión y luces.",
+      "Carrocería deformable, habitáculo rígido y barras laterales."
+    ],
+    "correct": 1,
+    "explanation": "La seguridad activa actúa antes de un siniestro para evitar que ocurra (frenos, neumáticos, luces, dirección, suspensión); la pasiva reduce lesiones durante el impacto.",
+    "optionExplanations": [
+      "Cinturones, airbags y apoyacabezas protegen durante el impacto, por lo que forman parte de la seguridad pasiva.",
+      "Correcto: frenos, neumáticos, dirección, suspensión y luces ayudan al conductor a evitar un siniestro (seguridad activa).",
+      "La estructura deformable y el habitáculo protegen en la colisión y corresponden a seguridad pasiva."
+    ]
+  },
+  {
+    "id": "q212",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-024-047.png",
+    "localFallback": "assets/pdf-images/pdf-024-047.png",
+    "question": "Si circula a 90 km/h en pavimento seco, ¿cuáles son aproximadamente su distancia de reacción y de detención total?",
+    "options": [
+      "Unos 27 metros de reacción y entre 70 y 75 metros de detención total.",
+      "Unos 12 metros de reacción y entre 25 y 30 metros de detención total.",
+      "Unos 45 metros de reacción y entre 140 y 160 metros de detención total."
+    ],
+    "correct": 0,
+    "explanation": "A 90 km/h la distancia de reacción ronda los 27 m (9 × 3) y la de frenado en seco unos 45 m, sumando cerca de 70 a 75 metros en total.",
+    "optionExplanations": [
+      "Correcto: a 90 km/h se recorren unos 27 m antes de frenar y unos 70–75 m hasta detenerse por completo.",
+      "Esas cifras corresponden a velocidades urbanas de alrededor de 40–50 km/h, no a 90 km/h.",
+      "140–160 m en seco sobreestima la distancia (esa cifra se acerca más a velocidad superior o pavimento muy mojado)."
+    ]
+  },
+  {
+    "id": "q_pdf_03",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-011-003.png",
+    "localFallback": "assets/pdf-images/pdf-011-003.png",
+    "question": "Si durante la marcha se enciende una luz testigo de color rojo en el tablero (como frenos o temperatura), ¿qué señala?",
+    "options": [
+      "Un aviso preventivo de mantenimiento menor que puede revisarse al llegar a destino.",
+      "Una falla crítica o peligro grave que exige detener el vehículo en un lugar seguro.",
+      "La activación normal de las luces bajas o de estacionamiento del vehículo."
+    ],
+    "correct": 1,
+    "explanation": "Los testigos rojos del tablero indican avería grave o riesgo inmediato (presión de aceite, frenos, sobrecalentamiento) y exigen detenerse cuanto antes de forma segura.",
+    "optionExplanations": [
+      "Las luces meramente informativas o preventivas menores suelen ser verdes, azules o ámbar, no rojas.",
+      "Correcto: un testigo rojo advierte una falla grave y obliga a detenerse de inmediato en lugar seguro.",
+      "Las luces bajas o de posición se indican mediante testigos verdes en el tablero."
+    ]
+  },
+  {
+    "id": "q_pdf_04",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Cómo debe comprobarse correctamente el nivel de aceite del motor con la varilla medidora?",
+    "options": [
+      "Con el motor detenido y frío, en piso nivelado, entre las marcas mínimo y máximo.",
+      "Con el motor encendido en ralentí y estacionado sobre una pendiente leve.",
+      "Solo cuando se enciende el testigo rojo de presión de aceite en el tablero."
+    ],
+    "correct": 0,
+    "explanation": "Para una lectura precisa, el aceite debe haber escurrido al cárter con el motor detenido y frío, y el auto sobre terreno plano.",
+    "optionExplanations": [
+      "Correcto: con motor frío y detenido en superficie plana, el nivel debe quedar entre MIN y MAX.",
+      "Con el motor en marcha o inclinado el aceite está en circulación o desnivelado y falsea la medida.",
+      "Esperar a que encienda el testigo rojo de aceite ya puede implicar falta grave de lubricación."
+    ]
+  },
+  {
+    "id": "q_pdf_05",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-020-025.png",
+    "localFallback": "assets/pdf-images/pdf-020-025.png",
+    "question": "¿Por qué el haz de las luces bajas es asimétrico y proyecta menos alcance hacia el lado izquierdo?",
+    "options": [
+      "Para iluminar bien la berma derecha sin encandilar al tránsito contrario.",
+      "Para reducir a la mitad el consumo eléctrico del alternador en ciudad.",
+      "Para proyectar el haz principal hacia el centro de la calzada contraria."
+    ],
+    "correct": 0,
+    "explanation": "El diseño asimétrico de las luces bajas da mayor alcance al borde derecho (donde circulan peatones y señales) y recorta el lado izquierdo para no deslumbrar a quien viene de frente.",
+    "optionExplanations": [
+      "Correcto: ilumina más lejos la berma derecha evitando encandilar a quienes vienen en sentido opuesto.",
+      "La forma del haz busca seguridad óptica, no ahorro energético del alternador.",
+      "Iluminar la calzada contraria provocaría exactamente el deslumbramiento que el haz asimétrico busca evitar."
+    ]
+  },
+  {
+    "id": "q_pdf_06",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-021-042.png",
+    "localFallback": "assets/pdf-images/pdf-021-042.png",
+    "question": "Antes de cambiar de pista, ¿qué acción complementaria debe realizarse además de mirar los espejos retrovisores?",
+    "options": [
+      "Girar brevemente la cabeza por sobre el hombro para revisar el punto ciego.",
+      "Activar las luces intermitentes de emergencia durante tres segundos antes.",
+      "Reducir bruscamente la velocidad para obligar a frenar a los vehículos laterales."
+    ],
+    "correct": 0,
+    "explanation": "Los espejos no cubren las zonas laterales próximas al vehículo (ángulos muertos); un giro rápido de cabeza confirma que la pista contigua está realmente libre.",
+    "optionExplanations": [
+      "Correcto: un vistazo rápido por sobre el hombro permite cubrir el ángulo muerto antes de cambiar de pista.",
+      "Las luces de emergencia no sirven para anunciar cambios de pista ni reemplazan la observación visual.",
+      "Frenar bruscamente sin motivo antes de cambiar de pista puede provocar choques por alcance."
+    ]
+  },
+  {
+    "id": "q_pdf_07",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": true,
+    "image": "assets/pdf-images/pdf-024-047.png",
+    "localFallback": "assets/pdf-images/pdf-024-047.png",
+    "question": "Según la tabla de distancias de detención, ¿qué sucede al pasar de 50 km/h a 110 km/h sobre pavimento mojado?",
+    "options": [
+      "La distancia total de detención aumenta alrededor de 20 metros solamente.",
+      "La distancia total supera los 180 metros al crecer el frenado al cuadrado.",
+      "La distancia de reacción se reduce a la mitad por mayor atención vial."
+    ],
+    "correct": 1,
+    "explanation": "La distancia de frenado aumenta con el cuadrado de la velocidad y casi se duplica en calzada mojada, haciendo que a 110 km/h la detención supere los 180 metros.",
+    "optionExplanations": [
+      "20 metros es una subestimación extrema; a 110 km/h ya recorres más de 30 m solo durante el segundo de reacción.",
+      "Correcto: al duplicarse con creces la velocidad sobre pavimento mojado, la detención total supera los 180 metros.",
+      "La distancia de reacción aumenta de forma proporcional con la velocidad, nunca disminuye."
+    ]
+  },
+  {
+    "id": "q_pdf_08",
+    "chapter": 2,
+    "category": "Principios de la conducción",
+    "doublePoints": true,
+    "image": "assets/pdf-images/pdf-030-070.png",
+    "localFallback": "assets/pdf-images/pdf-030-070.png",
+    "question": "¿Por qué está prohibido instalar una silla infantil mirando hacia atrás en un asiento con airbag frontal activo?",
+    "options": [
+      "Porque el respaldo de la silla obstruye por completo el espejo retrovisor lateral derecho.",
+      "Porque al desplegarse a unos 300 km/h el airbag golpea la silla con riesgo mortal.",
+      "Porque el cinturón delantero es más angosto y no permite asegurar ningún anclaje."
+    ],
+    "correct": 1,
+    "explanation": "El despliegue explosivo del airbag frontal golpea directamente el respaldo de una silla orientada a contramarcha, pudiendo causar lesiones fatales en el lactante.",
+    "optionExplanations": [
+      "La prohibición obedece al impacto letal del airbag, no a la visibilidad del espejo.",
+      "Correcto: la fuerza de apertura del airbag contra el respaldo de la silla puede provocar lesiones graves o fatales.",
+      "El peligro crítico proviene del despliegue del airbag frontal, no del ancho de la cinta del cinturón."
+    ]
+  },
+  {
+    "id": "q302",
+    "chapter": 3,
+    "category": "Convivencia vial",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-097-vec.png",
+    "localFallback": "assets/pdf-images/pdf-097-vec.png",
+    "question": "¿Qué actitud define la conducción a la defensiva en la convivencia vial?",
+    "options": [
+      "Anticiparse a errores ajenos, guardar distancia y no forzar la preferencia.",
+      "Hacer cambio de luces y tocar la bocina ante cada falta de otro conductor.",
+      "Circular siempre por la pista izquierda a baja velocidad para ordenar el flujo."
+    ],
+    "correct": 0,
+    "explanation": "Conducir a la defensiva consiste en prever posibles imprudencias de terceros, mantener espacio de seguridad y ceder antes que provocar una colisión por defender un derecho.",
+    "optionExplanations": [
+      "Correcto: se basa en anticipar errores ajenos, mantener distancia segura y evitar maniobras agresivas.",
+      "Responder con bocinazos y luces genera hostilidad y distracción, opuesto a la conducción preventiva.",
+      "Circular lento por la pista izquierda entorpece el tránsito y contraviene la norma de circular por la derecha."
+    ]
+  },
+  {
+    "id": "q_pdf_09",
+    "chapter": 3,
+    "category": "Convivencia vial",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-034-vec.png",
+    "localFallback": "assets/pdf-images/pdf-034-vec.png",
+    "question": "¿Cuáles son los cuatro grandes factores evitables que desencadenan la pérdida de control del vehículo?",
+    "options": [
+      "Distracciones, alcohol y drogas, fatiga o fármacos, y velocidad inadecuada.",
+      "Antigüedad de la patente, transmisión automática, aire acondicionado y color.",
+      "Encendido de luces bajas, uso del cinturón, distancia segura y frenado suave."
+    ],
+    "correct": 0,
+    "explanation": "La mayoría de las pérdidas de control se asocia a cuatro grupos evitables: distracción al volante, consumo de alcohol o drogas, fatiga/sueño/estrés/fármacos y velocidad inadecuada.",
+    "optionExplanations": [
+      "Correcto: esos cuatro grupos concentran los factores humanos prevenibles de pérdida de control.",
+      "Ninguna de esas características mecánicas o estéticas es causa principal de pérdida de control.",
+      "Esos hábitos corresponden justamente a conductas protectoras y seguras al conducir."
+    ]
+  },
+  {
+    "id": "q305",
+    "chapter": 3,
+    "category": "Convivencia vial",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Cómo se relaciona el 'principio de confianza' con la seguridad en la vía pública?",
+    "options": [
+      "Permite despreocuparse de los cruces verdes, pues nadie pasa nunca con luz roja.",
+      "Obliga a exigir siempre la preferencia aunque el otro vehículo no parezca detenerse.",
+      "Se confía en que todos cumplirán las normas, pero manteniendo alerta defensiva."
+    ],
+    "correct": 2,
+    "explanation": "El tránsito funciona sobre la confianza de que los demás respetarán las reglas, pero como las personas cometen errores, debe compensarse siempre con conducción defensiva.",
+    "optionExplanations": [
+      "Confiar ciegamente sin observar el entorno impide reaccionar si otro conductor comete una falta.",
+      "Insistir en la preferencia ante un peligro evidente aumenta la probabilidad de colisión.",
+      "Correcto: se espera el cumplimiento normativo ajeno sin dejar de estar atento para evitar siniestros."
+    ]
+  },
+  {
+    "id": "q306",
+    "chapter": 3,
+    "category": "Convivencia vial",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "En el marco de la convivencia vial, ¿qué valor se describe como la mejor virtud al conducir?",
+    "options": [
+      "La rapidez para despejar cuanto antes todas las intersecciones.",
+      "La solidaridad hacia el resto de las personas usuarias de la vía.",
+      "La firmeza para impedir que otros vehículos cambien de pista."
+    ],
+    "correct": 1,
+    "explanation": "Dentro de los valores de convivencia vial (respeto, solidaridad, comprensión, perdón y tolerancia), la solidaridad se destaca como la mejor virtud y la precaución como principio fundamental.",
+    "optionExplanations": [
+      "Priorizar la rapidez por sobre el cuidado favorece decisiones apresuradas e inseguras.",
+      "Correcto: la solidaridad permite ceder, facilitar maniobras y cuidar a los usuarios más vulnerables.",
+      "Impedir maniobras a otros conductores genera conflictos y situaciones de riesgo innecesarias."
+    ]
+  },
+  {
+    "id": "q307",
+    "chapter": 3,
+    "category": "Convivencia vial",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Por qué muchos conductores perciben menos riesgo del que realmente existe mientras manejan?",
+    "options": [
+      "Porque el habitáculo transmite falsa seguridad y el hábito reduce la alerta.",
+      "Porque las señales de tránsito modernas eliminan toda posibilidad de error.",
+      "Porque los automóviles actuales detienen su marcha al instante sin distancia."
+    ],
+    "correct": 0,
+    "explanation": "La sensación de aislamiento dentro del vehículo y la repetición cotidiana de trayectos sin incidentes generan falsa confianza y subestimación del peligro.",
+    "optionExplanations": [
+      "Correcto: el confort del habitáculo y la costumbre sin accidentes previos atenúan la percepción real del riesgo.",
+      "Las señales informan y regulan, pero no impiden por sí solas los errores humanos ni los choques.",
+      "Todo vehículo en movimiento requiere distancia de reacción y de frenado para detenerse."
+    ]
+  },
+  {
+    "id": "q308",
+    "chapter": 3,
+    "category": "Convivencia vial",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "Al compartir la calzada con peatones y ciclistas, ¿qué regla práctica de convivencia debes aplicar siempre?",
+    "options": [
+      "Usar la bocina en cada esquina para asegurar que hayan notado tu presencia.",
+      "No dar por hecho que las demás personas se dieron cuenta de tu presencia.",
+      "Mantener velocidad constante asumiendo que quienes van a pie deben apartarse."
+    ],
+    "correct": 1,
+    "explanation": "Una clave central de la convivencia y conducción defensiva es no asumir que los demás te vieron, actuando con margen de seguridad y sin presionar con la bocina.",
+    "optionExplanations": [
+      "Tocar la bocina de manera sistemática está prohibido y asusta a peatones y ciclistas.",
+      "Correcto: nunca des por sentado que te vieron; anticípate y deja espacio de seguridad.",
+      "Los usuarios vulnerables tienen prioridad en pasos y cruces y merecen especial resguardo."
+    ]
+  },
+  {
+    "id": "q401",
+    "chapter": 4,
+    "category": "La persona en el tránsito",
+    "doublePoints": true,
+    "image": "assets/pdf-images/pdf-050-table.png",
+    "localFallback": "assets/pdf-images/pdf-050-table.png",
+    "question": "Según la Ley Tolerancia Cero, ¿desde qué alcoholemia se configura el 'estado de ebriedad' al conducir?",
+    "options": [
+      "Desde 0,31 hasta 0,79 gramos por mil en la sangre.",
+      "Desde 0,80 gramos o más por mil en la sangre.",
+      "Desde 1,20 gramos o más por mil en la sangre."
+    ],
+    "correct": 1,
+    "explanation": "La Ley Tolerancia Cero fija el umbral de estado de ebriedad en 0,8 gramos por mil (0,8 g/l) o superior, mientras que entre 0,31 y 0,79 g/l corresponde a bajo la influencia del alcohol.",
+    "optionExplanations": [
+      "El rango entre 0,31 y 0,79 g/l corresponde a conducción 'bajo la influencia del alcohol'.",
+      "Correcto: 0,80 g/l o más configura conducción en estado de ebriedad.",
+      "1,20 g/l supera con creces el umbral legal; el estado de ebriedad parte en 0,80 g/l."
+    ]
+  },
+  {
+    "id": "q402",
+    "chapter": 4,
+    "category": "La persona en el tránsito",
+    "doublePoints": true,
+    "image": "assets/pdf-images/pdf-050-table.png",
+    "localFallback": "assets/pdf-images/pdf-050-table.png",
+    "question": "¿Qué rango de alcoholemia define la conducción 'bajo la influencia del alcohol' en Chile?",
+    "options": [
+      "Entre 0,01 y 0,30 gramos por mil de alcohol en la sangre.",
+      "Entre 0,31 y 0,79 gramos por mil de alcohol en la sangre.",
+      "Entre 0,80 y 1,50 gramos por mil de alcohol en la sangre."
+    ],
+    "correct": 1,
+    "explanation": "Con valores de 0,31 a 0,79 g/l se sanciona como conducción bajo la influencia del alcohol; desde 0,80 g/l pasa a estado de ebriedad.",
+    "optionExplanations": [
+      "Bajo 0,31 g/l no alcanza el rango típico sancionado como 'bajo la influencia', aunque ya afecta reflejos.",
+      "Correcto: el tramo de 0,31 a 0,79 g/l define la conducción bajo la influencia del alcohol.",
+      "Desde 0,80 g/l en adelante ya se tipifica como estado de ebriedad."
+    ]
+  },
+  {
+    "id": "q403",
+    "chapter": 4,
+    "category": "La persona en el tránsito",
+    "doublePoints": true,
+    "image": "assets/pdf-images/pdf-050-vec.png",
+    "localFallback": "assets/pdf-images/pdf-050-vec.png",
+    "question": "Según la Ley Emilia, ¿qué pena mínima enfrenta quien conduciendo ebrio causa lesiones gravísimas o muerte?",
+    "options": [
+      "Multa administrativa de 5 UTM y suspensión de licencia por seis meses.",
+      "Cárcel efectiva de al menos 1 año e inhabilitación perpetua para manejar.",
+      "Arresto domiciliario nocturno de 15 días si carece de antecedentes previos."
+    ],
+    "correct": 1,
+    "explanation": "La Ley Emilia impone al menos un año de privación efectiva de libertad (sin beneficios sustitutivos ese año) e inhabilidad perpetua para conducir vehículos motorizados.",
+    "optionExplanations": [
+      "La Ley Emilia elevó estos hechos a delito con pena de cárcel efectiva, no simple multa.",
+      "Correcto: conlleva al menos 1 año de cárcel efectiva e inhabilitación de por vida para conducir.",
+      "Durante el primer año no proceden penas sustitutivas como el arresto domiciliario."
+    ]
+  },
+  {
+    "id": "q404",
+    "chapter": 4,
+    "category": "La persona en el tránsito",
+    "doublePoints": true,
+    "image": "assets/pdf-images/pdf-052-080.png",
+    "localFallback": "assets/pdf-images/pdf-052-080.png",
+    "question": "¿Cuánto tiempo después de beber el último trago suele alcanzarse el nivel máximo de alcohol en la sangre?",
+    "options": [
+      "Aproximadamente a los dos minutos de ingerirlo.",
+      "Aproximadamente una hora después de la última copa.",
+      "Recién a las cinco horas de haber dejado de beber."
+    ],
+    "correct": 1,
+    "explanation": "La absorción continúa tras el último trago, alcanzando su peak en sangre alrededor de 1 hora después (variando según peso y alimento ingerido).",
+    "optionExplanations": [
+      "El paso del alcohol desde el estómago e intestino al torrente sanguíneo requiere más que dos minutos para alcanzar el máximo.",
+      "Correcto: la concentración máxima suele registrarse cerca de 1 hora después de la última ingesta.",
+      "A las cinco horas el cuerpo suele estar ya en fase descendente de metabolización hepática."
+    ]
+  },
+  {
+    "id": "q405",
+    "chapter": 4,
+    "category": "La persona en el tránsito",
+    "doublePoints": true,
+    "image": "assets/pdf-images/pdf-052-080.png",
+    "localFallback": "assets/pdf-images/pdf-052-080.png",
+    "question": "¿Cuál método acelera realmente la eliminación del alcohol ya presente en la sangre antes de conducir?",
+    "options": [
+      "Tomar dos tazas de café cargado y ducharse con agua fría.",
+      "Ninguno: solo el paso del tiempo permite al hígado eliminarlo.",
+      "Beber abundante agua mineral y hacer ejercicio intenso breve."
+    ],
+    "correct": 1,
+    "explanation": "El café, el agua, las duchas frías o el ejercicio no aceleran el metabolismo hepático del alcohol; únicamente esperar el paso del tiempo reduce la alcoholemia.",
+    "optionExplanations": [
+      "El café o una ducha fría pueden despabilar momentáneamente, pero no bajan en absoluto los gramos de alcohol en sangre.",
+      "Correcto: no existen atajos; el hígado metaboliza el alcohol a un ritmo fijo con el paso del tiempo.",
+      "Hacer ejercicio o tomar agua no acelera significativamente la tasa de eliminación hepática."
+    ]
+  },
+  {
+    "id": "q406",
+    "chapter": 4,
+    "category": "La persona en el tránsito",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-044-078.png",
+    "localFallback": "assets/pdf-images/pdf-044-078.png",
+    "question": "¿En qué consiste el fenómeno de 'visión de túnel' al conducir un vehículo?",
+    "options": [
+      "En el deslumbramiento pasajero al salir de un paso bajo nivel hacia el sol.",
+      "En el estrechamiento del campo visual periférico por velocidad, estrés o alcohol.",
+      "En la incapacidad nocturna de distinguir los colores rojo y verde en cruces."
+    ],
+    "correct": 1,
+    "explanation": "Al aumentar la velocidad —y también bajo estrés o alcohol— el ojo concentra el foco al centro y pierde percepción lateral (visión periférica), dificultando ver peatones o autos que vienen por los costados.",
+    "optionExplanations": [
+      "Ese efecto corresponde al encandilamiento temporal por contraste lumínico, no a la visión de túnel.",
+      "Correcto: reduce el ángulo de visión periférica al elevar la velocidad o sufrir estrés o efectos del alcohol.",
+      "La dificultad para diferenciar rojo y verde corresponde al daltonismo."
+    ]
+  },
+  {
+    "id": "q407",
+    "chapter": 4,
+    "category": "La persona en el tránsito",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-034-vec.png",
+    "localFallback": "assets/pdf-images/pdf-034-vec.png",
+    "question": "¿En qué tramos horarios del día existe mayor propensión biológica natural al sueño al volante?",
+    "options": [
+      "Entre las 03:00 y 05:00 de la madrugada, y entre las 14:00 y 16:00 horas.",
+      "Entre las 09:00 y 11:00 de la mañana, y entre las 19:00 y 21:00 horas.",
+      "Únicamente después de la medianoche cuando circula poco tráfico rural."
+    ],
+    "correct": 0,
+    "explanation": "El ritmo circadiano humano presenta dos caídas naturales de alerta: de madrugada (03:00–05:00) y en la sobremesa de tarde (14:00–16:00).",
+    "optionExplanations": [
+      "Correcto: el reloj biológico genera mayor somnolencia entre las 3 y 5 AM y entre las 2 y 4 PM.",
+      "Esas franjas corresponden habitualmente a períodos de mayor vigilia activa en el ciclo diario.",
+      "La somnolencia circadiana también se produce a media tarde (14:00–16:00), no solo de noche."
+    ]
+  },
+  {
+    "id": "q408",
+    "chapter": 4,
+    "category": "La persona en el tránsito",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-034-vec.png",
+    "localFallback": "assets/pdf-images/pdf-034-vec.png",
+    "question": "¿Qué riesgo conlleva conducir tras ingerir antihistamínicos comunes para una alergia o resfrío?",
+    "options": [
+      "Ninguno, porque los fármacos de venta libre no afectan la atención.",
+      "Puede provocar somnolencia y lentitud similar a 0,5–0,8 g/l de alcohol.",
+      "Produce un aumento temporal de la agudeza visual en horario nocturno."
+    ],
+    "correct": 1,
+    "explanation": "Muchos antihistamínicos de primera generación inducen somnolencia, mareos y aumento del tiempo de reacción equiparables a conducir con alcoholemia sancionable.",
+    "optionExplanations": [
+      "Varios medicamentos de venta sin receta producen fuerte sedación y alteran los reflejos.",
+      "Correcto: generan somnolencia y retardo de reacción equiparables a conducir con 0,5 a 0,8 g/l de alcohol.",
+      "No mejoran la visión nocturna; al contrario, pueden generar fatiga visual y visión borrosa."
+    ]
+  },
+  {
+    "id": "q409",
+    "chapter": 4,
+    "category": "La persona en el tránsito",
+    "doublePoints": true,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Qué efecto produce el consumo de marihuana (cannabis) en la capacidad de conducir?",
+    "options": [
+      "Altera la percepción de tiempo y espacio, bajando atención y reflejos.",
+      "Mejora la velocidad de respuesta física aunque disminuya la audición.",
+      "Genera hiperactividad motora inmediata con visión periférica ampliada."
+    ],
+    "correct": 0,
+    "explanation": "La marihuana distorsiona las distancias, el tiempo de reacción y la capacidad de mantener la concentración en múltiples estímulos viales.",
+    "optionExplanations": [
+      "Correcto: deteriora la percepción espacio-temporal, la concentración y ralentiza las reacciones.",
+      "Lejos de mejorar los reflejos, el cannabis lentifica las respuestas psicomotoras.",
+      "Reduce la coordinación y estrecha la capacidad de atender riesgos simultáneos."
+    ]
+  },
+  {
+    "id": "q410",
+    "chapter": 4,
+    "category": "La persona en el tránsito",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Cómo califica la ley manipular el teléfono celular sin manos libres mientras se conduce?",
+    "options": [
+      "Falta leve cuando el vehículo circula bajo los 40 km/h.",
+      "Conducta permitida si se detiene brevemente en luz roja.",
+      "Infracción gravísima; mirar 4 s a 60 km/h recorre ~70 m a ciegas."
+    ],
+    "correct": 2,
+    "explanation": "La Ley 'No Chat' tipifica manipular el teléfono celular (incluso detenido en luz roja) como falta gravísima, ya que apartar la vista pocos segundos equivale a avanzar decenas de metros sin mirar.",
+    "optionExplanations": [
+      "No es falta leve; está sancionada como falta gravísima sin importar la velocidad.",
+      "También está prohibido manipular el celular durante detenciones en semáforos o congestión.",
+      "Correcto: es infracción gravísima y 4 segundos distraído a 60 km/h equivalen a casi 70 metros sin mirar la vía."
+    ]
+  },
+  {
+    "id": "q411",
+    "chapter": 4,
+    "category": "La persona en el tránsito",
+    "doublePoints": true,
+    "image": null,
+    "localFallback": null,
+    "question": "Con una alcoholemia entre 0,5 y 0,8 g/l, ¿cuánto aumenta el riesgo de sufrir un siniestro respecto a no haber bebido?",
+    "options": [
+      "Aumenta aproximadamente un 10%.",
+      "Aumenta cerca de 5 veces más.",
+      "No varía en conductores expertos."
+    ],
+    "correct": 1,
+    "explanation": "Las mediciones muestran que entre 0,5 y 0,8 g/l el riesgo de verse involucrado en un siniestro mortal o grave es unas 5 veces mayor que con 0,0 g/l.",
+    "optionExplanations": [
+      "El incremento de riesgo es muchísimo más alto que un 10%.",
+      "Correcto: con 0,5 a 0,8 g/l la probabilidad de sufrir un siniestro se multiplica por 5.",
+      "La experiencia previa no protege del deterioro neurológico que causa el alcohol."
+    ]
+  },
+  {
+    "id": "q412",
+    "chapter": 4,
+    "category": "La persona en el tránsito",
+    "doublePoints": true,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Qué alteración conductual provoca el consumo de cocaína en quien maneja un vehículo?",
+    "options": [
+      "Sueño profundo inmediato apenas ingresa al organismo.",
+      "Sobreestimación de capacidades e impulsividad agresiva.",
+      "Mejora sostenida de la percepción nocturna en carretera."
+    ],
+    "correct": 1,
+    "explanation": "Al ser un estimulante fuerte, la cocaína genera falsa confianza, conductas competitivas, agresivas e impulsivas y asunción de riesgos extremos.",
+    "optionExplanations": [
+      "Es un estimulante del sistema nervioso, por lo que no induce sueño inmediato sino euforia y agitación.",
+      "Correcto: provoca conducta impulsiva, agresiva y sobrevaloración irreal de las propias habilidades.",
+      "Altera la percepción y genera encandilamiento y nerviosismo, nunca mejora la conducción nocturna."
+    ]
+  },
+  {
+    "id": "q_pdf_13",
+    "chapter": 4,
+    "category": "La persona en el tránsito",
+    "doublePoints": true,
+    "image": "assets/pdf-images/pdf-052-080.png",
+    "localFallback": "assets/pdf-images/pdf-052-080.png",
+    "question": "Si una persona bebe abundante alcohol de noche y duerme 6 horas, ¿por qué puede seguir dando positivo en la mañana?",
+    "options": [
+      "Porque dormir detiene por completo el metabolismo hepático del alcohol.",
+      "Porque el hígado elimina apenas ~0,10 a 0,15 g/l por hora, tardando muchas horas.",
+      "Porque el cuerpo sigue produciendo alcohol nuevo mientras la persona descansa."
+    ],
+    "correct": 1,
+    "explanation": "El hígado procesa el alcohol a una tasa constante y lenta (~0,10 a 0,15 g/l por hora), por lo que tras una ingesta alta puede seguir presente en sangre hasta ~19 horas después.",
+    "optionExplanations": [
+      "El hígado continúa trabajando mientras duermes, pero a una velocidad lenta y limitada.",
+      "Correcto: la metabolización lenta (~0,10–0,15 g/l/h) hace que siga existiendo alcohol en sangre a la mañana siguiente.",
+      "El organismo no genera alcohol al dormir; simplemente tarda muchas horas en degradar el ingerido."
+    ]
+  },
+  {
+    "id": "q502",
+    "chapter": 5,
+    "category": "Usuarios vulnerables",
+    "doublePoints": true,
+    "image": "assets/pdf-images/pdf-075-097.png",
+    "localFallback": "assets/pdf-images/pdf-075-097.png",
+    "question": "¿Hasta qué edad o medidas físicas es obligatorio usar Sistema de Retención Infantil (SRI) en vehículos particulares?",
+    "options": [
+      "Solo hasta los 4 años cumplidos, pasando luego al cinturón de tres puntas.",
+      "Hasta los 8 años inclusive, o hasta medir 135 cm y pesar 33 kilogramos.",
+      "Hasta los 12 años sin importar estatura ni peso del niño o niña."
+    ],
+    "correct": 1,
+    "explanation": "En Chile el SRI es obligatorio hasta cumplir los 9 años (8 años inclusive) o hasta que el menor alcance al menos 135 cm de estatura y 33 kg de peso.",
+    "optionExplanations": [
+      "A los 4 años el cinturón adulto aún queda sobre cuello y abdomen, causando lesiones graves en impactos.",
+      "Correcto: rige hasta los 8 años inclusive (un día antes de cumplir 9) o hasta alcanzar 135 cm y 33 kg.",
+      "Hasta antes de los 12 años está prohibido viajar en el asiento delantero; el SRI es obligatorio hasta los 8 años inclusive (o 135 cm y 33 kg)."
+    ]
+  },
+  {
+    "id": "q503",
+    "chapter": 5,
+    "category": "Usuarios vulnerables",
+    "doublePoints": true,
+    "image": "assets/pdf-images/pdf-075-096.png",
+    "localFallback": "assets/pdf-images/pdf-075-096.png",
+    "question": "¿Cómo se sanciona trasladar a un niño sin su Sistema de Retención Infantil obligatorio?",
+    "options": [
+      "Falta grave sancionada con multa de 1 UTM sin suspensión de licencia.",
+      "Falta gravísima con multa de 1,5 a 3 UTM y suspensión de 5 a 45 días.",
+      "Amonestación verbal escrita cuando el trayecto urbano es menor a 2 km."
+    ],
+    "correct": 1,
+    "explanation": "Incumplir la normativa de Sistema de Retención Infantil (o llevar menores de 12 años adelante) es infracción gravísima: 1,5 a 3 UTM y suspensión de licencia de 5 a 45 días.",
+    "optionExplanations": [
+      "No es falta grave sino gravísima, y sí contempla suspensión temporal de la licencia.",
+      "Correcto: constituye infracción gravísima con multa de 1,5 a 3 UTM y suspensión de 5 a 45 días.",
+      "La obligatoriedad rige desde el primer metro de circulación, sin excepción por trayectos cortos."
+    ]
+  },
+  {
+    "id": "q504",
+    "chapter": 5,
+    "category": "Usuarios vulnerables",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-071-082.png",
+    "localFallback": "assets/pdf-images/pdf-071-082.png",
+    "question": "Al adelantar o sobrepasar a una persona en bicicleta, ¿qué separación lateral mínima exige la ley?",
+    "options": [
+      "Al menos 1,5 metros de separación lateral.",
+      "Al menos 0,5 metros en vías de zona urbana.",
+      "Al menos 3,0 metros en calles residenciales."
+    ],
+    "correct": 0,
+    "explanation": "La Ley de Convivencia Vial obliga a dejar una distancia lateral mínima de 1,5 metros al sobrepasar o adelantar a un ciclista.",
+    "optionExplanations": [
+      "Correcto: debe mantenerse una distancia lateral mínima de 1,5 metros respecto del ciclista.",
+      "50 centímetros resulta insuficiente ante la turbulencia del aire o cualquier desvío leve de la bicicleta.",
+      "La distancia legal exigida es de al menos 1,5 metros, no 3 metros."
+    ]
+  },
+  {
+    "id": "q505",
+    "chapter": 5,
+    "category": "Usuarios vulnerables",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Cómo varía la probabilidad de supervivencia de un peatón atropellado según la velocidad del impacto?",
+    "options": [
+      "A 30 km/h sobrevive el 90%; a 50 km/h el 50%; a 60 km/h o más casi todos mueren.",
+      "Entre 30 y 60 km/h el riesgo mortal permanece casi constante cerca del 10%.",
+      "El riesgo fatal aparece recién cuando el vehículo supera los 80 km/h en ruta."
+    ],
+    "correct": 0,
+    "explanation": "La energía cinética crece con el cuadrado de la velocidad: por eso bajar de 60 a 50 o 30 km/h en zonas peatonales multiplica drásticamente la supervivencia.",
+    "optionExplanations": [
+      "Correcto: a 30 km/h sobrevive cerca del 90%, a 50 km/h alrededor del 50% y desde 60 km/h la mayoría fallece.",
+      "Entre 30 y 60 km/h la mortalidad sube de forma brusca de ~10% a cerca de 90%.",
+      "Ya a 50–60 km/h un atropello tiene altísima probabilidad de ser fatal."
+    ]
+  },
+  {
+    "id": "q507",
+    "chapter": 5,
+    "category": "Usuarios vulnerables",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Por qué las motocicletas resultan especialmente difíciles de percibir al llegar a un cruce?",
+    "options": [
+      "Porque tienen prohibido circular con sus luces encendidas durante el día.",
+      "Porque su silueta estrecha dificulta estimar distancia y velocidad reales.",
+      "Porque circulan siempre por debajo de la velocidad media de los autos."
+    ],
+    "correct": 1,
+    "explanation": "Su menor tamaño frontal engaña al ojo humano haciéndolas parecer más lejanas o lentas de lo que vienen, y además quedan ocultas fácilmente en ángulos muertos.",
+    "optionExplanations": [
+      "Las motocicletas deben circular con sus luces encendidas justamente para aumentar su visibilidad.",
+      "Correcto: su silueta delgada dificulta apreciar su distancia y velocidad y las oculta en puntos ciegos.",
+      "Pueden acelerar con mucha rapidez; el problema perceptivo radica en su tamaño frontal reducido."
+    ]
+  },
+  {
+    "id": "q508",
+    "chapter": 5,
+    "category": "Usuarios vulnerables",
+    "doublePoints": true,
+    "image": "assets/pdf-images/pdf-027-053.png",
+    "localFallback": "assets/pdf-images/pdf-027-053.png",
+    "question": "Cuando un niño mayor de 9 años y sobre 135 cm ya usa el cinturón del auto, ¿cómo debe quedar ajustado?",
+    "options": [
+      "Banda superior por la axila y banda inferior apoyada sobre el abdomen.",
+      "Sentado sobre un cojín suelto con la cinta holgada sobre las rodillas.",
+      "Banda diagonal sobre hombro y pecho y banda inferior sobre la pelvis."
+    ],
+    "correct": 2,
+    "explanation": "La banda superior debe cruzar por el centro del hombro y pecho (jamás por el cuello ni bajo el brazo) y la inferior bien baja sobre pelvis/muslos (nunca sobre el estómago).",
+    "optionExplanations": [
+      "Pasar la cinta bajo el brazo o sobre el abdomen provoca lesiones graves en órganos internos al frenar.",
+      "Un cojín suelto se desliza en el impacto y deja al niño expuesto a hundirse bajo el cinturón.",
+      "Correcto: la banda superior cruza hombro y pecho y la inferior descansa firme sobre la pelvis."
+    ]
+  },
+  {
+    "id": "q_pdf_15",
+    "chapter": 5,
+    "category": "Usuarios vulnerables",
+    "doublePoints": true,
+    "image": "assets/pdf-images/pdf-075-096.png",
+    "localFallback": "assets/pdf-images/pdf-075-096.png",
+    "question": "¿Qué tres aspectos deben verificarse antes de elegir e instalar un Sistema de Retención Infantil (SRI)?",
+    "options": [
+      "Peso, talla y edad del niño; anclajes del auto; y etiqueta de certificación.",
+      "Que quepa en el maletero, que combine con el tapiz y que sea reclinable.",
+      "Que el menor pueda soltarse el arnés solo y que incluya portavasos lateral."
+    ],
+    "correct": 0,
+    "explanation": "La silla debe corresponder a peso, altura y edad del niño, ser compatible con los anclajes del automóvil (ISOFIX/LATCH o cinturón 3 puntas) y contar con etiqueta amarilla de acreditación vigente.",
+    "optionExplanations": [
+      "Correcto: se debe comprobar edad/peso/talla del niño, compatibilidad de anclajes y certificación vigente.",
+      "La comodidad o estética son secundarias frente a la talla, anclaje y certificación oficial.",
+      "Un niño pequeño no debe poder abrir el arnés por sí solo durante la marcha."
+    ]
+  },
+  {
+    "id": "q_pdf_16",
+    "chapter": 5,
+    "category": "Usuarios vulnerables",
+    "doublePoints": true,
+    "image": "assets/pdf-images/pdf-075-097.png",
+    "localFallback": "assets/pdf-images/pdf-075-097.png",
+    "question": "¿Por qué conviene que los lactantes y niños pequeños viajen en su silla orientada mirando hacia atrás?",
+    "options": [
+      "Porque el respaldo distribuye la fuerza del choque y protege cuello y columna.",
+      "Porque ocupa menos espacio detrás del asiento del acompañante delantero.",
+      "Porque evita la obligación de ajustar las correas del arnés sobre los hombros."
+    ],
+    "correct": 0,
+    "explanation": "Al viajar a contramarcha, ante una colisión frontal el respaldo acoge cabeza, cuello y espalda de manera uniforme, evitando lesiones cervicales graves.",
+    "optionExplanations": [
+      "Correcto: en un impacto frontal el respaldo absorbe y reparte la energía protegiendo cabeza, cuello y médula.",
+      "La indicación a contramarcha responde a protección biomecánica, no a ahorro de espacio.",
+      "El arnés siempre debe quedar correctamente ajustado aunque la silla vaya orientada hacia atrás."
+    ]
+  },
+  {
+    "id": "q601",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": true,
+    "image": null,
+    "localFallback": null,
+    "question": "Salvo señalización que indique otro valor, ¿cuál es la velocidad máxima urbana para automóviles en Chile?",
+    "options": [
+      "60 km/h en avenidas y 40 km/h en pasajes.",
+      "50 km/h como límite máximo general urbano.",
+      "40 km/h como límite general en toda ciudad."
+    ],
+    "correct": 1,
+    "explanation": "Desde la reforma de 2018 a la Ley de Tránsito, el límite máximo general urbano para vehículos livianos es de 50 km/h (antes era 60 km/h).",
+    "optionExplanations": [
+      "60 km/h fue el límite urbano antiguo; actualmente el máximo general es 50 km/h.",
+      "Correcto: en zonas urbanas la velocidad máxima general para automóviles es 50 km/h.",
+      "40 km/h o 30 km/h pueden fijarse mediante señalización especial (como zonas de escuela), pero el límite general es 50 km/h."
+    ]
+  },
+  {
+    "id": "q602",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": true,
+    "image": null,
+    "localFallback": null,
+    "question": "En una carretera rural con dos o más pistas por sentido y sin señalización distinta, ¿cuál es la velocidad máxima para autos?",
+    "options": [
+      "100 km/h en cualquier vía fuera del radio urbano.",
+      "120 km/h en caminos de dos o más pistas por sentido.",
+      "90 km/h en autopistas y 110 km/h en caminos rurales."
+    ],
+    "correct": 1,
+    "explanation": "En zona no urbana, los vehículos livianos tienen máximo 100 km/h en caminos de una pista por sentido y 120 km/h en caminos con dos o más pistas en el mismo sentido.",
+    "optionExplanations": [
+      "100 km/h rige para vías rurales de una pista por sentido, pero sube a 120 km/h con dos o más pistas por sentido.",
+      "Correcto: en caminos rurales con dos o más pistas en un mismo sentido el límite máximo es 120 km/h.",
+      "90 km/h corresponde al límite rural de buses y camiones de carga, no de automóviles particulares."
+    ]
+  },
+  {
+    "id": "q603",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": true,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Cuál es la velocidad máxima permitida frente a un colegio en horarios de entrada y salida de estudiantes?",
+    "options": [
+      "30 km/h en Zona de Escuela.",
+      "40 km/h en Zona de Escuela.",
+      "50 km/h con precaución extrema."
+    ],
+    "correct": 0,
+    "explanation": "En zonas de establecimientos educacionales, durante los horarios de ingreso y salida de alumnos, ningún vehículo puede exceder los 30 km/h.",
+    "optionExplanations": [
+      "Correcto: en Zona de Escuela en horario escolar el límite máximo es 30 km/h.",
+      "40 km/h excede el límite legal de Zona de Escuela y multiplica el riesgo ante un atropello infantil.",
+      "50 km/h es el límite urbano general, pero baja obligatoriamente a 30 km/h frente a colegios."
+    ]
+  },
+  {
+    "id": "q604",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "En un cruce no regulado de vías de igual categoría sin señalización, ¿quién tiene derecho preferente de paso?",
+    "options": [
+      "El vehículo que se aproxima por la derecha del otro.",
+      "El vehículo que se aproxima por la izquierda del otro.",
+      "El vehículo de mayor peso o que circula a mayor rapidez."
+    ],
+    "correct": 0,
+    "explanation": "En intersecciones no reguladas sin señal PARE ni CEDA EL PASO rige la regla de la derecha: quien viene por la izquierda debe ceder el paso al vehículo que aparece por su derecha.",
+    "optionExplanations": [
+      "Correcto: tiene preferencia el vehículo que se aproxima al cruce por el costado derecho.",
+      "Quien llega por la izquierda es precisamente quien debe ceder la preferencia.",
+      "Ni el tamaño del vehículo ni la velocidad otorgan preferencia legal en un cruce."
+    ]
+  },
+  {
+    "id": "q605",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-077-109.png",
+    "localFallback": "assets/pdf-images/pdf-077-109.png",
+    "question": "Si el semáforo de un cruce está en luz roja pero un Carabinero le hace señas de avanzar, ¿cómo debe proceder?",
+    "options": [
+      "Detenerse ante la luz roja, pues el semáforo prevalece sobre indicaciones manuales.",
+      "Avanzar con precaución, pues las órdenes de Carabineros prevalecen sobre señales.",
+      "Esperar tocando brevemente la bocina hasta que el semáforo cambie a luz verde."
+    ],
+    "correct": 1,
+    "explanation": "En la jerarquía de regulación del tránsito, las indicaciones de Carabineros prevalecen por sobre los semáforos, las señales verticales y las demarcaciones.",
+    "optionExplanations": [
+      "Es al revés: las instrucciones del Carabinero tienen primacía sobre la luz del semáforo.",
+      "Correcto: las indicaciones de Carabineros prevalecen sobre semáforos y señales de tránsito.",
+      "Quedarse detenido bloquea el flujo que el Carabinero está dirigiendo y desobedece su orden."
+    ]
+  },
+  {
+    "id": "q606",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-082-168.png",
+    "localFallback": "assets/pdf-images/pdf-082-168.png",
+    "question": "Si el eje central presenta línea continua de su lado y segmentada del lado contrario, ¿qué indica para usted?",
+    "options": [
+      "Que usted puede adelantar, pero el tránsito contrario tiene prohibido hacerlo.",
+      "Que usted tiene prohibido traspasar el eje, pero el sentido contrario sí puede.",
+      "Que ninguno de los dos sentidos puede traspasar el eje central bajo ningún caso."
+    ],
+    "correct": 1,
+    "explanation": "En una línea mixta rige para cada conductor la línea ubicada inmediatamente junto a su pista: continua prohíbe traspasarla; segmentada lo permite si hay visibilidad.",
+    "optionExplanations": [
+      "Es exactamente al contrario: la línea continua de tu lado te prohíbe adelantar.",
+      "Correcto: la línea continua junto a tu pista te prohíbe traspasarla; el sentido contrario tiene línea segmentada.",
+      "Esa prohibición bilateral corresponde a la doble línea continua, no a una línea mixta."
+    ]
+  },
+  {
+    "id": "q607",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-092-195.png",
+    "localFallback": "assets/pdf-images/pdf-092-195.png",
+    "question": "Cuando realiza un viraje hacia la derecha o izquierda en una esquina, ¿qué ocurre con su derecho preferente de paso?",
+    "options": [
+      "Mantiene preferencia sobre los peatones si encendió el intermitente 30 m antes.",
+      "Carece de toda preferencia frente a vehículos que siguen recto y peatones.",
+      "Conserva preferencia ante vehículos contrarios únicamente al virar a la izquierda."
+    ],
+    "correct": 1,
+    "explanation": "Todo vehículo que vira pierde preferencia y debe ceder el paso tanto a los vehículos que continúan derecho como a los peatones y ciclistas que estén cruzando.",
+    "optionExplanations": [
+      "Señalizar es obligatorio para advertir la maniobra, pero nunca otorga preferencia sobre peatones o ciclistas.",
+      "Correcto: quien vira carece de preferencia y debe ceder el paso a quienes siguen recto y a quienes cruzan.",
+      "Al virar a la izquierda debes ceder especialmente a todos los vehículos que vienen en sentido contrario."
+    ]
+  },
+  {
+    "id": "q608",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-088-189.png",
+    "localFallback": "assets/pdf-images/pdf-088-189.png",
+    "question": "En carretera y pavimento seco, ¿en qué consiste la regla práctica de los 3 segundos?",
+    "options": [
+      "Mantener siempre una separación fija de 5 metros sin importar la velocidad.",
+      "Conservar una distancia equivalente al largo de un auto cada 50 km/h.",
+      "Verificar que pasen 3 s entre el paso del auto delantero y el tuyo por un punto."
+    ],
+    "correct": 2,
+    "explanation": "La regla de los 3 segundos ajusta automáticamente la distancia en metros según la velocidad: eliges un hito fijo y cuentas al menos 3 segundos tras el vehículo anterior.",
+    "optionExplanations": [
+      "Cinco metros a velocidad de carretera se recorren en apenas una fracción de segundo, haciendo imposible frenar.",
+      "Un automóvil mide cerca de 4–5 metros, distancia totalmente insuficiente a 50 o 100 km/h.",
+      "Correcto: contar al menos 3 segundos desde un punto fijo asegura margen suficiente ante una frenada brusca."
+    ]
+  },
+  {
+    "id": "q609",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-105-229.png",
+    "localFallback": "assets/pdf-images/pdf-105-229.png",
+    "question": "¿A qué distancia mínima de una esquina, señal PARE/CEDA EL PASO y de un grifo está prohibido estacionar?",
+    "options": [
+      "A menos de 3 metros de esquina y a menos de 2 metros de un grifo.",
+      "A menos de 10 metros de esquina o señal y a menos de 5 metros de grifo.",
+      "A menos de 25 metros de esquina y a menos de 15 metros de un grifo."
+    ],
+    "correct": 1,
+    "explanation": "La Ley de Tránsito prohíbe estacionar a menos de 10 m de una esquina o de un signo PARE/CEDA EL PASO, y a menos de 5 m de un grifo contra incendios (y 20 m de cruces ferroviarios).",
+    "optionExplanations": [
+      "Distancias de 2 o 3 metros bloquean la visibilidad del cruce y el acceso de Bomberos al grifo.",
+      "Correcto: 10 metros respecto de esquina o señal PARE/CEDA EL PASO, y 5 metros respecto de un grifo.",
+      "20 metros corresponde a la distancia de prohibición respecto a un cruce ferroviario, no a esquinas o grifos."
+    ]
+  },
+  {
+    "id": "q610",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-089-190.png",
+    "localFallback": "assets/pdf-images/pdf-089-190.png",
+    "question": "¿Cuál es la diferencia legal entre 'adelantar' y 'sobrepasar' en la Ley de Tránsito?",
+    "options": [
+      "Adelantar traspasa el eje central; sobrepasar ocurre en pistas del mismo sentido.",
+      "Adelantar se efectúa por el costado derecho y sobrepasar solo por el izquierdo.",
+      "Ambos vocablos son sinónimos legales sin distinción de pistas ni eje central."
+    ],
+    "correct": 0,
+    "explanation": "'Adelantar' implica invadir la pista del sentido contrario traspasando el eje de la calzada; 'sobrepasar' es rebasar a otro vehículo sin cruzar el eje central en vías de varias pistas por sentido.",
+    "optionExplanations": [
+      "Correcto: adelantar traspasa el eje central hacia la pista opuesta; sobrepasar se realiza sin cruzar el eje.",
+      "Por regla general ambas maniobras se realizan por la izquierda, salvo excepciones de sobrepaso en vías urbanas.",
+      "La Ley de Tránsito define de forma separada ambas maniobras según exista o no traspaso del eje central."
+    ]
+  },
+  {
+    "id": "q611",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-094-206.png",
+    "localFallback": "assets/pdf-images/pdf-094-206.png",
+    "question": "Al aproximarse para ingresar a una rotonda, ¿quién tiene derecho preferente de paso?",
+    "options": [
+      "Quien ingresa a la rotonda porque se acerca por el costado derecho.",
+      "Los vehículos que ya circulan dentro de la rotonda sobre quien entra.",
+      "Siempre el vehículo que pretende tomar la primera salida disponible."
+    ],
+    "correct": 1,
+    "explanation": "En toda rotonda los vehículos que ya están circulando por su anillo interior tienen preferencia sobre quienes pretenden ingresar desde los accesos.",
+    "optionExplanations": [
+      "En rotondas no rige la prioridad de ingreso por la derecha; quien entra debe ceder el paso.",
+      "Correcto: los vehículos que ya circulan dentro de la rotonda tienen la preferencia de paso.",
+      "La salida que elijas no otorga preferencia; al salir debes señalizar con el intermitente derecho."
+    ]
+  },
+  {
+    "id": "q612",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Con qué anticipación mínima debe señalizarse un viraje o cambio de pista en zona urbana?",
+    "options": [
+      "Con al menos 30 metros de anticipación.",
+      "Con al menos 5 metros de anticipación.",
+      "En el instante mismo de girar el volante."
+    ],
+    "correct": 0,
+    "explanation": "La normativa establece que todo viraje o cambio de pista debe advertirse mediante el señalizador luminoso (o señal de brazo) con una anticipación mínima de 30 metros.",
+    "optionExplanations": [
+      "Correcto: debe señalizarse al menos con 30 metros de anticipación.",
+      "5 metros es un margen demasiado corto y no da tiempo a otros conductores o peatones para reaccionar.",
+      "Señalizar al momento de doblar anula la función preventiva del intermitente."
+    ]
+  },
+  {
+    "id": "q613",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": true,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Qué significa circular a una 'velocidad razonable y prudente' según la Ley de Tránsito?",
+    "options": [
+      "Ir exactamente al límite máximo que indiquen las señales en todo momento.",
+      "Mantener control del auto para detenerse ante riesgos según clima y vía.",
+      "Igualar siempre la velocidad del flujo delantero sin importar la distancia."
+    ],
+    "correct": 1,
+    "explanation": "Velocidad razonable y prudente es aquella que permite controlar el vehículo y evitar siniestros ante cualquier contingencia previsible, considerando clima, visibilidad, vía y tránsito.",
+    "optionExplanations": [
+      "El límite máximo es un techo legal en condiciones ideales; con lluvia, neblina o tráfico puede ser excesivo.",
+      "Correcto: implica conservar el control físico del vehículo para detenerlo a tiempo según las condiciones reales.",
+      "Seguir la velocidad de otro conductor no exime de responsabilidad si esa velocidad es imprudente."
+    ]
+  },
+  {
+    "id": "q614",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-079-121.png",
+    "localFallback": "assets/pdf-images/pdf-079-121.png",
+    "question": "Al llegar a un cruce ferroviario sin barreras ni semáforo, ¿qué procedimiento obligatorio debe cumplir?",
+    "options": [
+      "Acelerar con decisión para despejar los rieles antes de mirar a los lados.",
+      "Detenerse, mirar y escuchar antes de cruzar en una marcha sin cambios.",
+      "Pasar a segunda o tercera marcha justo en medio de los rieles del tren."
+    ],
+    "correct": 1,
+    "explanation": "Ante un cruce ferroviario debes detenerte, apagar la radio o bajar el vidrio para mirar y escuchar en ambos sentidos, y cruzar en una marcha fija sin hacer cambios sobre la vía férrea.",
+    "optionExplanations": [
+      "Cruzar sin detenerse ni verificar ambos sentidos conlleva riesgo extremo de colisión ferroviaria.",
+      "Correcto: debes parar, comprobar visual y auditivamente ambos lados y cruzar sin cambiar de marcha sobre los rieles.",
+      "Pasar cambios encima de los rieles aumenta el riesgo de que se detenga o cale el motor sobre la vía."
+    ]
+  },
+  {
+    "id": "q_pdf_17",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-077-109.png",
+    "localFallback": "assets/pdf-images/pdf-077-109.png",
+    "question": "Cuando un Carabinero dirige el tránsito y usted lo ve de frente o de espaldas, ¿qué significa esa posición?",
+    "options": [
+      "Autorización para avanzar con precaución por el cruce.",
+      "Obligación de detenerse, equivalente a la luz roja.",
+      "Indicación de virar obligatoriamente hacia la derecha."
+    ],
+    "correct": 1,
+    "explanation": "El Carabinero visto de frente o de espaldas equivale a luz roja (detención obligatoria); visto de costado equivale a luz verde (autorización de paso).",
+    "optionExplanations": [
+      "La autorización de paso corresponde cuando el Carabinero se ubica de perfil respecto a tu flujo.",
+      "Correcto: verlo de frente o de espaldas obliga a detenerse, igual que ante una luz roja.",
+      "La postura frontal o de espaldas ordena detención total, no viraje obligatorio."
+    ]
+  },
+  {
+    "id": "q_pdf_18",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-079-117.png",
+    "localFallback": "assets/pdf-images/pdf-079-117.png",
+    "question": "Si un semáforo muestra luz circular roja junto a una flecha verde hacia la derecha, ¿qué maniobra puede hacer?",
+    "options": [
+      "Continuar en línea recta a través del cruce sin necesidad de detenerse.",
+      "Virar hacia la derecha cediendo el paso a peatones y vehículos con preferencia.",
+      "Esperar obligatoriamente a que se encienda la luz circular verde principal."
+    ],
+    "correct": 1,
+    "explanation": "La flecha verde habilita únicamente el movimiento en el sentido que indica, debiendo ceder siempre el paso a peatones que cruzan y al tráfico que tiene derecho preferente.",
+    "optionExplanations": [
+      "La luz roja circular prohíbe seguir de frente; solo la flecha autoriza el viraje a la derecha.",
+      "Correcto: puedes virar a la derecha según la flecha, cediendo el paso a peatones y vehículos con preferencia.",
+      "La flecha verde ya te autoriza a realizar ese viraje específico sin esperar la luz circular verde."
+    ]
+  },
+  {
+    "id": "q_pdf_19",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-082-163.png",
+    "localFallback": "assets/pdf-images/pdf-082-163.png",
+    "question": "¿Qué indica una doble línea continua amarilla o blanca pintada en el eje central de la calzada?",
+    "options": [
+      "Permite adelantar en ambos sentidos cuando la recta esté despejada.",
+      "Prohíbe traspasar el eje central para adelantar o virar a la izquierda.",
+      "Delimita una pista exclusiva destinada al transporte público urbano."
+    ],
+    "correct": 1,
+    "explanation": "La doble línea longitudinal continua prohíbe terminantemente cruzarla para adelantar o efectuar virajes a la izquierda en ambos sentidos de circulación.",
+    "optionExplanations": [
+      "Las líneas continuas prohíben el traspaso del eje, aunque la vía aparente estar despejada.",
+      "Correcto: prohíbe a ambos sentidos traspasar el eje para adelantar o virar a la izquierda.",
+      "Las pistas exclusivas de buses se demarcan con líneas especiales y leyendas 'SOLO BUSES'."
+    ]
+  },
+  {
+    "id": "q_pdf_20",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-083-171.png",
+    "localFallback": "assets/pdf-images/pdf-083-171.png",
+    "question": "Si una intersección tiene cuadrícula amarilla de 'No bloquear cruce' y su luz está verde, ¿cuándo puede ingresar?",
+    "options": [
+      "Siempre que haya luz verde, aunque quede detenido sobre las líneas amarillas.",
+      "Solo cuando exista espacio suficiente al otro lado para despejar el cruce.",
+      "Únicamente si ningún vehículo transversal se encuentra detenido esperando."
+    ],
+    "correct": 1,
+    "explanation": "La demarcación de cuadrícula amarilla refuerza la prohibición de ingresar a la intersección si el taco al otro lado te dejará detenido bloqueando el cruce.",
+    "optionExplanations": [
+      "La luz verde nunca autoriza a quedar detenido bloqueando la intersección sobre la cuadrícula amarilla.",
+      "Correcto: solo puedes entrar si al otro lado hay espacio para salir completamente del cruce.",
+      "Incluso sin autos transversales inmediatos, si quedas bloqueando el cruce obstruirás la siguiente fase del semáforo."
+    ]
+  },
+  {
+    "id": "q_pdf_22",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-086-186.png",
+    "localFallback": "assets/pdf-images/pdf-086-186.png",
+    "question": "Si un conductor o ciclista extiende su brazo izquierdo doblado en ángulo recto hacia arriba, ¿qué anuncia?",
+    "options": [
+      "Viraje hacia el lado izquierdo.",
+      "Viraje hacia el lado derecho.",
+      "Disminución de velocidad o freno."
+    ],
+    "correct": 1,
+    "explanation": "En las señales manuales con el brazo izquierdo: extendido horizontal = viraje izquierda; en ángulo recto hacia arriba = viraje derecha; extendido hacia abajo = detención o disminución de velocidad.",
+    "optionExplanations": [
+      "El viraje a la izquierda se anuncia con el brazo izquierdo extendido horizontalmente.",
+      "Correcto: brazo izquierdo doblado hacia arriba en ángulo recto indica viraje a la derecha.",
+      "La detención o desaceleración se anuncia con el brazo izquierdo extendido hacia abajo."
+    ]
+  },
+  {
+    "id": "q_pdf_24",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-090-192.png",
+    "localFallback": "assets/pdf-images/pdf-090-192.png",
+    "question": "En una calzada de tres o más pistas en un mismo sentido, ¿por cuál debe circular quien avanza más lento?",
+    "options": [
+      "Por la pista izquierda para evitar incorporaciones desde las entradas.",
+      "Por la pista de más a la derecha, dejando las demás para sobrepasar.",
+      "Por la pista central de forma permanente para equilibrar la vía."
+    ],
+    "correct": 1,
+    "explanation": "Por norma general se debe circular por la pista derecha, dejando las pistas centrales e izquierda para quienes circulan a mayor velocidad o realizan sobrepasos.",
+    "optionExplanations": [
+      "Ocupar la pista izquierda a baja velocidad entorpece el flujo rápido y obliga a maniobras peligrosas por la derecha.",
+      "Correcto: quien circula a menor velocidad debe ocupar la pista de más a la derecha.",
+      "Circular siempre por el centro obstruye innecesariamente una pista destinada a adelantamientos o flujo mayor."
+    ]
+  },
+  {
+    "id": "q_pdf_25",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-092-197.png",
+    "localFallback": "assets/pdf-images/pdf-092-197.png",
+    "question": "Cuando dos vehículos vienen frente a frente y ambos quieren virar a su respectiva izquierda, ¿cómo deben cruzarse?",
+    "options": [
+      "Rodeándose mutuamente por detrás de la trayectoria del otro vehículo.",
+      "Pasando cada uno por delante del otro sin cruzarse detrás ni bloquearse.",
+      "Abriéndose ambos primero hacia la berma derecha antes de iniciar el giro."
+    ],
+    "correct": 1,
+    "explanation": "Ambos vehículos deben ubicarse junto al eje central y girar pasando cada uno por delante del otro, evitando entrecruzar sus trayectorias por detrás.",
+    "optionExplanations": [
+      "Rodearse por detrás cruza sus trayectorias dos veces y bloquea la intersección.",
+      "Correcto: deben ubicarse a la derecha del eje y virar pasando uno por delante del otro.",
+      "Abrirse hacia la derecha para virar a la izquierda confunde a los demás conductores y genera riesgo lateral."
+    ]
+  },
+  {
+    "id": "q_pdf_27",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-094-204.png",
+    "localFallback": "assets/pdf-images/pdf-094-204.png",
+    "question": "¿En cuál de los siguientes lugares está estrictamente prohibido efectuar un viraje en 'U'?",
+    "options": [
+      "En avenidas urbanas donde una señal reglamentaria lo autorice.",
+      "En pasos peatonales, intersecciones o a menos de 200 m de curvas.",
+      "En estacionamientos privados abiertos fuera de la vía pública."
+    ],
+    "correct": 1,
+    "explanation": "La ley prohíbe virar en U en intersecciones, pasos de peatones, a menos de 200 m de curvas, cimas, gradientes, cruces ferroviarios, puentes, túneles y sobre líneas continuas.",
+    "optionExplanations": [
+      "Cuando una señal expresa autoriza el giro en U en un retorno habilitado, sí está permitido.",
+      "Correcto: está prohibido virar en U en intersecciones, pasos peatonales y a menos de 200 m de curvas o cimas.",
+      "La restricción vial rige sobre las vías públicas, no sobre recintos de estacionamiento privado."
+    ]
+  },
+  {
+    "id": "q_pdf_28",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-095-210.png",
+    "localFallback": "assets/pdf-images/pdf-095-210.png",
+    "question": "¿En qué único caso un automóvil particular puede ingresar a una pista exclusiva para buses con línea segmentada?",
+    "options": [
+      "Para sobrepasar vehículos particulares lentos en horarios de congestión.",
+      "Solo por el tramo indispensable para virar o entrar a un inmueble.",
+      "Para detenerse momentáneamente a esperar pasajeros junto a un paradero."
+    ],
+    "correct": 1,
+    "explanation": "Un vehículo particular solo puede invadir una pista solo buses (donde la línea sea segmentada) en la cuadra inmediata para virar a la derecha o ingresar a una propiedad.",
+    "optionExplanations": [
+      "Usar la pista exclusiva de buses para adelantar tráfico lento está prohibido y se sanciona mediante cámaras o inspectores.",
+      "Correcto: únicamente por el tramo estrictamente necesario para efectuar un viraje o ingresar a un recinto.",
+      "Detenerse o estacionar en paraderos o pistas exclusivas de transporte público está estrictamente prohibido."
+    ]
+  },
+  {
+    "id": "q_pdf_29",
+    "chapter": 6,
+    "category": "Normas de circulación",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "Si su pista está bloqueada por un auto detenido o trabajos viales y viene tránsito en contra, ¿qué debe hacer?",
+    "options": [
+      "Detenerse detrás del obstáculo y ceder el paso al tránsito contrario.",
+      "Avanzar con luces altas encendidas para que el vehículo contrario pare.",
+      "Pasar simultáneamente invadiendo la acera o berma del costado izquierdo."
+    ],
+    "correct": 0,
+    "explanation": "Quien enfrenta el obstáculo en su pista debe ceder siempre la preferencia a los vehículos que circulan correctamente por su propia pista en sentido contrario.",
+    "optionExplanations": [
+      "Correcto: el conductor en cuya pista está el obstáculo debe ceder el paso al vehículo que viene de frente.",
+      "Quien viene por su pista despejada conserva la preferencia; hacer luces altas no te da derecho a invadirla.",
+      "Invadir la berma o acera opuesta pone en grave riesgo a peatones y otros usuarios."
+    ]
+  },
+  {
+    "id": "q702",
+    "chapter": 7,
+    "category": "Conducción en circunstancias especiales",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "Si su vehículo sufre aquaplaning (hidroplaneo) sobre una película de agua en la calzada, ¿qué acción es correcta?",
+    "options": [
+      "Pisar el pedal de freno a fondo y girar rápido hacia la berma derecha.",
+      "Soltar suavemente el acelerador y sostener el volante firme sin frenar.",
+      "Acelerar con intensidad para que las ruedas expulsen el agua más rápido."
+    ],
+    "correct": 1,
+    "explanation": "Durante el aquaplaning los neumáticos flotan sobre el agua sin contacto con el asfalto; frenar o doblar bruscamente provoca derrapes al recuperar agarre de golpe.",
+    "optionExplanations": [
+      "Frenar a fondo o dar volantazos cuando no hay adherencia descontrola el auto apenas toca de nuevo el pavimento.",
+      "Correcto: deja de acelerar con suavidad, sujeta firme el volante recto y espera a recuperar adherencia.",
+      "Acelerar agrava el fenómeno porque aumenta la lámina de agua bajo la banda de rodadura."
+    ]
+  },
+  {
+    "id": "q703",
+    "chapter": 7,
+    "category": "Conducción en circunstancias especiales",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "Sobre una calzada con hielo o escarcha, ¿cuánto puede llegar a aumentar la distancia de frenado frente al asfalto seco?",
+    "options": [
+      "Aumenta exactamente al doble (2 veces más).",
+      "Puede aumentar hasta 10 veces más.",
+      "No varía si el auto posee frenos ABS."
+    ],
+    "correct": 1,
+    "explanation": "El hielo reduce la fricción casi a cero: la distancia necesaria para detenerse puede multiplicarse hasta por 10 veces respecto a un pavimento seco.",
+    "optionExplanations": [
+      "Duplicarse corresponde al pavimento mojado por lluvia; sobre hielo el aumento es muchísimo mayor.",
+      "Correcto: en calzada helada la distancia de frenado puede ser hasta 10 veces mayor.",
+      "Incluso con ABS, si no existe fricción entre goma y hielo, el vehículo necesita distancias enormes para detenerse."
+    ]
+  },
+  {
+    "id": "q704",
+    "chapter": 7,
+    "category": "Conducción en circunstancias especiales",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "Al circular bajo neblina espesa, ¿por qué deben evitarse las luces altas del vehículo?",
+    "options": [
+      "Porque las gotas de niebla reflejan la luz alta y encandilan al conductor.",
+      "Porque en condiciones de niebla las luces altas descargan rápido la batería.",
+      "Porque la ley exige circular únicamente con luces de estacionamiento."
+    ],
+    "correct": 0,
+    "explanation": "El haz elevado de las luces altas rebota en las microgotas suspendidas en la niebla creando una pared blanca reflectante; deben usarse luces bajas y neblineros.",
+    "optionExplanations": [
+      "Correcto: la niebla refleja el haz de las luces altas hacia tus ojos, empeorando aún más la visibilidad.",
+      "No es un problema de consumo eléctrico sino de reflexión óptica en la neblina.",
+      "Con neblina está prohibido circular solo con luces de estacionamiento; se exigen luces bajas."
+    ]
+  },
+  {
+    "id": "q705",
+    "chapter": 7,
+    "category": "Conducción en circunstancias especiales",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-111-249.png",
+    "localFallback": "assets/pdf-images/pdf-111-249.png",
+    "question": "De noche en carretera, si un auto de frente lo encandila con luces altas, ¿qué debe hacer?",
+    "options": [
+      "Encender sus propias luces altas de inmediato para advertir al otro conductor.",
+      "Mirar hacia el borde derecho de la vía, reducir velocidad y no mirar los focos.",
+      "Cerrar los ojos un par de segundos manteniendo constante su velocidad actual."
+    ],
+    "correct": 1,
+    "explanation": "Para evitar la ceguera temporal nocturna, desvía la mirada hacia la línea blanca del borde derecho de la calzada, disminuye la velocidad y jamás respondas encandilando al otro.",
+    "optionExplanations": [
+      "Responder con luces altas deja ciegos a ambos conductores al mismo tiempo, multiplicando el riesgo de choque frontal.",
+      "Correcto: dirige la vista al borde derecho de la calzada y reduce la velocidad hasta recuperar visión.",
+      "Cerrar los ojos o mantener alta velocidad equivale a circular a ciegas decenas de metros."
+    ]
+  },
+  {
+    "id": "q706",
+    "chapter": 7,
+    "category": "Conducción en circunstancias especiales",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-146-290.png",
+    "localFallback": "assets/pdf-images/pdf-146-290.png",
+    "question": "Si sufre una panne en autopista y necesita descender del auto, ¿qué secuencia de seguridad es obligatoria?",
+    "options": [
+      "Bajar primero a la berma para abrir el maletero y sacar el chaleco reflectante.",
+      "Activar intermitentes, ponerse el chaleco antes de bajar e instalar triángulos.",
+      "Apagar todas las luces para ahorrar batería y hacer señas desde la pista derecha."
+    ],
+    "correct": 1,
+    "explanation": "El chaleco reflectante debe guardarse dentro de la cabina para ponérselo antes de bajar del vehículo, tras encender las luces de emergencia y antes de colocar los triángulos.",
+    "optionExplanations": [
+      "Salir del vehículo en autopista sin el chaleco puesto te vuelve invisible para el tráfico rápido.",
+      "Correcto: enciende las luces de emergencia, ponte el chaleco dentro del auto y luego instala los triángulos.",
+      "Apagar las luces y pararse en la pista aumenta gravemente el riesgo de atropello o colisión por alcance."
+    ]
+  },
+  {
+    "id": "q707",
+    "chapter": 7,
+    "category": "Conducción en circunstancias especiales",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-129-269.png",
+    "localFallback": "assets/pdf-images/pdf-129-269.png",
+    "question": "¿Cómo afecta a la estabilidad del vehículo transportar una carga pesada en un portaequipajes de techo?",
+    "options": [
+      "Mejora el agarre de las cuatro ruedas al tomar curvas cerradas de montaña.",
+      "Eleva el centro de gravedad y aumenta la tendencia al balanceo y al vuelco.",
+      "Reduce la resistencia aerodinámica y acorta la distancia total de frenado."
+    ],
+    "correct": 1,
+    "explanation": "Llevar peso sobre el techo sube el centro de gravedad del automóvil, incrementa el balanceo lateral en curvas o viento y aumenta el riesgo de vuelco (además de elevar el consumo).",
+    "optionExplanations": [
+      "El peso en altura inestabiliza el vehículo en curvas; no mejora la adherencia.",
+      "Correcto: subir el centro de gravedad vuelve al vehículo más inestable en curvas y propenso a volcar.",
+      "Una carga en el techo aumenta la resistencia al viento y la masa total, alargando la distancia de frenado."
+    ]
+  },
+  {
+    "id": "q_pdf_31",
+    "chapter": 7,
+    "category": "Conducción en circunstancias especiales",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-114-258.png",
+    "localFallback": "assets/pdf-images/pdf-114-258.png",
+    "question": "Si arrastra un remolque y este comienza a zigzaguear (colear) en carretera, ¿cómo debe reaccionar?",
+    "options": [
+      "Acelerar a fondo para estirar el enganche del remolque hacia adelante.",
+      "Soltar el acelerador, sujetar firme el volante y bajar velocidad gradual.",
+      "Tirar progresivamente del freno de mano manteniendo pisado el acelerador."
+    ],
+    "correct": 1,
+    "explanation": "Ante el coleo de un remolque nunca se debe acelerar ni dar volantazos o frenazos bruscos; se suelta el acelerador y se deja disminuir la velocidad con suavidad manteniendo recto el volante.",
+    "optionExplanations": [
+      "Acelerar agrava la oscilación lateral y puede terminar volcando el remolque y el vehículo tractor.",
+      "Correcto: suelta el acelerador y sostén el volante con firmeza reduciendo la marcha de forma progresiva.",
+      "Aplicar el freno de mano o frenar brusco mientras se acelera desestabiliza aún más el eje trasero."
+    ]
+  },
+  {
+    "id": "q_pdf_32",
+    "chapter": 7,
+    "category": "Conducción en circunstancias especiales",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-083-173.png",
+    "localFallback": "assets/pdf-images/pdf-083-173.png",
+    "question": "¿Cuál es la forma correcta de usar una pista de aceleración al ingresar a una autopista?",
+    "options": [
+      "Detenerse justo al comienzo de la pista e ingresar lento en primera marcha.",
+      "Señalizar, igualar la velocidad del flujo y ceder el paso antes de entrar.",
+      "Ingresar directamente hacia la pista izquierda sin revisar el espejo lateral."
+    ],
+    "correct": 1,
+    "explanation": "La pista de aceleración permite ganar velocidad hasta equiparar el flujo de la autopista para incorporarse de manera fluida, señalizando y respetando la preferencia de quienes ya circulan.",
+    "optionExplanations": [
+      "Entrar a muy baja velocidad a una autopista obliga a frenar bruscamente a los vehículos rápidos.",
+      "Correcto: debes aprovechar el largo de la pista para igualar la velocidad, señalizar y ceder el paso al incorporarte.",
+      "Debes incorporarte primero a la pista derecha revisando espejos y punto ciego."
+    ]
+  },
+  {
+    "id": "q801",
+    "chapter": 8,
+    "category": "Conducción eficiente",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Cuánto ahorro aproximado de combustible puede lograrse aplicando técnicas de conducción eficiente?",
+    "options": [
+      "Entre un 10% y un 15% de ahorro.",
+      "Entre un 45% y un 60% de ahorro.",
+      "Menos de un 1% en uso urbano."
+    ],
+    "correct": 0,
+    "explanation": "Conducir con suavidad, anticipación y cambios oportunos reduce el consumo de combustible y emisiones entre un 10% y un 15%.",
+    "optionExplanations": [
+      "Correcto: la conducción eficiente permite ahorrar entre un 10% y un 15% de combustible.",
+      "Un ahorro de 45% a 60% es irrealizable solo mediante hábitos de manejo en un mismo vehículo.",
+      "El impacto es significativo (10%–15%), muy superior a un 1%."
+    ]
+  },
+  {
+    "id": "q802",
+    "chapter": 8,
+    "category": "Conducción eficiente",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-131-272.png",
+    "localFallback": "assets/pdf-images/pdf-131-272.png",
+    "question": "Para ahorrar combustible en conducción eficiente, ¿a qué régimen de RPM conviene subir de marcha?",
+    "options": [
+      "Sobre las 4.000 rpm en todo motor para mantener limpios los inyectores.",
+      "Entre 2.000 y 2.500 rpm en gasolina y entre 1.500 y 2.000 rpm en diésel.",
+      "Siempre por debajo de las 900 rpm apenas el vehículo comienza a rodar."
+    ],
+    "correct": 1,
+    "explanation": "Pasar a marchas altas tempranamente (2.000–2.500 rpm en gasolina; 1.500–2.000 rpm en diésel) evita sobrerrevolucionar el motor y optimiza el rendimiento.",
+    "optionExplanations": [
+      "Llevar el motor sobre 4.000 rpm en uso normal dispara el consumo y el desgaste mecánico.",
+      "Correcto: el rango eficiente es 2.000–2.500 rpm en gasolina y 1.500–2.000 rpm en diésel.",
+      "Cambiar bajo 900 rpm ahoga el motor y lo fuerza por debajo del ralentí."
+    ]
+  },
+  {
+    "id": "q803",
+    "chapter": 8,
+    "category": "Conducción eficiente",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-131-272.png",
+    "localFallback": "assets/pdf-images/pdf-131-272.png",
+    "question": "Al bajar una pendiente pronunciada, ¿por qué conviene ir con una marcha enganchada en lugar de ir en neutro?",
+    "options": [
+      "Porque en neutro se pierde freno motor y el motor sigue gastando combustible.",
+      "Porque al poner punto muerto la caja de cambios se traba de inmediato en bajada.",
+      "Porque circular en neutro desgasta menos las pastillas y reduce el consumo a cero."
+    ],
+    "correct": 0,
+    "explanation": "En neutro el motor inyecta combustible para mantenerse en ralentí y los frenos soportan todo el peso; con marcha engranada sin acelerar el consumo es cero y actúa el freno motor.",
+    "optionExplanations": [
+      "Correcto: bajar enganchado aporta freno motor y corta la inyección de combustible (consumo cero).",
+      "La caja no se traba en neutro, pero sí pierdes control y retención del motor.",
+      "En neutro ocurre exactamente lo opuesto: sobrecargas las pastillas de freno y gastas combustible en ralentí."
+    ]
+  },
+  {
+    "id": "q804",
+    "chapter": 8,
+    "category": "Conducción eficiente",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "Si debe esperar estacionado a una persona durante más de 1 o 2 minutos, ¿qué recomienda la conducción eficiente?",
+    "options": [
+      "Mantener el motor andando dando pequeños acelerones cada 15 segundos.",
+      "Apagar el motor para evitar gasto innecesario en ralentí y emisiones.",
+      "Dejar el motor en marcha con el aire acondicionado al máximo y ventanas bajas."
+    ],
+    "correct": 1,
+    "explanation": "El motor en ralentí consume combustible sin avanzar y contamina innecesariamente; en detenciones prolongadas sobre 1–2 minutos conviene apagarlo.",
+    "optionExplanations": [
+      "Acelerar en vacío desperdicia combustible y desgasta componentes sin utilidad alguna.",
+      "Correcto: apagar el motor en detenciones superiores a 1 o 2 minutos ahorra combustible y reduce emisiones.",
+      "El aire acondicionado al máximo aumenta aún más la carga y el consumo del motor detenido."
+    ]
+  },
+  {
+    "id": "q_pdf_34",
+    "chapter": 8,
+    "category": "Conducción eficiente",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-132-276.png",
+    "localFallback": "assets/pdf-images/pdf-132-276.png",
+    "question": "¿Por qué guardar una buena distancia respecto al vehículo de adelante ayuda a gastar menos combustible?",
+    "options": [
+      "Porque evita frenadas y aceleraciones continuas permitiendo usar la inercia.",
+      "Porque el aire desplazado por el vehículo delantero remolca al automóvil.",
+      "Porque los autos modernos apagan el motor automáticamente cada diez metros."
+    ],
+    "correct": 0,
+    "explanation": "Una mayor distancia permite anticipar reducciones de velocidad soltando el acelerador a tiempo y manteniendo el impulso suave sin frenazos innecesarios.",
+    "optionExplanations": [
+      "Correcto: anticiparse evita ciclos constantes de freno y aceleración brusca, ahorrando combustible.",
+      "Aprovechar el rebufo requiere acercarse peligrosamente, lo cual es ilegal y riesgoso.",
+      "Los sistemas Start-Stop detienen el motor cuando el vehículo se detiene por completo, no en movimiento."
+    ]
+  },
+  {
+    "id": "q901",
+    "chapter": 9,
+    "category": "Informaciones importantes y anexos",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-168-685.png",
+    "localFallback": "assets/pdf-images/pdf-168-685.png",
+    "question": "¿Qué documentos obligatorios y vigentes deben portarse siempre al conducir un automóvil en la vía pública?",
+    "options": [
+      "Cédula de identidad, factura de compra y póliza comercial voluntaria.",
+      "Licencia, Permiso de Circulación, Revisión Técnica, SOAP y Padrón.",
+      "Únicamente Licencia de Conducir vigente y comprobante del TAG urbano."
+    ],
+    "correct": 1,
+    "explanation": "Para circular legalmente se exige portar Licencia de Conducir, Permiso de Circulación, Certificado de Revisión Técnica (o de Homologación), SOAP y Certificado de Inscripción (Padrón).",
+    "optionExplanations": [
+      "La factura de compra y un seguro voluntario no reemplazan los documentos legales de circulación.",
+      "Correcto: los 5 documentos exigidos son Licencia, Permiso de Circulación, Revisión Técnica, SOAP y Padrón.",
+      "El TAG solo habilita cobro en autopistas concesionadas; no sustituye los documentos del vehículo."
+    ]
+  },
+  {
+    "id": "q902",
+    "chapter": 9,
+    "category": "Informaciones importantes y anexos",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-137-284.png",
+    "localFallback": "assets/pdf-images/pdf-137-284.png",
+    "question": "Si participa en un siniestro de tránsito donde resultan personas lesionadas, ¿cuál es su obligación legal inmediata?",
+    "options": [
+      "Detener la marcha, prestar la ayuda posible y avisar de inmediato a Carabineros.",
+      "Retirarse del lugar para dar aviso telefónico a su compañía de seguros desde casa.",
+      "Trasladar de inmediato a los heridos graves en el asiento trasero de su vehículo."
+    ],
+    "correct": 0,
+    "explanation": "La Ley de Tránsito obliga a detenerse, auxiliar en lo posible y dar cuenta inmediata a la autoridad policial; huir con lesionados constituye un delito grave.",
+    "optionExplanations": [
+      "Correcto: debe detenerse, prestar ayuda y dar aviso inmediato a Carabineros.",
+      "Abandonar el lugar de un siniestro con lesionados constituye un delito sancionado por la Ley Emilia.",
+      "Mover o trasladar heridos sin personal capacitado puede agravar gravemente lesiones de columna."
+    ]
+  },
+  {
+    "id": "q903",
+    "chapter": 9,
+    "category": "Informaciones importantes y anexos",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-168-685.png",
+    "localFallback": "assets/pdf-images/pdf-168-685.png",
+    "question": "Si reprueba por primera vez el examen teórico o práctico en la Municipalidad, ¿qué plazo tiene para repetirlo?",
+    "options": [
+      "Hasta 48 horas corridas desde el primer intento.",
+      "Hasta 25 días hábiles desde la primera reprobación.",
+      "Debe esperar obligatoriamente seis meses completos."
+    ],
+    "correct": 1,
+    "explanation": "En caso de reprobar el examen teórico o práctico por primera vez, el postulante dispone de un plazo máximo de 25 días hábiles para rendir la repetición sin reiniciar el trámite.",
+    "optionExplanations": [
+      "El plazo legal no es de 48 horas; otorga mayor margen para reforzar la preparación.",
+      "Correcto: cuenta con un plazo máximo de 25 días hábiles para rendir la repetición.",
+      "Esperar 6 meses aplica tras una segunda reprobación, no en la primera."
+    ]
+  },
+  {
+    "id": "q904",
+    "chapter": 9,
+    "category": "Informaciones importantes y anexos",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-148-301.png",
+    "localFallback": "assets/pdf-images/pdf-148-301.png",
+    "question": "¿Qué precaución especial requiere conducir un vehículo eléctrico en calles urbanas con peatones?",
+    "options": [
+      "Tienen prohibido circular con lluvia intensa por riesgo de cortocircuito.",
+      "Son casi silenciosos a baja velocidad y retienen al soltar el acelerador.",
+      "Están exentos del uso de luces bajas durante los días nublados o túneles."
+    ],
+    "correct": 1,
+    "explanation": "Los vehículos eléctricos apenas emiten ruido a baja velocidad (por lo que peatones y ciclistas pueden no oírlos) y su freno regenerativo desacelera al soltar el pedal.",
+    "optionExplanations": [
+      "Los vehículos eléctricos están sellados y diseñados para circular con seguridad bajo la lluvia.",
+      "Correcto: su bajo nivel sonoro exige mayor atención con peatones y poseen freno regenerativo.",
+      "Están sujetos exactamente a las mismas normas de iluminación y tránsito que cualquier automóvil."
+    ]
+  },
+  {
+    "id": "q905",
+    "chapter": 9,
+    "category": "Informaciones importantes y anexos",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "Ante un motociclista caído en la calzada tras una colisión, ¿qué norma esencial de primeros auxilios rige?",
+    "options": [
+      "Quitarle el casco de inmediato para darle aire fresco y ofrecerle agua.",
+      "No quitarle el casco ni moverlo salvo peligro vital inmediato como fuego.",
+      "Sentarlo en la vereda y pedirle que camine para descartar fracturas."
+    ],
+    "correct": 1,
+    "explanation": "Nunca se debe retirar el casco ni movilizar a un motociclista accidentado (salvo riesgo inminente de incendio o maniobra vital) para evitar daño irreversible en la médula cervical.",
+    "optionExplanations": [
+      "Quitar el casco sin técnica médica puede causar parálisis por lesión cervical; tampoco debe darse líquidos a heridos.",
+      "Correcto: no se quita el casco ni se mueve al herido salvo riesgo vital inmediato, mientras llegan emergencias.",
+      "Hacerlo caminar o sentarlo puede agravar fracturas vertebrales o hemorragias internas."
+    ]
+  },
+  {
+    "id": "q_pdf_35",
+    "chapter": 9,
+    "category": "Informaciones importantes y anexos",
+    "doublePoints": false,
+    "image": "assets/pdf-images/pdf-137-284.png",
+    "localFallback": "assets/pdf-images/pdf-137-284.png",
+    "question": "Si una persona herida está inconsciente pero respira bien y sin trauma grave evidente, ¿para qué sirve la posición lateral de seguridad?",
+    "options": [
+      "Para mantener despejada su vía aérea evitando asfixia por lengua o vómito.",
+      "Para incorporarla parcialmente y facilitar que beba agua con azúcar.",
+      "Para permitir que pueda caminar con apoyo hacia la berma más cercana."
+    ],
+    "correct": 0,
+    "explanation": "Colocar de costado (posición lateral de seguridad) a quien respira pero está inconsciente evita que la lengua obstruya la garganta o aspire vómitos.",
+    "optionExplanations": [
+      "Correcto: mantiene la vía aérea abierta y previene la obstrucción por caída de la lengua o fluidos.",
+      "Nunca se debe dar de beber ni comer a una persona inconsciente o herida.",
+      "No se debe poner de pie ni mover innecesariamente a una persona herida."
+    ]
+  },
+  {
+    "id": "q906",
+    "chapter": 9,
+    "category": "Anexos y definiciones",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "Según la Ley de Tránsito, ¿qué parte de la vía corresponde a la 'calzada'?",
+    "options": [
+      "La parte de la vía destinada exclusivamente al tránsito de los peatones.",
+      "La parte de la vía destinada al uso de vehículos y animales.",
+      "La franja lateral adyacente destinada solo a detenciones de emergencia."
+    ],
+    "correct": 1,
+    "explanation": "La calzada es el área central de la vía destinada a la circulación de vehículos y animales; la acera (vereda) es para peatones y la berma es la faja lateral de emergencia.",
+    "optionExplanations": [
+      "La parte destinada al uso exclusivo de peatones es la acera (o vereda).",
+      "Correcto: la calzada es la zona de la vía destinada a vehículos y animales.",
+      "La faja lateral adyacente destinada a emergencias corresponde a la berma."
+    ]
+  },
+  {
+    "id": "q907",
+    "chapter": 9,
+    "category": "Anexos y definiciones",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Cuál es la función reglamentaria de la 'berma' en un camino o carretera?",
+    "options": [
+      "Servir como pista extra para sobrepasar vehículos lentos por la derecha.",
+      "Servir de faja lateral adyacente para emergencias, no circulación normal.",
+      "Servir como pista permanente exclusiva de motocicletas y bicicletas."
+    ],
+    "correct": 1,
+    "explanation": "La berma es la faja lateral (pavimentada o no) adyacente a la calzada; está prohibido circular normalmente por ella salvo detenciones de emergencia o resguardo.",
+    "optionExplanations": [
+      "Está prohibido utilizar la berma para adelantar o sobrepasar vehículos.",
+      "Correcto: es una faja lateral destinada a emergencias o resguardo, no a la circulación ordinaria.",
+      "No es una ciclovía ni una pista habilitada para tránsito habitual de motocicletas."
+    ]
+  },
+  {
+    "id": "q908",
+    "chapter": 9,
+    "category": "Anexos y definiciones",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Qué se entiende por 'intersección' en las definiciones de tránsito?",
+    "options": [
+      "El área común donde dos o más calzadas se cruzan o convergen.",
+      "Únicamente el tramo de avenida regulado por un semáforo activo.",
+      "La faja longitudinal demarcada para ordenar una fila de autos."
+    ],
+    "correct": 0,
+    "explanation": "Intersección es el área común de calzadas que se cruzan o convergen, exista o no semáforo o señalización.",
+    "optionExplanations": [
+      "Correcto: es la superficie común en que las calzadas se cruzan o convergen.",
+      "Una intersección existe aunque carezca de semáforo o señalización vertical.",
+      "La franja longitudinal para una fila de vehículos se define como pista de circulación."
+    ]
+  },
+  {
+    "id": "q909",
+    "chapter": 9,
+    "category": "Anexos y definiciones",
+    "doublePoints": false,
+    "image": null,
+    "localFallback": null,
+    "question": "¿Cómo define la normativa una 'pista de circulación'?",
+    "options": [
+      "El ancho completo de la calle incluyendo calzada, veredas y bermas.",
+      "La faja demarcada o imaginaria destinada a una fila de vehículos.",
+      "El sector reservado únicamente para estacionamiento junto a la solera."
+    ],
+    "correct": 1,
+    "explanation": "Una pista de circulación es cada faja longitudinal (demarcada o imaginaria) dentro de la calzada destinada al tránsito de una sola fila de vehículos.",
+    "optionExplanations": [
+      "La totalidad del espacio público entre líneas oficiales de edificación corresponde a la 'vía' o calle.",
+      "Correcto: es la faja demarcada o imaginaria destinada al desplazamiento de una fila de vehículos.",
+      "Una pista está diseñada para la circulación vehicular, no es una zona exclusiva de estacionamiento."
+    ]
+  }
+]

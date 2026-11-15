@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" role="img" aria-label="Señal informativa de retorno en autopista">
+  <rect width="420" height="320" rx="16" fill="#e8eff6"/>
+  <rect x="200" y="210" width="20" height="110" fill="#64748b"/>
+  <rect x="95" y="26" width="230" height="230" rx="18" fill="#0b57a4" stroke="#ffffff" stroke-width="6"/>
+  <rect x="103" y="34" width="214" height="214" rx="13" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <!-- U-turn arrow -->
+  <path d="M 248 182 L 248 112 C 248 76, 172 76, 172 112 L 172 152" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round"/>
+  <polygon points="172,188 142,144 202,144" fill="#ffffff"/>
+  <text x="210" y="226" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" letter-spacing="1.5">RETORNO</text>
+</svg>

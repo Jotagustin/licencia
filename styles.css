@@ -10,7 +10,7 @@
   --bg-subtle: #F3F4F6;
   --text-primary: #111317;
   --text-secondary: #525866;
-  --text-muted: #767D8C;
+  --text-muted: #5E6573;
   --border-hairline: #E4E7EC;
   --border-strong: #CBD0D8;
 
@@ -42,7 +42,7 @@
   --bg-subtle: #1C2028;
   --text-primary: #F3F4F6;
   --text-secondary: #9CA3AF;
-  --text-muted: #6E7685;
+  --text-muted: #8B93A3;
   --border-hairline: #232730;
   --border-strong: #323846;
 
@@ -83,7 +83,7 @@ body {
   text-align: start;
   overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
-  padding-bottom: 5rem;
+  padding-bottom: calc(5.25rem + env(safe-area-inset-bottom, 0px));
 }
 
 /* ==========================================================================
@@ -214,18 +214,23 @@ button:disabled {
   border-top: 1px solid var(--border-hairline);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .nav-item {
   background: transparent;
   border: none;
   color: var(--text-secondary);
-  padding: 0.65rem 0.5rem;
-  font-size: 0.78rem;
+  padding: 0.65rem 0.35rem;
+  min-block-size: 3.25rem;
+  font-size: 0.74rem;
   font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 0.25rem;
 }
 
@@ -920,6 +925,167 @@ button:disabled {
 }
 
 /* ==========================================================================
+   Tarjetas Desplegables (Collapsible Cards) para Inicio Ordenado
+   ========================================================================== */
+
+.collapsible-card {
+  margin-top: 1.15rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  transition: border-color 150ms ease-out, box-shadow 150ms ease-out;
+  overflow: hidden;
+}
+
+.collapsible-card:hover {
+  border-color: var(--border-strong);
+}
+
+.collapsible-card[open] {
+  border-color: var(--border-strong);
+  box-shadow: 0 4px 14px rgba(17, 19, 23, 0.05);
+}
+
+.collapsible-card-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  user-select: none;
+  background: var(--bg-surface);
+  transition: background-color 140ms ease-out;
+}
+
+.collapsible-card-summary::-webkit-details-marker {
+  display: none;
+}
+
+.collapsible-card-summary:hover {
+  background: var(--bg-subtle);
+}
+
+.collapsible-card[open] > .collapsible-card-summary {
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.summary-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.icon-summary {
+  width: 2.15rem;
+  height: 2.15rem;
+  padding: 0.48rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-hairline);
+  color: var(--text-primary);
+  flex-shrink: 0;
+  transition: background-color 150ms ease-out, color 150ms ease-out, border-color 150ms ease-out;
+}
+
+.collapsible-card[open] .icon-summary {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--bg-canvas);
+}
+
+.collapsible-card-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+  display: block;
+}
+
+.collapsible-card-sub {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin: 0.15rem 0 0 0;
+  line-height: 1.35;
+}
+
+.summary-right {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.icon-chevron {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.22rem;
+  border-radius: 999px;
+  background: var(--bg-subtle);
+  color: var(--text-secondary);
+  transition: transform 180ms ease-out, background-color 140ms ease-out;
+  flex-shrink: 0;
+}
+
+.collapsible-card[open] .icon-chevron {
+  transform: rotate(180deg);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+}
+
+.collapsible-card-body {
+  padding: 1rem 1.15rem 1.15rem;
+  background: var(--bg-canvas);
+}
+
+.collapsible-card-body .clean-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  border-top: none;
+  margin-top: 0;
+}
+
+.collapsible-card-body .clean-row {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.collapsible-card-body .clean-row.is-today-row {
+  border-left: 3px solid var(--text-primary);
+}
+
+.collapsible-card-body .overall-progress-card {
+  margin-bottom: 0.75rem;
+  background: var(--bg-surface);
+}
+
+/* Reducción de padding y ajuste móvil */
+@media (max-width: 540px) {
+  .collapsible-card-summary {
+    padding: 0.9rem 0.95rem;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+  }
+  .summary-right {
+    margin-left: auto;
+  }
+  .collapsible-card-body {
+    padding: 0.75rem;
+  }
+  .collapsible-card-body .clean-row {
+    padding: 0.85rem;
+  }
+}
+
+/* ==========================================================================
    Vista 3: Acordeón Minimalista del Temario 2026 & Calculadora Integrada
    ========================================================================== */
 
@@ -1020,7 +1186,7 @@ button:disabled {
 
 .chapter-illustrations-strip {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr));
   gap: 0.9rem;
 }
 
@@ -1163,5 +1329,248 @@ button:disabled {
   padding-top: 0;
   border-top: none;
 }
+
+/* ==========================================================================
+   Seguimiento de Aprendizaje, Barra de Señales & Calculadora Responsiva
+   ========================================================================== */
+
+.overall-progress-card {
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.15rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+}
+
+.overall-progress-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.4rem 1rem;
+  margin-bottom: 0.55rem;
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+}
+
+.overall-progress-header strong {
+  color: var(--text-primary);
+}
+
+.progress-track-sm {
+  height: 6px;
+  width: 100%;
+  background: var(--bg-subtle);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--border-hairline);
+}
+
+.progress-fill-sm {
+  height: 100%;
+  background: var(--status-pass);
+  border-radius: 999px;
+  transition: width 240ms ease-out;
+}
+
+.chapter-progress-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.75rem;
+  margin-top: 0.45rem;
+}
+
+.chapter-progress-bar-inline {
+  width: 100%;
+  max-width: 220px;
+  height: 5px;
+  background: var(--bg-subtle);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--border-hairline);
+}
+
+.signs-toolbar {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.signs-search-input {
+  flex: 1 1 260px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.sign-thumb-box {
+  width: 3.5rem;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.15rem;
+}
+
+.sign-thumb-img {
+  width: 3.25rem;
+  height: 3.25rem;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.sign-fallback-badge {
+  display: none;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-subtle);
+  color: var(--text-primary);
+  font-size: 0.68rem;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.2rem;
+}
+
+.sign-fallback-badge.is-visible {
+  display: inline-flex;
+}
+
+.inline-calculator-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.35rem 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.inline-calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.inline-calculator-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.25rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-hairline);
+  padding-top: 0.6rem;
+}
+
+/* ==========================================================================
+   Refinamientos Responsivos y Áreas Táctiles en Móvil
+   ========================================================================== */
+
+@media (max-width: 540px) {
+  .main-container {
+    padding: 1.35rem 1rem 2.5rem;
+  }
+
+  .ghost-link,
+  .preset-pill {
+    min-block-size: 2.35rem;
+  }
+
+  .check-toggle {
+    min-inline-size: 2rem;
+    min-block-size: 2rem;
+    padding: 0.25rem;
+  }
+
+  .index-btn {
+    min-inline-size: 2.25rem;
+    min-block-size: 2.25rem;
+    font-size: 0.8rem;
+  }
+
+  .clean-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding: 1rem 0.25rem;
+  }
+
+  .clean-row.is-today-row {
+    padding-inline: 0.75rem;
+  }
+
+  .row-right {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 1.4rem;
+  }
+
+  .chapter-summary {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+
+  .chapter-summary .row-right {
+    padding-left: 1.4rem;
+  }
+
+  .chapter-body {
+    padding: 0.25rem 0.25rem 1.4rem 0.4rem;
+  }
+
+  .primary-cta-bar {
+    padding: 1.1rem;
+  }
+
+  .exam-figure {
+    padding: 0.75rem;
+  }
+
+  .exam-footer-nav {
+    flex-wrap: wrap;
+  }
+
+  .exam-footer-nav .btn-outline,
+  .exam-footer-nav .btn-solid {
+    min-block-size: 2.65rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .metrics-strip {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    padding: 1rem 0;
+  }
+
+  .metric-cell + .metric-cell {
+    padding-left: 0;
+    border-left: none;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-hairline);
+  }
+
+  .metric-title {
+    min-block-size: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+
 
 

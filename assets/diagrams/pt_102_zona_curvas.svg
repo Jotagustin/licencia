@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" role="img" aria-label="Tres señales de advertencia numeradas: Señal 1 Resalto, Señal 2 Curva a la derecha y Señal 3 Zona de curvas">
+  <rect width="600" height="260" rx="16" fill="#f1f5f9"/>
+  <!-- Señal 1: Resalto -->
+  <g transform="translate(105, 105)">
+    <rect x="-54" y="-54" width="108" height="108" rx="10" transform="rotate(45)" fill="#facc15" stroke="#111827" stroke-width="5"/>
+    <rect x="-47" y="-47" width="94" height="94" rx="7" transform="rotate(45)" fill="none" stroke="#111827" stroke-width="2.5"/>
+    <path d="M -38 14 L -18 14 C -10 -12, 10 -12, 18 14 L 38 14 Z" fill="#111827"/>
+    <text x="0" y="114" text-anchor="middle" fill="#0f172a" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800">Señal 1</text>
+  </g>
+  <!-- Señal 2: Curva única a la derecha -->
+  <g transform="translate(300, 105)">
+    <rect x="-54" y="-54" width="108" height="108" rx="10" transform="rotate(45)" fill="#facc15" stroke="#111827" stroke-width="5"/>
+    <rect x="-47" y="-47" width="94" height="94" rx="7" transform="rotate(45)" fill="none" stroke="#111827" stroke-width="2.5"/>
+    <path d="M -14 30 L -14 2 C -14 -14, -4 -20, 14 -20" fill="none" stroke="#111827" stroke-width="11" stroke-linecap="round"/>
+    <polygon points="32,-20 10,-34 10,-6" fill="#111827"/>
+    <text x="0" y="114" text-anchor="middle" fill="#0f172a" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800">Señal 2</text>
+  </g>
+  <!-- Señal 3: Zona de curvas (múltiples curvas) -->
+  <g transform="translate(495, 105)">
+    <rect x="-54" y="-54" width="108" height="108" rx="10" transform="rotate(45)" fill="#facc15" stroke="#111827" stroke-width="5"/>
+    <rect x="-47" y="-47" width="94" height="94" rx="7" transform="rotate(45)" fill="none" stroke="#111827" stroke-width="2.5"/>
+    <path d="M 4 36 L 4 22 C 4 14, -18 14, -18 4 C -18 -6, 18 -6, 18 -16 C 18 -24, -4 -24, -4 -30" fill="none" stroke="#111827" stroke-width="10" stroke-linecap="round"/>
+    <polygon points="-4,-44 -17,-24 9,-24" fill="#111827"/>
+    <text x="0" y="114" text-anchor="middle" fill="#0f172a" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800">Señal 3</text>
+  </g>
+</svg>

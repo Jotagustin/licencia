@@ -2,7 +2,7 @@
 <html lang="es-CL" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Clase B — Preparación de Examen de Conducir (CONASET 2026)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,6 +26,15 @@
           </svg>
           <span>Manual PDF</span>
         </a>
+
+        <button type="button" id="sound-toggle-btn" class="ghost-link" aria-pressed="true" aria-label="Silenciar sonidos de respuesta" title="Activar o silenciar sonidos">
+          <svg id="sound-icon-svg" class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+          <span id="sound-label-text">Sonido</span>
+        </button>
 
         <button type="button" id="theme-toggle-btn" class="ghost-link" aria-label="Cambiar apariencia">
           <svg id="theme-icon-svg" class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
@@ -86,58 +95,7 @@
         </p>
       </header>
 
-      <!-- Barra de Configuración en Línea -->
-      <div class="goal-inline-bar">
-        <div class="control-group">
-          <label for="target-date-input" class="control-label">Fecha objetivo para rendir el examen</label>
-          <input type="date" id="target-date-input" class="minimal-input tabular" />
-          <div class="quick-presets" role="group" aria-label="Plazos rápidos">
-            <button type="button" class="preset-pill" data-preset-days="1">1 día</button>
-            <button type="button" class="preset-pill" data-preset-days="3">3 días</button>
-            <button type="button" class="preset-pill is-selected" data-preset-days="7">7 días</button>
-            <button type="button" class="preset-pill" data-preset-days="14">14 días</button>
-            <button type="button" class="preset-pill" data-preset-days="30">30 días</button>
-          </div>
-        </div>
-
-        <div class="control-group">
-          <label for="baseline-level-select" class="control-label">Punto de partida</label>
-          <select id="baseline-level-select" class="minimal-input">
-            <option value="zero">Desde cero (lectura + tests)</option>
-            <option value="medium">Con base previa (énfasis en tests)</option>
-            <option value="advanced">Repaso final (sólo simulacros)</option>
-          </select>
-
-          <label for="feedback-mode-select" class="control-label" style="margin-top: 0.45rem;">Corrección en simulacro oficial</label>
-          <select id="feedback-mode-select" class="minimal-input">
-            <option value="instant">Explicación inmediata al responder</option>
-            <option value="exam">Resultado al finalizar el examen</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Franja de 3 Métricas Esenciales -->
-      <div class="metrics-strip">
-        <div class="metric-cell">
-          <span class="metric-title">Plazo restante</span>
-          <span id="odo-days-left" class="metric-number tabular">7 días</span>
-          <span id="odo-target-date-sub" class="metric-note">Meta programada</span>
-        </div>
-
-        <div class="metric-cell">
-          <span class="metric-title">Dedicación diaria</span>
-          <span id="odo-daily-time" class="metric-number tabular">45 min</span>
-          <span id="odo-daily-time-sub" class="metric-note">2 tests por día</span>
-        </div>
-
-        <div class="metric-cell">
-          <span class="metric-title">Nivel actual</span>
-          <span id="odo-avg-score" class="metric-number tabular">Pendiente</span>
-          <span id="odo-avg-score-sub" class="metric-note">Mínimo 33 / 38 pts</span>
-        </div>
-      </div>
-
-      <!-- Acción Destacada de Hoy -->
+      <!-- Acción Destacada de Hoy (Hero Card) -->
       <div class="primary-cta-bar">
         <div class="cta-copy">
           <span class="eyebrow-tag">Sesión prioritaria de hoy</span>
@@ -158,123 +116,292 @@
         </button>
       </div>
 
-      <!-- Bloque 2: Modalidades de Examen -->
-      <section class="content-section" aria-labelledby="modes-heading">
-        <div class="section-block-header">
-          <div>
-            <h2 id="modes-heading" class="section-heading">Modalidades de práctica</h2>
-            <p class="section-desc">
-              Elige entre un simulacro con las reglas oficiales de tu municipalidad o entrenamientos focalizados en preguntas críticas.
-            </p>
+      <!-- Configuración del Plan (Desplegable) -->
+      <details class="collapsible-card" id="details-plan-config">
+        <summary class="collapsible-card-summary">
+          <div class="summary-left">
+            <svg class="icon-svg icon-summary" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+            <div>
+              <span class="collapsible-card-title">Ajustar meta y fecha de examen</span>
+              <p class="collapsible-card-sub" id="config-summary-sub">Calcula tu plan diario según el tiempo restante</p>
+            </div>
           </div>
-          <span class="status-pill tabular">Aprobación: 33 / 38 pts</span>
-        </div>
+          <div class="summary-right">
+            <span class="status-pill tabular">Personalizar</span>
+            <svg class="icon-svg icon-chevron" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </summary>
 
-        <div class="clean-list">
-          <div class="clean-row">
-            <div class="row-main">
-              <span class="status-dot dot-active" aria-hidden="true"></span>
-              <div>
-                <h3 class="row-title">Simulacro oficial municipal</h3>
-                <p class="row-sub">35 preguntas (32 de 1 pto + 3 de doble puntaje) · Límite de 45 minutos</p>
+        <div class="collapsible-card-body">
+          <div class="goal-inline-bar" style="border: none; padding-top: 0.25rem;">
+            <div class="control-group">
+              <label for="target-date-input" class="control-label">Fecha objetivo para rendir el examen</label>
+              <input type="date" id="target-date-input" class="minimal-input tabular" />
+              <div class="quick-presets" role="group" aria-label="Plazos rápidos">
+                <button type="button" class="preset-pill" data-preset-days="1">1 día</button>
+                <button type="button" class="preset-pill" data-preset-days="3">3 días</button>
+                <button type="button" class="preset-pill is-selected" data-preset-days="7">7 días</button>
+                <button type="button" class="preset-pill" data-preset-days="14">14 días</button>
+                <button type="button" class="preset-pill" data-preset-days="30">30 días</button>
               </div>
             </div>
-            <div class="row-right">
-              <button type="button" class="btn-outline" data-action="start-mode" data-mode="official">
-                <span>Rendir 35 pregs</span>
-                <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
+
+            <div class="control-group">
+              <label for="baseline-level-select" class="control-label">Punto de partida</label>
+              <select id="baseline-level-select" class="minimal-input">
+                <option value="zero">Desde cero (lectura + tests)</option>
+                <option value="medium">Con base previa (énfasis en tests)</option>
+                <option value="advanced">Repaso final (sólo simulacros)</option>
+              </select>
+
+              <label for="feedback-mode-select" class="control-label" style="margin-top: 0.45rem;">Corrección en simulacro oficial</label>
+              <select id="feedback-mode-select" class="minimal-input">
+                <option value="instant">Explicación inmediata al responder</option>
+                <option value="exam">Resultado al finalizar el examen</option>
+              </select>
             </div>
           </div>
+        </div>
+      </details>
 
-          <div class="clean-row">
-            <div class="row-main">
-              <span class="status-dot dot-warn" aria-hidden="true"></span>
-              <div>
-                <h3 class="row-title">Preguntas de doble puntaje</h3>
-                <p class="row-sub">Alcohol y drogas, velocidad máxima, cinturón y Sistemas de Retención Infantil (2 pts c/u)</p>
+      <!-- SECCIÓN A: Modalidades de práctica (Abierto por defecto para acción directa) -->
+      <details class="collapsible-card" id="details-modes" open>
+        <summary class="collapsible-card-summary">
+          <div class="summary-left">
+            <svg class="icon-svg icon-summary" viewBox="0 0 24 24" aria-hidden="true">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <div>
+              <span class="collapsible-card-title">Modalidades de práctica</span>
+              <p class="collapsible-card-sub">Simulacro oficial (35 pregs), doble puntaje, señales y errores</p>
+            </div>
+          </div>
+          <div class="summary-right">
+            <span class="status-pill tabular">5 modalidades</span>
+            <svg class="icon-svg icon-chevron" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </summary>
+
+        <div class="collapsible-card-body">
+          <div class="clean-list">
+            <div class="clean-row">
+              <div class="row-main">
+                <span class="status-dot dot-active" aria-hidden="true"></span>
+                <div>
+                  <h3 class="row-title">Simulacro oficial municipal</h3>
+                  <p class="row-sub">35 preguntas (32 de 1 pto + 3 de doble puntaje) · Límite de 45 minutos</p>
+                </div>
+              </div>
+              <div class="row-right">
+                <button type="button" class="btn-solid" style="padding: 0.45rem 0.95rem; font-size: 0.84rem; width: auto;" data-action="start-mode" data-mode="official">
+                  <span>Rendir 35 pregs</span>
+                  <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
               </div>
             </div>
-            <div class="row-right">
-              <button type="button" class="btn-outline" data-action="start-mode" data-mode="double-points">
-                <span>Practicar 2 pts</span>
-                <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
-            </div>
-          </div>
 
-          <div class="clean-row">
-            <div class="row-main">
-              <span class="status-dot" aria-hidden="true"></span>
-              <div>
-                <h3 class="row-title">Práctica breve (10 preguntas)</h3>
-                <p class="row-sub">Sesión rápida de 12 minutos con selección mixta de capítulos</p>
+            <div class="clean-row">
+              <div class="row-main">
+                <span class="status-dot dot-warn" aria-hidden="true"></span>
+                <div>
+                  <h3 class="row-title">Preguntas de doble puntaje</h3>
+                  <p class="row-sub">Alcohol y drogas, velocidad máxima, cinturón y Sistemas de Retención Infantil (2 pts c/u)</p>
+                </div>
+              </div>
+              <div class="row-right">
+                <button type="button" class="btn-outline" data-action="start-mode" data-mode="double-points">
+                  <span>Practicar 2 pts</span>
+                  <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
               </div>
             </div>
-            <div class="row-right">
-              <button type="button" class="btn-outline" data-action="start-mode" data-mode="express">
-                <span>Iniciar 10 pregs</span>
-                <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
-            </div>
-          </div>
 
-          <div class="clean-row">
-            <div class="row-main">
-              <span class="status-dot dot-fail" aria-hidden="true"></span>
-              <div>
-                <h3 class="row-title">Repaso de errores registrados</h3>
-                <p class="row-sub" id="mistakes-row-sub">Preguntas respondidas incorrectamente en tus sesiones previas</p>
+            <div class="clean-row">
+              <div class="row-main">
+                <span class="status-dot dot-active" aria-hidden="true"></span>
+                <div>
+                  <h3 class="row-title">Test de señales de tránsito</h3>
+                  <p class="row-sub">15 preguntas visuales aleatorias del catálogo oficial de 138 señales CONASET</p>
+                </div>
+              </div>
+              <div class="row-right">
+                <span id="signs-mastered-badge" class="status-pill tabular">0 / 138</span>
+                <button type="button" class="btn-outline" data-action="start-mode" data-mode="signs">
+                  <span>Practicar señales</span>
+                  <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
               </div>
             </div>
-            <div class="row-right">
-              <span id="mistakes-count-badge" class="status-pill tabular">0 errores</span>
-              <button type="button" class="btn-outline" data-action="start-mode" data-mode="mistakes">
-                <span>Repasar</span>
-                <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
+
+            <div class="clean-row">
+              <div class="row-main">
+                <span class="status-dot" aria-hidden="true"></span>
+                <div>
+                  <h3 class="row-title">Práctica breve (10 preguntas)</h3>
+                  <p class="row-sub">Sesión rápida de 12 minutos con selección mixta de capítulos</p>
+                </div>
+              </div>
+              <div class="row-right">
+                <button type="button" class="btn-outline" data-action="start-mode" data-mode="express">
+                  <span>Iniciar 10 pregs</span>
+                  <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="clean-row">
+              <div class="row-main">
+                <span class="status-dot dot-fail" aria-hidden="true"></span>
+                <div>
+                  <h3 class="row-title">Repaso de errores registrados</h3>
+                  <p class="row-sub" id="mistakes-row-sub">Preguntas respondidas incorrectamente en tus sesiones previas</p>
+                </div>
+              </div>
+              <div class="row-right">
+                <span id="mistakes-count-badge" class="status-pill tabular">0 errores</span>
+                <button type="button" class="btn-outline" data-action="start-mode" data-mode="mistakes">
+                  <span>Repasar</span>
+                  <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </details>
 
-      <!-- Bloque 3: Cronograma Día por Día -->
-      <section class="content-section" aria-labelledby="schedule-heading">
-        <div class="section-block-header">
-          <div>
-            <h2 id="schedule-heading" class="section-heading">Tu ruta día por día</h2>
-            <p class="section-desc">
-              Distribución automática de los 9 capítulos del manual 2026 y simulacros según los días que faltan para tu examen.
-            </p>
+      <!-- SECCIÓN A2: Exámenes Reales Extraídos (5 tests oficiales de 35 preguntas) -->
+      <details class="collapsible-card" id="details-real-exams" open>
+        <summary class="collapsible-card-summary">
+          <div class="summary-left">
+            <svg class="icon-svg icon-summary" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <div>
+              <span class="collapsible-card-title">Tests reales extraídos (CONASET)</span>
+              <p class="collapsible-card-sub">5 exámenes municipales completos de 35 preguntas cada uno</p>
+            </div>
           </div>
-          <span id="schedule-summary-meta" class="status-pill tabular"></span>
-        </div>
+          <div class="summary-right">
+            <span class="status-pill tabular">5 tests</span>
+            <svg class="icon-svg icon-chevron" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </summary>
 
-        <div id="sprint-schedule-list" class="clean-list">
-          <!-- Generado dinámicamente por app.js -->
-        </div>
-      </section>
-
-      <!-- Bloque 4: Historial de Sesiones -->
-      <section class="content-section" aria-labelledby="history-heading">
-        <div class="section-block-header">
-          <div>
-            <h2 id="history-heading" class="section-heading">Historial reciente</h2>
-            <p class="section-desc">
-              Registro de tus últimos simulacros y su equivalencia en la escala oficial de 38 puntos.
-            </p>
+        <div class="collapsible-card-body">
+          <div id="preset-exams-list" class="clean-list">
+            <!-- Generado dinámicamente por app.js desde CONASET_EXAM_SETS -->
           </div>
         </div>
-        <div id="recent-history-list" class="clean-list"></div>
-      </section>
+      </details>
+
+      <!-- SECCIÓN B: Seguimiento de Aprendizaje por Capítulo (Desplegable) -->
+      <details class="collapsible-card" id="details-progress">
+        <summary class="collapsible-card-summary">
+          <div class="summary-left">
+            <svg class="icon-svg icon-summary" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+            <div>
+              <span class="collapsible-card-title">Seguimiento de aprendizaje</span>
+              <p class="collapsible-card-sub" id="progress-bank-subtitle">Dominio por capítulo y lectura del manual</p>
+            </div>
+          </div>
+          <div class="summary-right">
+            <span id="overall-mastery-pill" class="status-pill tabular">0% dominado</span>
+            <svg class="icon-svg icon-chevron" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </summary>
+
+        <div class="collapsible-card-body">
+          <div id="overall-progress-bar-wrap" class="overall-progress-card" style="margin-top: 0.25rem;">
+            <!-- Generado dinámicamente por app.js -->
+          </div>
+
+          <div id="chapter-progress-list" class="clean-list">
+            <!-- Generado dinámicamente por app.js -->
+          </div>
+        </div>
+      </details>
+
+      <!-- SECCIÓN C: Tu ruta día por día (Desplegable) -->
+      <details class="collapsible-card" id="details-schedule">
+        <summary class="collapsible-card-summary">
+          <div class="summary-left">
+            <svg class="icon-svg icon-summary" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <div>
+              <span class="collapsible-card-title">Tu ruta día por día</span>
+              <p class="collapsible-card-sub">Distribución organizada según tu fecha meta</p>
+            </div>
+          </div>
+          <div class="summary-right">
+            <span id="schedule-summary-meta" class="status-pill tabular">0 completados</span>
+            <svg class="icon-svg icon-chevron" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </summary>
+
+        <div class="collapsible-card-body">
+          <div id="sprint-schedule-list" class="clean-list" style="margin-top: 0.25rem;">
+            <!-- Generado dinámicamente por app.js -->
+          </div>
+        </div>
+      </details>
+
+      <!-- SECCIÓN D: Historial reciente de simulacros (Desplegable) -->
+      <details class="collapsible-card" id="details-history">
+        <summary class="collapsible-card-summary">
+          <div class="summary-left">
+            <svg class="icon-svg icon-summary" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <div>
+              <span class="collapsible-card-title">Historial reciente</span>
+              <p class="collapsible-card-sub">Resultados de tus últimos tests en la escala oficial de 38 pts</p>
+            </div>
+          </div>
+          <div class="summary-right">
+            <span id="history-count-badge" class="status-pill tabular">Ver registros</span>
+            <svg class="icon-svg icon-chevron" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </summary>
+
+        <div class="collapsible-card-body">
+          <div id="recent-history-list" class="clean-list" style="margin-top: 0.25rem;"></div>
+        </div>
+      </details>
     </section>
 
     <!-- ====================================================================
@@ -311,8 +438,14 @@
         <p class="page-subtitle">
           138 señales reglamentarias, de advertencia de peligro, informativas y transitorias exigidas en el examen municipal.
         </p>
-        <div style="margin-top: 1rem;">
-          <input type="text" id="search-signs-input" class="minimal-input" placeholder="Buscar por nombre, código (ej: RPI-1) o descripción..." style="max-width: 480px; width: 100%;" />
+        <div class="signs-toolbar">
+          <input type="text" id="search-signs-input" class="minimal-input signs-search-input" placeholder="Buscar por nombre, código (ej: RPI-1) o descripción..." />
+          <button type="button" class="btn-outline" data-action="start-mode" data-mode="signs">
+            <span>Practicar test de señales</span>
+            <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
         </div>
       </header>
 

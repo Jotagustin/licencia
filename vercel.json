@@ -1,0 +1,17 @@
+{
+  "projectName": "Licencia Clase B - CONASET 2026",
+  "github": {
+    "id": null
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}

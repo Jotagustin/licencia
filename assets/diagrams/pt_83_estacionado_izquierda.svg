@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" role="img" aria-label="Vehículo gris estacionado al costado izquierdo junto a señal de estacionamiento permitido">
+  <rect width="560" height="320" rx="16" fill="#cbd5e1"/>
+  <!-- Sidewalks -->
+  <rect x="0" y="0" width="120" height="320" fill="#e2e8f0"/>
+  <rect x="440" y="0" width="120" height="320" fill="#e2e8f0"/>
+  <!-- Road -->
+  <rect x="120" y="0" width="320" height="320" fill="#475569"/>
+  <rect x="120" y="0" width="6" height="320" fill="#facc15"/>
+  <rect x="434" y="0" width="6" height="320" fill="#facc15"/>
+  <!-- One-way arrows indicating upward direction -->
+  <g fill="#ffffff" opacity="0.9">
+    <polygon points="280,55 262,88 273,88 273,128 287,128 287,88 298,88"/>
+    <polygon points="280,190 262,223 273,223 273,263 287,263 287,223 298,223"/>
+  </g>
+  <!-- Grey car parked on the left side facing direction of traffic -->
+  <g transform="translate(142, 110)">
+    <rect x="0" y="0" width="64" height="122" rx="14" fill="#94a3b8" stroke="#1e293b" stroke-width="2.5"/>
+    <rect x="8" y="24" width="48" height="24" rx="5" fill="#bae6fd"/>
+    <rect x="10" y="54" width="44" height="34" rx="4" fill="#64748b"/>
+    <rect x="10" y="94" width="44" height="16" rx="4" fill="#bae6fd"/>
+    <rect x="8" y="4" width="12" height="5" rx="2" fill="#fef08a"/>
+    <rect x="44" y="4" width="12" height="5" rx="2" fill="#fef08a"/>
+    <rect x="8" y="114" width="12" height="5" rx="2" fill="#ef4444"/>
+    <rect x="44" y="114" width="12" height="5" rx="2" fill="#ef4444"/>
+  </g>
+  <!-- Official blue E parking sign on left sidewalk -->
+  <rect x="52" y="128" width="6" height="72" fill="#475569"/>
+  <rect x="24" y="64" width="62" height="68" rx="8" fill="#0b57a4" stroke="#ffffff" stroke-width="3"/>
+  <text x="55" y="112" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800">E</text>
+  <rect x="20" y="138" width="70" height="22" rx="4" fill="#ffffff" stroke="#0b57a4" stroke-width="2"/>
+  <text x="55" y="153" text-anchor="middle" fill="#0b57a4" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800">PERMITIDO</text>
+</svg>
