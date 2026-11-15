@@ -1,19 +1,12 @@
 {
-  "projectName": "Licencia Clase B - CONASET 2026",
-  "github": {
-    "id": null
-  },
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "headers": [
     {
-      "source": "/sw.js",
+      "source": "/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        },
-        {
-          "key": "Service-Worker-Allowed",
-          "value": "/"
+          "value": "public, max-age=0, must-revalidate"
         }
       ]
     },
@@ -31,11 +24,15 @@
       ]
     },
     {
-      "source": "/(.*)",
+      "source": "/sw.js",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Service-Worker-Allowed",
+          "value": "/"
         }
       ]
     }
