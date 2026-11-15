@@ -79,16 +79,66 @@ for (const q of questions) {
     assert(/licencia|documentos|examen|municipalidad/i.test(q.question), `License image misused on ${q.id}`);
   }
 
+  // Structural & anti-bias validation
+  assert(q.options.length === 3, `Expected 3 options on ${q.id}, got ${q.options.length}`);
+  assert(
+    !q.options.every((o) => /^(Verdadero|Falso)$/i.test(o.trim())),
+    `Disallowed 2-option Verdadero/Falso format on ${q.id}`
+  );
+  assert(
+    !q.options.some((o) => /^(Solo\s+(I|II|III)|I\s+y\s+II|II\s+y\s+III|I,\s*II)/i.test(o.trim())),
+    `Disallowed Roman numeral combo option on ${q.id}`
+  );
+  assert(
+    !q.options.some((o) =>
+      /^(Todas las mencionadas|Todas las anteriores|Ninguna de las anteriores|Ningun[oa]:)/i.test(o.trim()) ||
+      /\b(las otras dos|ambas anteriores|alternativa [abc])\b/i.test(o)
+    ),
+    `Disallowed meta-option giveaway on ${q.id}`
+  );
+  assert(
+    new Set(q.options.map((o) => o.trim().toLowerCase())).size === q.options.length,
+    `Duplicate option text on ${q.id}`
+  );
+  assert(
+    !/[<>]/.test(`${q.question} ${q.options.join(" ")}`),
+    `Unexpected HTML angle bracket in ${q.id}`
+  );
+  const absRe = /\b(siempre|nunca|jamás|todos|todas|todo|toda|exclusivamente|únicamente|ninguno|ninguna)\b/i;
+  assert(
+    !q.options.every((o, i) => (i === q.correct ? !absRe.test(o) : absRe.test(o))),
+    `Disallowed absolutes-in-all-distractors clue on ${q.id}`
+  );
+  assert(
+    !(
+      q.options[q.correct].includes(";") &&
+      q.options.filter((o, i) => i !== q.correct && o.includes(";")).length === 0
+    ),
+    `Exclusive semicolon clue in correct option on ${q.id}`
+  );
+  assert(
+    !/(?:se deber(?![a-záéíóúüñ])|(?<![a-záéíóúüñ])vera(?![a-záéíóúüñ]))/i.test(`${q.question} ${q.options.join(" ")}`),
+    `Known errata detected in ${q.id}`
+  );
+
   // Anti-length-bias validation for prose questions
   const lens = q.options.map((o) => o.length);
+  const spread = Math.max(...lens) - Math.min(...lens);
+  const cLen = lens[q.correct];
+  const dLens = lens.filter((_, i) => i !== q.correct);
+  const avgD = dLens.reduce((a, b) => a + b, 0) / dLens.length;
+  assert(spread <= 5, `Option spread > 5 on ${q.id}: spread=${spread}, lens=${JSON.stringify(lens)}`);
+  assert(
+    Math.abs(cLen - avgD) <= 3,
+    `Correct vs avg distractor diff > 3 on ${q.id}: cLen=${cLen}, avgD=${avgD.toFixed(1)}`
+  );
+
   const isFormulaic =
     q.options.every((o) => /^(I+|Solo|Ambas|Todas|Ninguna|Verdadero|Falso)/i.test(o.trim())) ||
     Math.max(...lens) < 22;
 
   if (!isFormulaic) {
     proseCount++;
-    const cLen = lens[q.correct];
-    const dLens = lens.filter((_, i) => i !== q.correct);
     const maxD = Math.max(...dLens);
     const minD = Math.min(...dLens);
     if (cLen > maxD) strictlyLongestCount++;
@@ -107,12 +157,12 @@ const avgDistractor = distractorLenSum / distractorCount;
 const avgRelDiff = Math.abs(avgCorrect - avgDistractor) / avgDistractor;
 
 assert(
-  strictlyLongestPct >= 20 && strictlyLongestPct <= 42,
-  `Expected prose strictlyLongest rate between 20% and 42%, got ${strictlyLongestPct.toFixed(1)}%`
+  strictlyLongestPct >= 24 && strictlyLongestPct <= 38,
+  `Expected prose strictlyLongest rate between 24% and 38%, got ${strictlyLongestPct.toFixed(1)}%`
 );
 assert(
-  avgRelDiff <= 0.10,
-  `Average correct (${avgCorrect.toFixed(1)}) vs distractor (${avgDistractor.toFixed(1)}) differs by >10%`
+  Math.abs(avgCorrect - avgDistractor) <= 0.8 && avgRelDiff <= 0.10,
+  `Average correct (${avgCorrect.toFixed(1)}) vs distractor (${avgDistractor.toFixed(1)}) differs by >0.8 chars`
 );
 
 // Validate all 5 real extracted exam sets

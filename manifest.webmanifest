@@ -1,0 +1,56 @@
+{
+  "id": "./",
+  "name": "Licencia Clase B - CONASET 2026",
+  "short_name": "Clase B 2026",
+  "description": "Simulador de estudio, ensayos tipo CONASET 2026 y diccionario oficial de señales de tránsito para aprobar la Licencia Clase B en Chile.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "lang": "es-CL",
+  "background_color": "#FAFAFA",
+  "theme_color": "#111317",
+  "categories": ["education", "books"],
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ensayo oficial (35 pregs)",
+      "short_name": "Ensayo",
+      "description": "Iniciar simulación oficial de 35 preguntas CONASET",
+      "url": "./?view=exam",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Diccionario de señales",
+      "short_name": "Señales",
+      "description": "Explorar todas las señales de tránsito chilenas",
+      "url": "./?view=senales",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}

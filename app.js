@@ -513,28 +513,39 @@
     });
 
     // Franja de 3 métricas esenciales
-    document.getElementById("odo-days-left").textContent =
-      plan.daysLeft === 1 ? "1 día" : `${plan.daysLeft} días`;
-    document.getElementById("odo-target-date-sub").textContent = `Meta: ${formatHumanDate(
-      state.targetDate
-    )}`;
+    const daysLeftEl = document.getElementById("odo-days-left");
+    if (daysLeftEl) {
+      daysLeftEl.textContent = plan.daysLeft === 1 ? "1 día" : `${plan.daysLeft} días`;
+    }
+    const targetSubEl = document.getElementById("odo-target-date-sub");
+    if (targetSubEl) {
+      targetSubEl.textContent = `Meta: ${formatHumanDate(state.targetDate)}`;
+    }
 
-    document.getElementById("odo-daily-time").textContent = `${plan.dailyMinutes} min`;
-    document.getElementById("odo-daily-time-sub").textContent = `${plan.testsPerDay} ${
-      plan.testsPerDay === 1 ? "test diario" : "tests diarios"
-    } · Hoy: ${state.studiedMinutesToday} min`;
+    const dailyTimeEl = document.getElementById("odo-daily-time");
+    if (dailyTimeEl) {
+      dailyTimeEl.textContent = `${plan.dailyMinutes} min`;
+    }
+    const dailySubEl = document.getElementById("odo-daily-time-sub");
+    if (dailySubEl) {
+      dailySubEl.textContent = `${plan.testsPerDay} ${
+        plan.testsPerDay === 1 ? "test diario" : "tests diarios"
+      } · Hoy: ${state.studiedMinutesToday} min`;
+    }
 
     const scoreEl = document.getElementById("odo-avg-score");
     const scoreSubEl = document.getElementById("odo-avg-score-sub");
-    if (stats.examsTaken > 0) {
-      scoreEl.textContent = `${stats.avgScore38} / 38`;
-      scoreSubEl.textContent =
-        stats.avgScore38 >= 33
-          ? `Aprobado (${stats.masteredCount}/${stats.totalQuestions} dominadas)`
-          : `Faltan ${Math.ceil(33 - stats.avgScore38)} pts para aprobar`;
-    } else {
-      scoreEl.textContent = "Pendiente";
-      scoreSubEl.textContent = `${stats.masteredCount}/${stats.totalQuestions} pregs dominadas`;
+    if (scoreEl && scoreSubEl) {
+      if (stats.examsTaken > 0) {
+        scoreEl.textContent = `${stats.avgScore38} / 38`;
+        scoreSubEl.textContent =
+          stats.avgScore38 >= 33
+            ? `Aprobado (${stats.masteredCount}/${stats.totalQuestions} dominadas)`
+            : `Faltan ${Math.ceil(33 - stats.avgScore38)} pts para aprobar`;
+      } else {
+        scoreEl.textContent = "Pendiente";
+        scoreSubEl.textContent = `${stats.masteredCount}/${stats.totalQuestions} pregs dominadas`;
+      }
     }
 
     // Resumen del foco de hoy
@@ -833,22 +844,28 @@
         const byLengthDiff = (a, b) =>
           Math.abs(a.name.length - targetLen) - Math.abs(b.name.length - targetLen);
 
-        const sameCat = shuffleArray(
+        const closeSameCat = shuffleArray(
           allSigns
-            .filter((other) => other.code !== sign.code && other.category === sign.category)
+            .filter(
+              (other) =>
+                other.code !== sign.code &&
+                other.category === sign.category &&
+                Math.abs(other.name.length - targetLen) <= 6
+            )
             .sort(byLengthDiff)
-            .slice(0, 10)
+            .slice(0, 4)
         );
-        const fallbackCat = shuffleArray(
+        const sameCatIds = new Set(closeSameCat.map((s) => s.code));
+        const anyClose = shuffleArray(
           allSigns
-            .filter((other) => other.code !== sign.code && other.category !== sign.category)
+            .filter((other) => other.code !== sign.code && !sameCatIds.has(other.code))
             .sort(byLengthDiff)
-            .slice(0, 10)
+            .slice(0, 4)
         );
-        const distractors = [...sameCat, ...fallbackCat].slice(0, 3);
+        const distractors = [...closeSameCat, ...anyClose].slice(0, 3);
         const rawOptions = [
-          `${sign.name} (${sign.code})`,
-          ...distractors.map((d) => `${d.name} (${d.code})`)
+          sign.name,
+          ...distractors.map((d) => d.name)
         ];
         const optionExplanations = [
           `Correcto: "${sign.name}" (${sign.code}, ${sign.category}). ${sign.description}`,
@@ -1084,7 +1101,9 @@
                 <figcaption class="exam-figure-caption">
                   ${
                     q.isSignQuestion
-                      ? `Señal oficial · Código ${q.signCode}`
+                      ? showInstant
+                        ? `Señal oficial · Código ${q.signCode}`
+                        : `Señal oficial de tránsito CONASET`
                       : `Imagen de apoyo`
                   }
                 </figcaption>
@@ -1338,74 +1357,164 @@
 
   function renderExamResults(container) {
     const res = activeExam.results;
+    if (!activeExam.reviewFilter) {
+      activeExam.reviewFilter = "all";
+    }
+    const letters = ["A", "B", "C", "D"];
+    const wrongCount = res.totalQuestions - res.correctCount;
+    const doubleCount = activeExam.questions.filter((q) => Boolean(q.doublePoints)).length;
 
-    const reviewRowsHtml = activeExam.questions
+    const mapButtonsHtml = activeExam.questions
       .map((q, idx) => {
         const userAns = activeExam.answers[idx];
         const isOk = userAns === q.correct;
-        const userText =
-          userAns !== undefined ? q.options[userAns] : "Sin responder";
-        const correctText = q.options[q.correct];
-
-        return `
-          <div class="clean-row" style="align-items: flex-start; flex-direction: column; gap: 0.4rem;">
-            <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-              <span style="font-size: 0.78rem; color: var(--text-muted);" class="tabular">
-                Pregunta ${idx + 1} · ${
-          q.isSignQuestion ? `Señal ${q.signCode}` : `Capítulo ${q.chapter}`
-        } ${
-          q.doublePoints ? "· Doble puntaje (2 pts)" : ""
-        }
-              </span>
-              <span class="status-pill ${isOk ? "pill-pass" : "pill-fail"} tabular">
-                ${isOk ? `+${q.doublePoints ? 2 : 1} pto` : `0 / ${q.doublePoints ? 2 : 1} pto`}
-              </span>
-            </div>
-
-            <p class="row-title" style="font-size: 0.95rem;">${q.question}</p>
-            ${
-              q.image
-                ? `<div style="margin: 0.5rem 0; background: #FFFFFF; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border-hairline); display: inline-flex; align-items: center; gap: 0.5rem;"><img src="${q.image}" data-fallback="${
-                    q.localFallback || ""
-                  }" onerror="if(this.dataset.fallback && this.src !== this.dataset.fallback){this.src = this.dataset.fallback;}else{this.style.display='none';if(this.nextElementSibling && this.nextElementSibling.classList.contains('sign-fallback-badge')){this.nextElementSibling.classList.add('is-visible');}}" alt="${
-                    q.isSignQuestion ? `Señal ${q.signCode}` : "Ilustración de la pregunta"
-                  }" style="max-height: 140px; width: auto; display: block;" />${
-                    q.isSignQuestion
-                      ? `<span class="sign-fallback-badge tabular">${q.signCode}</span>`
-                      : ""
-                  }</div>`
-                : ""
-            }
-
-            ${
-              !isOk
-                ? `<div class="feedback-block feedback-block-wrong" style="width: 100%; border-radius: var(--radius-sm); margin-top: 0.25rem;">
-                    <div class="feedback-label label-wrong">
-                      ${ICONS.xmark}
-                      <span>Por qué NO es tu selección (${userText})</span>
-                    </div>
-                    <p class="feedback-reason">${
-                      userAns !== undefined && q.optionExplanations
-                        ? q.optionExplanations[userAns]
-                        : "Pregunta sin responder dentro del tiempo del examen."
-                    }</p>
-                  </div>`
-                : ""
-            }
-            <div class="feedback-block feedback-block-correct" style="width: 100%; border-radius: var(--radius-sm); margin-top: 0.25rem;">
-              <div class="feedback-label label-correct">
-                ${ICONS.check}
-                <span>Por qué SÍ es la alternativa correcta (${correctText})</span>
-              </div>
-              <p class="feedback-reason">${
-                (q.optionExplanations && q.optionExplanations[q.correct]) ||
-                q.explanation
-              }</p>
-            </div>
-          </div>
-        `;
+        const cls = [
+          "index-btn",
+          "tabular",
+          isOk ? "is-ok" : "is-err",
+          q.doublePoints ? "is-double" : ""
+        ]
+          .filter(Boolean)
+          .join(" ");
+        return `<button type="button" class="${cls}" data-action="jump-review-item" data-review-index="${idx}" title="Ir a pregunta ${idx + 1} (${isOk ? "Correcta" : "Incorrecta"})">${idx + 1}</button>`;
       })
       .join("");
+
+    const filteredItems = activeExam.questions
+      .map((q, idx) => ({ q, idx }))
+      .filter(({ q, idx }) => {
+        const isOk = activeExam.answers[idx] === q.correct;
+        if (activeExam.reviewFilter === "wrong") return !isOk;
+        if (activeExam.reviewFilter === "correct") return isOk;
+        if (activeExam.reviewFilter === "double") return Boolean(q.doublePoints);
+        return true;
+      });
+
+    const reviewCardsHtml =
+      filteredItems.length === 0
+        ? `<div class="review-empty-state">No hay preguntas en este filtro (${
+            activeExam.reviewFilter === "wrong"
+              ? "respondiste todas correctamente"
+              : "sin coincidencias"
+          }).</div>`
+        : filteredItems
+            .map(({ q, idx }) => {
+              const userAns = activeExam.answers[idx];
+              const isOk = userAns === q.correct;
+              const pts = q.doublePoints ? 2 : 1;
+              const userLetter = userAns !== undefined ? letters[userAns] : "—";
+              const correctLetter = letters[q.correct];
+              const userText =
+                userAns !== undefined ? q.options[userAns] : "Sin responder";
+              const correctText = q.options[q.correct];
+
+              const optionsHtml = q.options
+                .map((optText, oIdx) => {
+                  const isCorrectOpt = oIdx === q.correct;
+                  const isChosenWrong = oIdx === userAns && !isCorrectOpt;
+                  const optCls = [
+                    "review-option-item",
+                    isCorrectOpt ? "is-opt-correct" : "",
+                    isChosenWrong ? "is-opt-wrong-chosen" : ""
+                  ]
+                    .filter(Boolean)
+                    .join(" ");
+                  const tagHtml = isCorrectOpt
+                    ? ` <span class="status-pill pill-pass">Correcta</span>`
+                    : oIdx === userAns
+                    ? ` <span class="status-pill pill-fail">Tu elección</span>`
+                    : "";
+                  return `
+                    <div class="${optCls}">
+                      <span class="option-key">${letters[oIdx]}</span>
+                      <span>${optText}${tagHtml}</span>
+                    </div>
+                  `;
+                })
+                .join("");
+
+              return `
+                <details class="review-card ${isOk ? "is-correct" : "is-wrong"}" id="review-card-${idx}" data-review-index="${idx}">
+                  <summary class="review-card-summary">
+                    <div class="review-card-left">
+                      <span class="status-pill ${isOk ? "pill-pass" : "pill-fail"}" aria-label="${isOk ? "Correcta" : "Incorrecta"}">
+                        ${isOk ? ICONS.check : ICONS.xmark}
+                      </span>
+                      <div class="review-card-copy">
+                        <div class="review-card-meta-row tabular">
+                          <span>#${idx + 1} · ${
+                q.isSignQuestion ? `Señal ${q.signCode}` : `Cap. ${q.chapter}`
+              }</span>
+                          ${q.doublePoints ? `<span class="status-pill pill-double">2 pts</span>` : ""}
+                        </div>
+                        <p class="review-card-preview">${q.question}</p>
+                        <p class="review-card-choice-hint tabular">
+                          ${
+                            userAns === undefined
+                              ? `Sin responder · Correcta: <strong>${correctLetter}</strong>`
+                              : `Elegiste: <strong>${userLetter}</strong> · Correcta: <strong>${correctLetter}</strong>`
+                          }
+                        </p>
+                      </div>
+                    </div>
+                    <div class="review-card-right">
+                      <span class="status-pill ${isOk ? "pill-pass" : "pill-fail"} tabular">
+                        ${isOk ? `+${pts}` : `0/${pts}`} pts
+                      </span>
+                      <svg class="icon-svg icon-chevron" viewBox="0 0 24 24" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </div>
+                  </summary>
+
+                  <div class="review-card-body">
+                    <p class="review-full-stem">${q.question}</p>
+                    ${
+                      q.image
+                        ? `<div class="exam-figure" style="margin: 0;"><img src="${q.image}" data-fallback="${
+                            q.localFallback || ""
+                          }" onerror="if(this.dataset.fallback && this.src !== this.dataset.fallback){this.src = this.dataset.fallback;}else{this.style.display='none';if(this.nextElementSibling && this.nextElementSibling.classList.contains('sign-fallback-badge')){this.nextElementSibling.classList.add('is-visible');}}" alt="${
+                            q.isSignQuestion ? `Señal ${q.signCode}` : "Ilustración de la pregunta"
+                          }" style="max-height: 150px;" />${
+                            q.isSignQuestion
+                              ? `<span class="sign-fallback-badge tabular">${q.signCode}</span>`
+                              : ""
+                          }</div>`
+                        : ""
+                    }
+                    <div class="review-options-grid">
+                      ${optionsHtml}
+                    </div>
+                    ${
+                      !isOk
+                        ? `<div class="feedback-block feedback-block-wrong" style="width: 100%; border-radius: var(--radius-sm);">
+                            <div class="feedback-label label-wrong">
+                              ${ICONS.xmark}
+                              <span>Por qué NO es tu selección (${userText})</span>
+                            </div>
+                            <p class="feedback-reason">${
+                              userAns !== undefined && q.optionExplanations
+                                ? q.optionExplanations[userAns]
+                                : "Pregunta sin responder dentro del tiempo del examen."
+                            }</p>
+                          </div>`
+                        : ""
+                    }
+                    <div class="feedback-block feedback-block-correct" style="width: 100%; border-radius: var(--radius-sm);">
+                      <div class="feedback-label label-correct">
+                        ${ICONS.check}
+                        <span>Por qué SÍ es la alternativa correcta (${correctText})</span>
+                      </div>
+                      <p class="feedback-reason">${
+                        (q.optionExplanations && q.optionExplanations[q.correct]) ||
+                        q.explanation
+                      }</p>
+                    </div>
+                  </div>
+                </details>
+              `;
+            })
+            .join("");
 
     container.innerHTML = `
       <div style="padding-bottom: 1.25rem; border-bottom: 1px solid var(--border-hairline);">
@@ -1444,12 +1553,29 @@
       <section class="content-section">
         <div class="section-block-header">
           <div>
-            <h2 class="section-heading">Revisión detallada de respuestas</h2>
-            <p class="section-desc">Fundamento oficial por pregunta según el Libro para la Conducción en Chile 2026.</p>
+            <h2 class="section-heading">Revisión desplegable de respuestas</h2>
+            <p class="section-desc">Filtra o selecciona un número para desplegar la explicación oficial de cada pregunta.</p>
           </div>
         </div>
-        <div class="clean-list">
-          ${reviewRowsHtml}
+
+        <div class="review-toolbar">
+          <div class="review-filter-pills" role="group" aria-label="Filtrar preguntas revisadas">
+            <button type="button" class="filter-chip ${activeExam.reviewFilter === "all" ? "is-active" : ""}" data-action="set-review-filter" data-review-filter="all">Todas (${res.totalQuestions})</button>
+            <button type="button" class="filter-chip ${activeExam.reviewFilter === "wrong" ? "is-active" : ""}" data-action="set-review-filter" data-review-filter="wrong">Incorrectas (${wrongCount})</button>
+            <button type="button" class="filter-chip ${activeExam.reviewFilter === "correct" ? "is-active" : ""}" data-action="set-review-filter" data-review-filter="correct">Correctas (${res.correctCount})</button>
+            <button type="button" class="filter-chip ${activeExam.reviewFilter === "double" ? "is-active" : ""}" data-action="set-review-filter" data-review-filter="double">2 pts (${doubleCount})</button>
+          </div>
+          <button type="button" class="btn-outline btn-compact" data-action="toggle-all-review" id="review-toggle-all-btn">
+            Expandir todas
+          </button>
+        </div>
+
+        <div class="review-map" role="navigation" aria-label="Mapa de preguntas revisadas">
+          ${mapButtonsHtml}
+        </div>
+
+        <div class="review-accordion-list" id="review-accordion-list">
+          ${reviewCardsHtml}
         </div>
       </section>
     `;
@@ -1683,16 +1809,35 @@
   // ==========================================================================
   // Navegación y Tema
   // ==========================================================================
-  function switchView(viewName) {
+  const VALID_VIEWS = new Set(["plan", "exam", "manual", "senales"]);
+
+  function switchView(viewName, syncHash = true) {
+    const target = VALID_VIEWS.has(viewName) ? viewName : "plan";
     document.querySelectorAll(".view-panel").forEach((panel) => {
-      panel.classList.toggle("is-active", panel.id === `view-${viewName}`);
+      panel.classList.toggle("is-active", panel.id === `view-${target}`);
     });
     document.querySelectorAll(".nav-item").forEach((tab) => {
       tab.classList.toggle(
         "is-active",
-        tab.getAttribute("data-view") === viewName
+        tab.getAttribute("data-view") === target
       );
     });
+    if (syncHash) {
+      try {
+        const url = new URL(window.location.href);
+        if (url.searchParams.has("view")) {
+          url.searchParams.delete("view");
+        }
+        const nextUrl = `${url.pathname}${url.search}#${target}`;
+        if (window.location.hash !== `#${target}` || window.location.search.includes("view=")) {
+          history.replaceState(null, "", nextUrl);
+        }
+      } catch (e) {
+        if (window.location.hash !== `#${target}`) {
+          window.location.hash = `#${target}`;
+        }
+      }
+    }
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -1720,6 +1865,10 @@
   function applyTheme(theme) {
     state.theme = theme;
     document.documentElement.setAttribute("data-theme", theme);
+    const metaTheme = document.getElementById("meta-theme-color");
+    if (metaTheme) {
+      metaTheme.setAttribute("content", theme === "dark" ? "#0E1013" : "#FAFAFA");
+    }
     const labelEl = document.getElementById("theme-label-text");
     const iconEl = document.getElementById("theme-icon-svg");
     if (labelEl) {
@@ -1891,14 +2040,186 @@
         finishExam();
       } else if (action === "go-view") {
         switchView(actionEl.getAttribute("data-view"));
+      } else if (action === "set-review-filter") {
+        if (!activeExam || !activeExam.results) return;
+        activeExam.reviewFilter = actionEl.getAttribute("data-review-filter") || "all";
+        const resultsEl = document.getElementById("exam-cockpit-container");
+        if (resultsEl) renderExamResults(resultsEl);
+      } else if (action === "toggle-all-review") {
+        const listEl = document.getElementById("review-accordion-list");
+        if (!listEl) return;
+        const cards = Array.from(listEl.querySelectorAll("details.review-card"));
+        if (cards.length === 0) return;
+        const shouldOpen = cards.some((card) => !card.open);
+        cards.forEach((card) => {
+          card.open = shouldOpen;
+        });
+        actionEl.textContent = shouldOpen ? "Contraer todas" : "Expandir todas";
+      } else if (action === "jump-review-item") {
+        const targetIdx = Number(actionEl.getAttribute("data-review-index"));
+        if (!activeExam || !activeExam.results || Number.isNaN(targetIdx)) return;
+        let card = document.getElementById(`review-card-${targetIdx}`);
+        if (!card) {
+          activeExam.reviewFilter = "all";
+          const resultsEl = document.getElementById("exam-cockpit-container");
+          if (resultsEl) renderExamResults(resultsEl);
+          card = document.getElementById(`review-card-${targetIdx}`);
+        }
+        if (card) {
+          card.open = true;
+          const toggleAllBtn = document.getElementById("review-toggle-all-btn");
+          const listEl = document.getElementById("review-accordion-list");
+          if (toggleAllBtn && listEl) {
+            const allCards = Array.from(listEl.querySelectorAll("details.review-card"));
+            toggleAllBtn.textContent = allCards.every((c) => c.open)
+              ? "Contraer todas"
+              : "Expandir todas";
+          }
+          card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
       }
     });
   }
+
+  function initPWA() {
+    const installBtn = document.getElementById("install-app-btn");
+    const banner = document.getElementById("pwa-install-banner");
+    const bannerInstallBtn = document.getElementById("pwa-banner-install-btn");
+    const bannerDismissBtn = document.getElementById("pwa-banner-dismiss-btn");
+    const bannerTitle = document.getElementById("pwa-banner-title");
+    const bannerSub = document.getElementById("pwa-banner-sub");
+    const updateToast = document.getElementById("sw-update-toast");
+    const updateBtn = document.getElementById("sw-update-btn");
+
+    const DISMISS_KEY = "claseb_pwa_banner_dismissed";
+    let deferredPrompt = null;
+    let waitingWorker = null;
+    let isReloading = false;
+
+    const isStandalone =
+      window.matchMedia("(display-mode: standalone)").matches ||
+      Boolean(window.navigator.standalone);
+    const isIOS =
+      (/iPad|iPhone|iPod/.test(window.navigator.userAgent) ||
+        (window.navigator.platform === "MacIntel" && window.navigator.maxTouchPoints > 1)) &&
+      !window.MSStream;
+
+    function hideInstallUI() {
+      if (installBtn) installBtn.classList.add("is-hidden");
+      if (banner) banner.classList.add("is-hidden");
+    }
+
+    async function triggerNativeInstall() {
+      if (!deferredPrompt) return;
+      deferredPrompt.prompt();
+      try {
+        await deferredPrompt.userChoice;
+      } catch (err) {
+        // Ignorar cancelaciones del prompt
+      }
+      deferredPrompt = null;
+      hideInstallUI();
+    }
+
+    if (!isStandalone) {
+      window.addEventListener("beforeinstallprompt", (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        if (installBtn) installBtn.classList.remove("is-hidden");
+        if (banner && !sessionStorage.getItem(DISMISS_KEY)) {
+          if (bannerInstallBtn) bannerInstallBtn.classList.remove("is-hidden");
+          banner.classList.remove("is-hidden");
+        }
+      });
+
+      if (isIOS && banner && !sessionStorage.getItem(DISMISS_KEY)) {
+        if (bannerTitle) bannerTitle.textContent = "Instala Clase B en tu iPhone o iPad";
+        if (bannerSub) {
+          bannerSub.textContent =
+            "Toca el botón Compartir en Safari y selecciona «Agregar a inicio» para usarla offline.";
+        }
+        if (bannerInstallBtn) bannerInstallBtn.classList.add("is-hidden");
+        if (bannerDismissBtn) bannerDismissBtn.textContent = "Entendido";
+        banner.classList.remove("is-hidden");
+      }
+    }
+
+    if (installBtn) {
+      installBtn.addEventListener("click", triggerNativeInstall);
+    }
+    if (bannerInstallBtn) {
+      bannerInstallBtn.addEventListener("click", triggerNativeInstall);
+    }
+    if (bannerDismissBtn) {
+      bannerDismissBtn.addEventListener("click", () => {
+        try {
+          sessionStorage.setItem(DISMISS_KEY, "1");
+        } catch (err) {}
+        if (banner) banner.classList.add("is-hidden");
+      });
+    }
+
+    window.addEventListener("appinstalled", () => {
+      deferredPrompt = null;
+      hideInstallUI();
+    });
+
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (isReloading) return;
+        isReloading = true;
+        window.location.reload();
+      });
+
+      if (updateBtn) {
+        updateBtn.addEventListener("click", () => {
+          if (waitingWorker) {
+            waitingWorker.postMessage({ type: "SKIP_WAITING" });
+          }
+          if (updateToast) updateToast.classList.add("is-hidden");
+        });
+      }
+
+      navigator.serviceWorker
+        .register("./sw.js")
+        .then((reg) => {
+          if (reg.waiting && navigator.serviceWorker.controller) {
+            waitingWorker = reg.waiting;
+            if (updateToast) updateToast.classList.remove("is-hidden");
+          }
+          reg.addEventListener("updatefound", () => {
+            const newWorker = reg.installing;
+            if (!newWorker) return;
+            newWorker.addEventListener("statechange", () => {
+              if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+                waitingWorker = newWorker;
+                if (updateToast) updateToast.classList.remove("is-hidden");
+              }
+            });
+          });
+        })
+        .catch(() => {
+          // Modo degradado sin Service Worker si el contexto no es seguro
+        });
+    }
+  }
+
+  window.addEventListener("hashchange", () => {
+    const hashView = window.location.hash.replace(/^#/, "");
+    if (VALID_VIEWS.has(hashView)) {
+      if (hashView === "exam" && !activeExam) {
+        startExam("official");
+      } else {
+        switchView(hashView, false);
+      }
+    }
+  });
 
   window.addEventListener("DOMContentLoaded", () => {
     applyTheme(state.theme || "light");
     applySoundPreference(state.soundEnabled !== false, false);
     initEvents();
+    initPWA();
     renderDashboard();
     renderChaptersAccordion();
     renderSignsView();
@@ -1907,13 +2228,16 @@
     if (params.get("theme") === "dark" || params.get("theme") === "light") {
       applyTheme(params.get("theme"));
     }
-    const requestedView = params.get("view");
+    const hashView = window.location.hash.replace(/^#/, "");
+    const requestedView = params.get("view") || (VALID_VIEWS.has(hashView) ? hashView : "");
     if (requestedView === "exam") {
       startExam("official");
     } else if (requestedView === "manual") {
       switchView("manual");
     } else if (requestedView === "senales") {
       switchView("senales");
+    } else if (requestedView === "plan") {
+      switchView("plan");
     }
   });
 })();

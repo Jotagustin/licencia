@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Clase B — Preparación de Examen de Conducir (CONASET 2026)</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" id="meta-theme-color" content="#FAFAFA" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Clase B 2026" />
+  <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-180.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
@@ -19,12 +26,21 @@
       </div>
 
       <div class="header-tools">
+        <button type="button" id="install-app-btn" class="ghost-link is-hidden" aria-label="Instalar aplicación" title="Instalar app en este dispositivo">
+          <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span class="tool-label">Instalar</span>
+        </button>
+
         <a href="LIBRO-DEL-NUEVO-CONDUCTOR-AUTOMOVILISTAS_2026.pdf" target="_blank" rel="noopener" class="ghost-link" title="Abrir Libro Oficial en PDF">
           <svg class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
             <polyline points="14 2 14 8 20 8"></polyline>
           </svg>
-          <span>Manual PDF</span>
+          <span class="tool-label">Manual PDF</span>
         </a>
 
         <button type="button" id="sound-toggle-btn" class="ghost-link" aria-pressed="true" aria-label="Silenciar sonidos de respuesta" title="Activar o silenciar sonidos">
@@ -33,14 +49,14 @@
             <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
             <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
           </svg>
-          <span id="sound-label-text">Sonido</span>
+          <span id="sound-label-text" class="tool-label">Sonido</span>
         </button>
 
         <button type="button" id="theme-toggle-btn" class="ghost-link" aria-label="Cambiar apariencia">
           <svg id="theme-icon-svg" class="icon-svg icon-sm" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
-          <span id="theme-label-text">Oscuro</span>
+          <span id="theme-label-text" class="tool-label">Oscuro</span>
         </button>
       </div>
     </div>
@@ -94,6 +110,37 @@
           Define la fecha de tu examen municipal para calcular tu dedicación diaria recomendada y generar los tests necesarios para aprobar al primer intento.
         </p>
       </header>
+
+      <!-- Franja de 3 Métricas Esenciales -->
+      <div class="metrics-strip" role="region" aria-label="Resumen de avance">
+        <div class="metric-cell">
+          <span class="metric-title">Días al examen</span>
+          <span class="metric-number tabular" id="odo-days-left">—</span>
+          <span class="metric-note" id="odo-target-date-sub">Meta: —</span>
+        </div>
+        <div class="metric-cell">
+          <span class="metric-title">Ritmo diario</span>
+          <span class="metric-number tabular" id="odo-daily-time">—</span>
+          <span class="metric-note" id="odo-daily-time-sub">—</span>
+        </div>
+        <div class="metric-cell">
+          <span class="metric-title">Nivel promedio</span>
+          <span class="metric-number tabular" id="odo-avg-score">Pendiente</span>
+          <span class="metric-note" id="odo-avg-score-sub">0/268 pregs dominadas</span>
+        </div>
+      </div>
+
+      <!-- Banner de Instalación PWA (se muestra si el navegador soporta instalación o en iOS Safari) -->
+      <div id="pwa-install-banner" class="pwa-install-banner is-hidden" role="region" aria-label="Instalar aplicación">
+        <div class="pwa-banner-copy">
+          <strong class="pwa-banner-title" id="pwa-banner-title">Instala Clase B en tu dispositivo</strong>
+          <p class="pwa-banner-sub" id="pwa-banner-sub">Accede rápido desde tu pantalla de inicio y practica tus ensayos incluso sin conexión.</p>
+        </div>
+        <div class="pwa-banner-actions">
+          <button type="button" class="btn-solid btn-compact" id="pwa-banner-install-btn">Instalar app</button>
+          <button type="button" class="btn-outline btn-compact" id="pwa-banner-dismiss-btn" aria-label="Ocultar aviso">Ahora no</button>
+        </div>
+      </div>
 
       <!-- Acción Destacada de Hoy (Hero Card) -->
       <div class="primary-cta-bar">
@@ -454,6 +501,11 @@
       </div>
     </section>
   </main>
+
+  <div id="sw-update-toast" class="sw-update-toast is-hidden" role="status" aria-live="polite">
+    <span>Nueva versión disponible con preguntas y mejoras actualizadas.</span>
+    <button type="button" id="sw-update-btn" class="btn-solid btn-compact">Actualizar</button>
+  </div>
 
   <script src="questions-db.js"></script>
   <script src="app.js"></script>
